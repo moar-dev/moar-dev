@@ -52,13 +52,10 @@
 <loc>http://localhost:4000/guitars/offset-quote/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/checkout/offset/</loc>
-</url>
-<url>
 <loc>http://localhost:4000/guitars/offset/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/checkout/order-placed/</loc>
+<loc>http://localhost:4000/checkout/offset/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/order-placed/</loc>

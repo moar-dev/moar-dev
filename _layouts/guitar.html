@@ -346,6 +346,9 @@
 {% include footer.html %}
 </div>
 </body>
+</html>
+
+
 <!-- Scripts -->
 <!-- Table tabs -->
 <script>
@@ -448,4 +451,33 @@ document.getElementById('priceusd').innerHTML = price_usd;
     );
 </script>
 
-</html>
+
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<!-- Form Script -->
+<script>
+function updateTotals() {
+    var inputs = document.getElementById('extra-features').getElementsByTagName('input');
+
+    var sum = {{ page.price-usd }};
+    for (var i = 0, num = inputs.length; i < num; i++) {
+        if (inputs[i].checked) {
+            sum += parseInt(inputs[i].getAttribute('value'));
+        }
+    }
+
+    var customisations = sum - {{ page.price-usd }};
+
+    document.getElementById('payment-custom').innerHTML = '$' + customisations;
+    document.getElementById('payment-total').value = '$' + sum;
+    document.getElementById('next').value = '/order-placed?deposit=' + (sum*0.25);
+    
+}
+var section = document.getElementById('extra-features');
+var inputs = section.getElementsByTagName('input');
+for (var i = 0, num = inputs.length; i < num; i++) {
+    inputs[i].addEventListener('change', updateTotals);
+}
+</script>

@@ -50,10 +50,6 @@ nav-menu: false
 						</select>
 					</div>
 				</div>
-				<!-- <div class="field">
-					<label for="name">Serial Number</label>
-					<input type="text" id="yourname" placeholder="If you have created a Moar serial number, please add it here" name="customer"/>
-				</div> -->
 				<div class="row uniform" style="display:none;">
 					<div class="4u 12u$(xsmall)">
 						<div class="field">

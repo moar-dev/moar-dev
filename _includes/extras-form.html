@@ -1,8 +1,116 @@
-<h2 style="margin-bottom: 0.5em">Specify Extras</h2>
-<p>Select the options</p>
+<h2 style="margin-bottom: 0.5em">Design your own {{ page.title }}</h2>
+<p>Build your dream guitar then add your email to save and guarantee the quoted price.</p>
 
-<section style="box-sizing: border-box; padding-right: 2em; margin-bottom: 1em;">
-	<h4 style="margin-bottom: 0.5em">Binding</h4>
+<section style="box-sizing: border-box; margin-bottom: 2em;">
+	<h3 style="margin-bottom: 0.5em">Choose the woods</h3>
+	<p>Not sure which woods to pick? Find out more and see pictures in our guide to wood.</p>
+	
+	<!-- Body -->
+	<div style="margin-top: 1em;">
+		<label for="guitarmodel">Body Wood</label>
+		<select name="wood-body" id="wood-body" onchange="updateTotals()" required>
+			<option name="ash" value="0">Ash</option>
+			<option name="cedar" value="0">Cedar</option>
+			<option name="pine" value="0">Pine</option>
+			<option name="alder" value="0">Alder</option>
+			<option name="mahogany" value="0">Mahogany</option>
+			<option name="wenge" value="160">Wenge</option>
+			<option name="walnut" value="130">Walnut</option>
+			<option name="bubinga" value="220">Bubinga</option>
+			<option name="maple" value="160">Maple</option>
+			<option name="swamp-ash" value="130">Swamp Ash</option>
+		</select>
+	</div>
+
+	<!-- Neck --> 
+	<div style="margin-top: 1em;">
+		<label for="guitarmodel">Neck Wood</label>
+		<select name="wood-body" id="wood-neck" onchange="updateTotals()" required>
+			<option name="maple" value="0">Maple</option>
+			<option name="mahogany" value="0">Mahogany</option>
+			<option name="cedar" value="0">Cedar</option>
+			<option name="ash" value="0">Ash</option>
+			<option name="rosewood-african" value="45">Rosewood (African)</option>
+			<option name="bubinga" value="45">Bubinga</option>
+			<option name="walnut" value="45">Walnut</option>
+			<option name="wenge" value="45">Wenge</option>
+		</select>
+	</div>
+
+	<!-- Fretboard -->
+	<h4 style="margin-top: 2em; margin-bottom: 0;">Fretboard</h4>
+	<div class="field first half" style="margin-top: 1em;">
+		<label for="guitarmodel">Fretboard Wood</label>
+		<select name="wood-body" id="wood-fret" onchange="updateTotals()" required>
+			<option name="ebony" value="0">Ebony</option>
+			<option name="rosewood-indian" value="0">Rosewood (Indian)</option>
+			<option name="rosewood-african" value="0">Rosewood (African)</option>
+			<option name="wenge" value="0">Wenge</option>
+			<option name="maple" value="0">Maple</option>
+			<option name="oak" value="0">Oak</option>
+			<option name="bubinga" value="0">Bubinga</option>
+			<option name="cocobolo" value="0">Cocobolo</option>
+			<option name="rosewood-madagascan" value="30">Rosewood (Madagascan)</option>
+			<option name="malaysian-blackwood" value="30">Malaysian Blackwood</option>
+			<option name="ovangkol" value="30">Ovangkol</option>
+			<option name="padouk" value="30">Padouk</option>
+			<option name="walnut" value="30">Walnut</option>
+			<option name="zebrano" value="30">Zebrano</option>
+		</select>
+	</div>
+    <div class="field half" style="margin-top: 1em;">
+    	<label for="guitarmodel">Fretboard Radius</label>
+		<select name="wood-body" id="wood-body" onchange="updateTotals()" required>
+			<option name="7.25" value="0">7.25”</option>
+			<option name="9.5" value="0">9.5”</option>
+			<option name="10" value="0">10”</option>
+			<option name="12" value="0">12”</option>
+			<option name="14" value="0">14”</option>
+			<option name="16" value="0">16”</option>
+			<option name="20" value="0">20”</option>
+			<option name="compound" value="60">Compound</option>
+
+		</select>
+	</div>
+
+	<!-- Roasted Options -->
+	<label style="margin-top: 1em;">Roasted Woods</label>
+	<table class="alt">
+		<tbody>
+    		<tr>
+    			<td>
+    				<input class="binding" value="155" type="checkbox" id="Checkbox1" name="roasted-body" data-toggle="checkbox"> 
+    				<label class="checkbox" for="Checkbox1">Roasted Body</label>
+    			</td>
+    			<td>
+    				<p>$155</p>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td>
+    				<input class="binding" value="90" type="checkbox" id="Checkbox2" name="roasted-neck" data-toggle="checkbox"> 
+    				<label class="checkbox" for="Checkbox2">Roasted Neck</label>
+    			</td>
+    			<td>
+    				<p>$90</p>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td>
+    				<input class="binding" value="45" type="checkbox" id="Checkbox3" name="roasted-fret" data-toggle="checkbox"> 
+    				<label class="checkbox" for="Checkbox3">Roasted Fretboard</label>
+    			</td>
+    			<td>
+    				<p>$45</p>
+    			</td>
+    		</tr>
+    	</tbody>
+    </table>
+</section>
+
+<section style="box-sizing: border-box; margin-bottom: 1em;">
+	<h3 style="margin-bottom: 0.5em">Binding</h3>
+	<p>Binding is a bitch, but you can have what you like if you're willing to pay.</p>
   	<table class="alt">
 		<tbody>
 			<tr> 
@@ -11,8 +119,8 @@
     		</tr>
     		<tr>
     			<td>
-    				<input class="binding" value="160" type="checkbox" id="Checkbox1" name="binding-top" data-toggle="checkbox"> 
-    				<label class="checkbox" for="Checkbox1">Top binding</label>
+    				<input class="binding" value="160" type="checkbox" id="Checkbox4" name="binding-top" data-toggle="checkbox"> 
+    				<label class="checkbox" for="Checkbox4">Top binding</label>
     			</td>
     			<td>
     				<p>$160</p>
@@ -20,8 +128,8 @@
     		</tr>
     		<tr>
     			<td>
-    				<input class="binding" value="160"  type="checkbox" id="Checkbox2" name="binding-bottom" data-toggle="checkbox"> 
-					<label class="checkbox" for="Checkbox2">Bottom binding</label>
+    				<input class="binding" value="160"  type="checkbox" id="Checkbox5" name="binding-bottom" data-toggle="checkbox"> 
+					<label class="checkbox" for="Checkbox5">Bottom binding</label>
 				</td>
 				<td>
 					<p>$160</p>
@@ -29,8 +137,8 @@
 			</tr>
 			<tr>
     			<td>
-    				<input class="binding" value="160"  type="checkbox" id="Checkbox3" name="binding-fhole" data-toggle="checkbox"> 
-					<label class="checkbox" for="Checkbox3">F-hole binding</label>
+    				<input class="binding" value="160"  type="checkbox" id="Checkbox6" name="binding-fhole" data-toggle="checkbox"> 
+					<label class="checkbox" for="Checkbox6">F-hole binding</label>
 				</td>
 				<td>
 					<p>$160</p>
@@ -38,8 +146,8 @@
 			</tr>
 			<tr>
     			<td>
-    				<input class="binding" value="220"  type="checkbox" id="Checkbox4" name="binding-neck" data-toggle="checkbox"> 
-					<label class="checkbox" for="Checkbox4">Neck binding</label>
+    				<input class="binding" value="220"  type="checkbox" id="Checkbox7" name="binding-neck" data-toggle="checkbox"> 
+					<label class="checkbox" for="Checkbox7">Neck binding</label>
 				</td>
 				<td>
 					<p>$220</p>

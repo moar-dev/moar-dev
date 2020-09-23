@@ -10,24 +10,37 @@
 <!-- Main -->
 <div id="main" class="alt">
 	<section>
-		<form class="inner row uniform" id="extra-features" action="https://formspree.io/xnqoqbjw" method="POST">
-			<div class="12u 12u(small)" style="margin-bottom: 2em;">
-				<div class="100%">
-					<a href="{{ '/guitars' | relative_url }}">Guitars</a><p style="display: inline-block;">&nbsp;&nbsp;/&nbsp;&nbsp;{{ page.title }}</p>
+			<div class="inner row uniform">
+				<div class="12u 12u(small)" style="margin-bottom: 2em;">
+					<div class="100%">
+						<a href="{{ '/guitars' | relative_url }}">Guitars</a><p style="display: inline-block;">&nbsp;&nbsp;/&nbsp;&nbsp;{{ page.title }}</p>
+					</div>
+					<h1>The {{ page.title }}</h1>
+					<hr/>
+					<h3>{{ page.description }}</h3>
+					<p>{{ page.modeldesc }}</p>
 				</div>
-				<h1>Design your own {{ page.title }}</h1>
-				<hr/>
-				<h3>{{ page.description }}</h3>
+			
+				<!-- Gallery -->
+				{% for record in site.data.gallery.records reversed %}
+					{% if record.fields.guitar == page.img-tag and record.fields.placement == 'gallery' %}
+					<div class="4u 12u$(medium)">
+						<img class="image fit" src="{{ record.fields.image[0].url }}" alt="">
+					</div>
+					{% endif %}
+				{% endfor %}
 			</div>
-			<div class="8u 12u(small)">
+			<form class="inner row uniform" id="extra-features" action="https://formspree.io/xnqoqbjw" method="POST">
+				<div class="8u 12u(small)" style="padding-right: 2em;">
+					
 
-				{% include extras-form.html %}
-				
-			</div>
+					{% include extras-form.html %}
+					
+				</div>
 
-			{% include stickyquote.html %}
+				{% include stickyquote.html %}
 
-		</form>
+			</form>
 	</section>
 </div>
 
@@ -42,25 +55,41 @@
 <!-- Form Script -->
 <script>
 function updateTotals() {
+    // Checkboxes
     var inputs = document.getElementById('extra-features').getElementsByTagName('input');
 
-    var sum = {{ page.price-usd }};
+    // Selected Options
+    var body = document.getElementById("wood-body");
+	var bodycost = parseInt(body.options[body.selectedIndex].getAttribute('value'));
+	var neck = document.getElementById("wood-neck");
+	var neckcost = parseInt(neck.options[neck.selectedIndex].getAttribute('value'));
+	var fret = document.getElementById("wood-fret");
+	var fretcost = parseInt(fret.options[fret.selectedIndex].getAttribute('value'));
+	var result = bodycost + neckcost + fretcost;
+
+    // Total Price
+    var sum = {{ page.price-usd }} + result;
     for (var i = 0, num = inputs.length; i < num; i++) {
         if (inputs[i].checked) {
             sum += parseInt(inputs[i].getAttribute('value'));
         }
     }
 
+    // Customisation Total
     var customisations = sum - {{ page.price-usd }};
 
+	// Totals for text
     document.getElementById('payment-custom').innerHTML = '$' + customisations;
     document.getElementById('payment-total').value = '$' + sum;
     document.getElementById('next').value = '/order-placed?deposit=' + (sum*0.25);
     
 }
+
 var section = document.getElementById('extra-features');
 var inputs = section.getElementsByTagName('input');
 for (var i = 0, num = inputs.length; i < num; i++) {
     inputs[i].addEventListener('change', updateTotals);
 }
+
+
 </script>

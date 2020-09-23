@@ -14,7 +14,7 @@ country: Denmark
 phone: (0045) 5387 2888
 permalink: /:title/
 
-repository: moarguitars.github.io/moarguitars
+repository: moar-dev.github.io/moar-dev
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"

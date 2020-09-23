@@ -1,5 +1,5 @@
 ---
-layout: guitar
+layout: build-quote
 title: Morty
 nav-menu: false
 show_tile: false

@@ -23,7 +23,7 @@
 			
 				<!-- Gallery -->
 				{% for record in site.data.gallery.records reversed %}
-					{% if record.fields.guitar == page.img-tag and record.fields.placement == 'gallery' %}
+					{% if record.fields.guitar == page.img-tag and record.fields.placement == 'gallery' | limit:3 %}
 					<div class="4u 12u$(medium)">
 						<img class="image fit" src="{{ record.fields.image[0].url }}" alt="">
 					</div>
@@ -33,8 +33,12 @@
 			<form class="inner row uniform" id="extra-features" action="https://formspree.io/xnqoqbjw" method="POST">
 				<div class="8u 12u(small)" style="padding-right: 2em;">
 					
-
+				{% if page.type == 'guitar' %}
 					{% include extras-form.html %}
+				{% endif %}
+				{% if page.type == 'bass' %}
+					Bass Options
+				{% endif %}
 					
 				</div>
 

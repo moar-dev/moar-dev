@@ -4,7 +4,7 @@
 <loc>http://localhost:4000/moar-dev/404/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/moar-dev/guitars/bass-quote/</loc>
+<loc>http://localhost:4000/moar-dev/guitars/bass-hollow/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/moar-dev/guitars/bass/</loc>
@@ -43,13 +43,10 @@
 <loc>http://localhost:4000/moar-dev/merch/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/moar-dev/guitars/morty-quote/</loc>
+<loc>http://localhost:4000/moar-dev/guitars/morty-hollow/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/moar-dev/guitars/morty/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/moar-dev/guitars/offset-quote/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/moar-dev/guitars/offset/</loc>
@@ -70,9 +67,6 @@
 <loc>http://localhost:4000/moar-dev/place-order/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/moar-dev/guitars/serial-generator/</loc>
-</url>
-<url>
 <loc>http://localhost:4000/moar-dev/checkout/solid-bass/</loc>
 </url>
 <url>
@@ -83,9 +77,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/moar-dev/waitlist/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/moar-dev/guitars/wayfair-quote/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/moar-dev/guitars/wayfair/</loc>

@@ -22,7 +22,7 @@
 				</div>
 				<!-- Gallery -->
 				{% for record in site.data.gallery.records reversed %}
-					{% if record.fields.guitar == page.img-tag and record.fields.placement == 'gallery' | limit:3 %}
+					{% if record.fields.guitar == page.img-tag and record.fields.placement == 'gallery' %}
 					<div class="4u 12u$(medium)">
 						<img class="image fit" src="{{ record.fields.image[0].url }}" alt="">
 					</div>
@@ -60,10 +60,12 @@ function updateTotals() {
     var body = document.getElementById("wood-body");
 	var bodycost = parseInt(body.options[body.selectedIndex].getAttribute('value'));
 	var neck = document.getElementById("wood-neck");
-	var neckcost = parseInt(neck.options[neck.selectedIndex].getAttribute('value'));
+	var neckcost = parseInt(neck.options[neck.selectedIndex].getAttribute('value'));	
 	var fret = document.getElementById("wood-fret");
 	var fretcost = parseInt(fret.options[fret.selectedIndex].getAttribute('value'));
-	var result = bodycost + neckcost + fretcost;
+	var radius = document.getElementById("neck-radius");
+	var radiuscost = parseInt(radius.options[radius.selectedIndex].getAttribute('value'));
+	var result = bodycost + neckcost + fretcost + radiuscost;
 
     // Total Price
     var sum = {{ page.price-usd }} + result;

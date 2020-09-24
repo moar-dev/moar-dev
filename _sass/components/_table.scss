@@ -41,15 +41,18 @@
 				margin: 0;
 			}
 
-			.description {
-				width: 80%;
-				text-align: left;
-			}
+		}
 
-			.price {
-				width: 20%;
-				text-align: center;
-			}
+		.description {
+			width: 80%;
+			max-width: 80%;
+			text-align: left;
+		}
+
+		.price {
+			width: 20%;
+			max-width: 20%;
+			text-align: center;
 		}
 
 		th {

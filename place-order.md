@@ -54,7 +54,7 @@ nav-menu: false
 					<label for="customer">Total Deposit</label>
 					<input style="font-weight: 700;" type="text" value="$500" id="payment-total" name="total-price" disabled>
 					<!-- Next Page -->
-					<input type="hidden" name="_next" id="next" value="{{ site.url }}/order-placed?deposit=500" />
+					<input type="hidden" name="_next" id="next" value="{{ site.baseurl }}/order-placed?deposit=500" />
 				</div>
 				<ul class="actions">
 					<li><input id="submit" type="submit" value="Submit Order" class="special"/></li>
@@ -78,7 +78,7 @@ function updateTotals() {
 
 	// Totals for text
     document.getElementById('payment-total').value = '$' + guitarcost;
-    document.getElementById('next').value = '{{ site.url }}/order-placed?deposit=' + guitarcost;
+    document.getElementById('next').value = '{{ site.baseurl }}/order-placed?deposit=' + guitarcost;
     
 }
 

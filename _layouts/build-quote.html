@@ -79,7 +79,7 @@ function updateTotals() {
 	// Totals for text
     document.getElementById('payment-custom').innerHTML = '$' + customisations;
     document.getElementById('payment-total').value = '$' + sum;
-    document.getElementById('next').value = '{{ site.url }}/order-placed?deposit=' + (sum*0.25);
+    document.getElementById('next').value = '{{ site.baseurl }}/order-placed?deposit=' + (sum*0.25);
     
 }
 

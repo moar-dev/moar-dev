@@ -77,12 +77,6 @@
 		    
 		
 		    
-		
-		    
-		
-		    
-		
-		    
 		        <li><a href="http://localhost:4000/moar-dev">Home</a></li>
 	    	
 		
@@ -120,29 +114,7 @@
 		
 		    
 		
-		    
 		
-		    
-		
-		    
-		
-		    
-		
-		
-		
-		    
-		
-		    
-		
-		    
-		
-		    
-		
-		    
-		
-		    
-		
-		    
 		
 		    
 		
@@ -175,7 +147,7 @@
 		    
 		
 		    
-		        <li><a href="http://localhost:4000/moar-dev/merch/">Merch</a></li>
+		        <li><a href="http://localhost:4000/moar-dev/order-process/">The Order Process</a></li>
 		    
 		
 		    
@@ -183,7 +155,7 @@
 		    
 		
 		    
-		        <li><a href="http://localhost:4000/moar-dev/order-process/">The Order Process</a></li>
+		        <li><a href="http://localhost:4000/moar-dev/merch/">Merch</a></li>
 		    
 		
 		    
@@ -225,7 +197,6 @@
 					<h3>All you need in a guitar and nothing else. Built on a perfect foundation, simplicity can be more of an inspiration than a limitation.</h3>
 					<p>My Hollow Morty’s are made to be comfortable, resonant, inspiring to play acoustically and versatile. They are totally hollow, with no centre block, to maximise resonance and keep the weight down.  But I vary the thickness of the top, back and sides to add strength and support where needed, whilst removing all unnecessary material. This gives me a lot of extra control on my builds. For example if the customer knows they will be playing on very loud stages I can add a little extra thickness to the top to help control feedback, or if you want to feel vibrations against your chest when you play I can make the back a little thinner on the belly cut.</p>
 				</div>
-			
 				<!-- Gallery -->
 				
 					
@@ -289,8 +260,7 @@
 			</div>
 			<form class="inner row uniform" id="extra-features" action="https://formspree.io/xnqoqbjw" method="POST">
 				<div class="8u 12u(small)" style="padding-right: 2em;">
-					
-				
+					<!-- Extras -->
 					<h2 style="margin-bottom: 0.5em">Design your own Hollow Morty</h2>
 <p>Build your dream guitar then add your email to save and guarantee the quoted price.</p>
 <p>Base price comes with Nickel hardware, 1 handwound p90 made to your tastes, an intonated cut off T style bridge, stainless steel frets and a single volume control.</p>
@@ -333,6 +303,7 @@
 	</div>
 
 	<!-- Fretboard -->
+        
 	<h4 style="margin-top: 2em; margin-bottom: 0;">Fretboard</h4>
 	<div class="field first half" style="margin-top: 1em;">
 		<label for="guitarmodel">Fretboard Wood</label>
@@ -352,7 +323,7 @@
 			<option name="walnut" value="30">Walnut</option>
 			<option name="zebrano" value="30">Zebrano</option>
 		</select>
-	</div>
+	</div>            
     <div class="field half" style="margin-top: 1em;">
     	<label for="guitarmodel">Fretboard Radius</label>
 		<select name="wood-body" id="wood-body" onchange="updateTotals()" required>
@@ -364,9 +335,11 @@
 			<option name="16" value="0">16”</option>
 			<option name="20" value="0">20”</option>
 			<option name="compound" value="60">Compound</option>
-
 		</select>
 	</div>
+    
+
+    
 
 	<!-- Roasted Options -->
 	<label style="margin-top: 1em;">Roasted Woods</label>
@@ -917,76 +890,61 @@
     </table>
 </section>
 
-				
-				
-					
 				</div>
-
 				<div class="box 4u 12u(small) sticky-quote" style="padding: 2em">
-	<div class="">
-		<h3 style="margin-bottom: 0.5em;">Your Morty</h3>	
+					<!-- Quote Box -->
+					
+<h3 style="margin-bottom: 0.5em;">Your Morty</h3>	
 
-		<!-- Maths -->	
-		<table class="alt">
-			<tbody>
-				<tr> 
-					<th width="50%">Item</th>
-	    			<th width="50%">$USD</th>
-	    		</tr>
-	    		<tr>
-	    			<td>
-	    				<p>Base Price</p>
-	    			</td>
-	    			<td>
-	    				<span value="$2645" id="base-price">$2645</span>
-	    			</td>
-	    		</tr>
-	    		<tr>
-	    			<td>
-	    				<p>Customisations</p>
-	    			</td>
-	    			<td>
-	    				<span value="$0" id="payment-custom">$0</span>
-	    			</td>
-	    		</tr>
-	    		<tfoot>
-	    			<td>
-	    				<p style="font-weight: 700;">Total (USD)</p>
-	    			</td>
-	    			<td>
-	    				<input style="font-weight: 700;" type="text" value="$2645" id="payment-total" name="total-price" disabled></input>
-	    			</td>
-	    		</tfoot>
-	    	</tbody>
-	    </table>
+<!-- Maths -->	
+<table class="alt">
+	<tbody>
+		<tr> 
+			<th width="50%">Item</th>
+			<th width="50%">$USD</th>
+		</tr>
+		<tr>
+			<td>
+				<p>Base Price</p>
+			</td>
+			<td>
+				<span value="$2645" id="base-price">$2645</span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p>Customisations</p>
+			</td>
+			<td>
+				<span value="$0" id="payment-custom">$0</span>
+			</td>
+		</tr>
+		<tfoot>
+			<td>
+				<p style="font-weight: 700;">Total (USD)</p>
+			</td>
+			<td>
+				<input style="font-weight: 700;" type="text" value="$2645" id="payment-total" name="total-price" disabled></input>
+			</td>
+		</tfoot>
+	</tbody>
+</table>
 
-	    <!-- Email -->
-	    <h4 style="margin-bottom: 0.5em;">Save your quote</h4>
-	    <p style="margin-bottom: 0.5em; font-size: 0.8em">Enter your email to save a copy of this quote. Your quote and email will also be shared with the Moar Guitars team.</p>
-	    <div style="margin-bottom: 1em">
-	    	<input placeholder="email@moarguitars.com" type="email" id="email" name="email" required>
-		</div>
-	    
-
-		<!-- Submit -->
-	    <ul class="actions" style="margin-bottom: 0;">
-			<li style="width:100%; padding:0;"><input id="submit" type="submit" value="Save and Send Quote" class="button special fit"/></li>
-<!-- 			<li style="width:100%; padding:0;"><input id="reset" type="reset" value="Start again" class="button small fit"  onclick="setTimeout(updateTotals,20);" /></li> -->
-			<input type="hidden" name="_next" id="next" value="/order-placed" />
-		</ul>
-		</p>
-	</div>
+<!-- Email -->
+<h4 style="margin-bottom: 0.5em;">Save your quote</h4>
+<div style="margin-bottom: 0.5em">
+	<input placeholder="email@moarguitars.com" type="email" id="email" name="email" required>
 </div>
+<p style="margin-bottom: 2em; font-size: 0.6em">Enter your email to save a copy of this quote. Your quote and email will also be shared with the Moar Guitars team.</p>
 
-<!-- Start Again -->
-<!-- <div class="box" style="margin-bottom: 2em">
-	<p style="margin-bottom: 0.5em;">Want to start again?</p>
-	<ul class="actions">
-		<li style="padding: 0;"><input id="reset" type="reset" value="Reset all customisations" class="button small"  onclick="setTimeout(updateTotals,20);" /></li>
-		<input type="hidden" name="_next" id="next" value="/order-placed" />
-	</ul>
-</div> -->
-
+<!-- Submit -->
+<ul class="actions" style="margin-bottom: 0;">
+	<li style="width:100%; padding:0;"><input id="submit" type="submit" value="Save and Send Quote" class="button special fit"/></li>
+<!-- 			<li style="width:100%; padding:0;"><input id="reset" type="reset" value="Start again" class="button small fit"  onclick="setTimeout(updateTotals,20);" /></li> -->
+	<input type="hidden" name="_next" id="next" value="http://localhost:4000/order-placed" />
+</ul>
+</p>
+				</div>
 			</form>
 	</section>
 </div>
@@ -1064,7 +1022,7 @@ function updateTotals() {
 	// Totals for text
     document.getElementById('payment-custom').innerHTML = '$' + customisations;
     document.getElementById('payment-total').value = '$' + sum;
-    document.getElementById('next').value = '/order-placed?deposit=' + (sum*0.25);
+    document.getElementById('next').value = 'http://localhost:4000/order-placed?deposit=' + (sum*0.25);
     
 }
 

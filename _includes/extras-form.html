@@ -40,6 +40,7 @@
 	</div>
 
 	<!-- Fretboard -->
+    {% if page.type == 'guitar' %}    
 	<h4 style="margin-top: 2em; margin-bottom: 0;">Fretboard</h4>
 	<div class="field first half" style="margin-top: 1em;">
 		<label for="guitarmodel">Fretboard Wood</label>
@@ -59,7 +60,7 @@
 			<option name="walnut" value="30">Walnut</option>
 			<option name="zebrano" value="30">Zebrano</option>
 		</select>
-	</div>
+	</div>            
     <div class="field half" style="margin-top: 1em;">
     	<label for="guitarmodel">Fretboard Radius</label>
 		<select name="wood-body" id="wood-body" onchange="updateTotals()" required>
@@ -71,9 +72,32 @@
 			<option name="16" value="0">16”</option>
 			<option name="20" value="0">20”</option>
 			<option name="compound" value="60">Compound</option>
-
 		</select>
 	</div>
+    {% endif %}
+
+    {% if page.type == 'bass' %}    
+    <h4 style="margin-top: 2em; margin-bottom: 0;">Fretboard</h4>
+    <div class="field" style="margin-top: 1em;">
+        <label for="guitarmodel">Fretboard Wood</label>
+        <select name="wood-body" id="wood-fret" onchange="updateTotals()" required>
+            <option name="ebony" value="0">Ebony</option>
+            <option name="rosewood-indian" value="0">Rosewood (Indian)</option>
+            <option name="rosewood-african" value="0">Rosewood (African)</option>
+            <option name="wenge" value="0">Wenge</option>
+            <option name="maple" value="0">Maple</option>
+            <option name="oak" value="0">Oak</option>
+            <option name="bubinga" value="0">Bubinga</option>
+            <option name="cocobolo" value="0">Cocobolo</option>
+            <option name="rosewood-madagascan" value="30">Rosewood (Madagascan)</option>
+            <option name="malaysian-blackwood" value="30">Malaysian Blackwood</option>
+            <option name="ovangkol" value="30">Ovangkol</option>
+            <option name="padouk" value="30">Padouk</option>
+            <option name="walnut" value="30">Walnut</option>
+            <option name="zebrano" value="30">Zebrano</option>
+        </select>
+    </div>            
+    {% endif %}
 
 	<!-- Roasted Options -->
 	<label style="margin-top: 1em;">Roasted Woods</label>

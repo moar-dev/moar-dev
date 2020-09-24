@@ -10,9 +10,6 @@
 <loc>http://localhost:4000/moar-dev/guitars/bass/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/moar-dev/checkout/beer/</loc>
-</url>
-<url>
 <loc>http://localhost:4000/moar-dev/contact/</loc>
 </url>
 <url>
@@ -26,12 +23,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/moar-dev/guitars/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/moar-dev/checkout/hollow-bass/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/moar-dev/checkout/hollow-t/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/moar-dev/</loc>
@@ -52,9 +43,6 @@
 <loc>http://localhost:4000/moar-dev/guitars/offset/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/moar-dev/checkout/offset/</loc>
-</url>
-<url>
 <loc>http://localhost:4000/moar-dev/order-placed/</loc>
 </url>
 <url>
@@ -67,12 +55,6 @@
 <loc>http://localhost:4000/moar-dev/place-order/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/moar-dev/checkout/solid-bass/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/moar-dev/checkout/solid-t/</loc>
-</url>
-<url>
 <loc>http://localhost:4000/moar-dev/videos/</loc>
 </url>
 <url>
@@ -80,9 +62,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/moar-dev/guitars/wayfair/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/moar-dev/checkout/wayfair/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/moar-dev/workshop/</loc>

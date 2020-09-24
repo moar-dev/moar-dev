@@ -33,57 +33,31 @@ nav-menu: false
 					<label for="customer">Email</label>
 					<input type="email" id="email" placeholder="team@moarguitars.com" name="email" required/>
 				</div>
-				<div class="field half first" style="margin-bottom: 0.4em">
-					<label for="name">Name</label>
+				<div class="field">
+					<label for="name">Your Name</label>
 					<input type="text" id="yourname" placeholder="Morty Moar" name="customer" required/>
 				</div>
-				<div class="field half">
+				<div class="field half first">
 					<label for="guitarmodel">Choose Guitar Model</label>
 					<div class="select-wrapper">
-						<select name="model" id="guitarmodel" required>
-							<option value="solid-t">Solid Morty (500USD)</option>
-							<option value="hollow-t">Hollow Morty (600USD)</option>
-							<option value="offset">Moar Offset (700USD)</option>
-							<option value="solid-bass">Solid Bass (700USD)</option>
-							<option value="hollow-bass">Hollow Bass (800USD)</option>
-							<option value="wayfair">Wayfair (1000USD)</option>
+						<select name="deposit" id="guitarmodel" onchange="updateTotals()" required>
+							<option name="morty" value="500" selected="selected">Morty</option>
+							<option name="morty-hollow" value="600">Hollow Morty</option>
+							<option name="offset" value="700">Moar Offset</option>
+							<option name="bass" value="700">Bass</option>
+							<option name="solid-bass" value="800">Hollow Bass</option>
+							<option name="wayfair" value="1000">Wayfair</option>
 						</select>
 					</div>
 				</div>
-				<div class="row uniform" style="display:none;">
-					<div class="4u 12u$(xsmall)">
-						<div class="field">
-							<label for="wood">Body Wood</label>
-							<div class="select-wrapper">
-								<select name="wood" id="wood">
-									<option value="test">Wood 1</option>
-								</select>
-							</div>
-						</div>
-					</div>
-					<div class="4u 12u$(xsmall)">
-						<div class="field">
-							<label for="neck">Neck Radius</label>
-							<div class="select-wrapper">
-								<select name="neck" id="neck">
-									<option value="test">Option 1</option>
-								</select>
-							</div>
-						</div>
-					</div>
-					<div class="4u 12u$(xsmall)">
-						<div class="field">
-							<label for="scale">Scale Length</label>
-							<div class="select-wrapper">
-								<select name="scale" id="scale">
-									<option value="test">Option 1</option>
-								</select>
-							</div>
-						</div>
-					</div>
+				<div class="field half">
+					<label for="customer">Total Deposit</label>
+					<input style="font-weight: 700;" type="text" value="$500" id="payment-total" name="total-price" disabled>
+					<!-- Next Page -->
+					<input type="hidden" name="_next" id="next" value="{{ site.url }}/order-placed?deposit=500" />
 				</div>
 				<ul class="actions">
-					<li><input id="submit" type="submit" value="Continue to Pay" class="special" onclick="showme();"/></li>
+					<li><input id="submit" type="submit" value="Submit Order" class="special"/></li>
 					<li><input id="reset" type="reset" value="Clear" /></li>
 				</ul>
 				<p style="font-size:0.6em">Prices listed are the total deposit required to process your order - after submitting this form you will be redirected to a page where you can make a payment.</p>	
@@ -92,12 +66,29 @@ nav-menu: false
 	</div>
 </section>
 
-<!-- URL Parameters -->
-<script type="text/javascript">
-    var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
-    for(var i = 0; i < hashParams.length; i++){
-        var p = hashParams[i].split('=');
-        document.getElementById(p[0]).value = decodeURIComponent(p[1]).replace('+', ' ').replace('+', ' ');;
-    }
+<!-- Form Script -->
+<script>
+function updateTotals() {
+    // Checkboxes
+    var inputs = document.getElementById('order-request').getElementsByTagName('input');
+
+    // Selected Options
+    var guitar = document.getElementById("guitarmodel");
+	var guitarcost = parseInt(guitar.options[guitar.selectedIndex].getAttribute('value'));
+
+	// Totals for text
+    document.getElementById('payment-total').value = '$' + guitarcost;
+    document.getElementById('next').value = '{{ site.url }}/order-placed?deposit=' + guitarcost;
+    
+}
+
+var section = document.getElementById('order-request');
+var inputs = section.getElementsByTagName('input');
+for (var i = 0, num = inputs.length; i < num; i++) {
+    inputs[i].addEventListener('change', updateTotals);
+}
+
+
 </script>
+
 

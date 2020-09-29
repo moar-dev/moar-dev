@@ -486,13 +486,13 @@ function updateGuitar() {
     btn.addEventListener('click', function () {
       var canvas = document.getElementById('canvas');
       var ctx = canvas.getContext('2d');
-      canvas.width =  document.body.getBoundingClientRect().width;
-      canvas.height = 631;
+      canvas.width = 100vw;
+        canvas.height = 33vw;
       var data = (new XMLSerializer()).serializeToString(svg);
       var DOMURL = window.URL || window.webkitURL || window;
 
       var img = new Image();
-      var svgBlob = new Blob([data], {type: 'image/svg+xml;charset=utf-8'});
+      var svgBlob = new Blob([data], {type: 'image/svg+xml'});
       var url = DOMURL.createObjectURL(svgBlob);
 
       img.onload = function () {

@@ -552,7 +552,8 @@
                           <path id="Path_53" data-name="Path 53" d="M9,0c4.971,0,1.874,4.128-2.6,5.678S0,13.971,0,9A9,9,0,0,1,9,0Z" transform="translate(336 493)" fill="rgba(255,255,255,0.2)"/>
                         </g>
                       </svg>                    
-				</div>
+				<canvas style="display: none;" id="canvas"></canvas>
+                </div>
                 <div class="4u 12u(small) uniform">
                     <div class="box">
                         <h3>Woods</h3>
@@ -586,6 +587,21 @@
                           <h5 style="margin-top: 1em">Neck Position</h5>
                           <input onchange="updateGuitar()" id="pickup2" type="range" min="50" max="130" value="50">
                         </div>
+                    </div>
+                </div>
+                <div class="4u 12u(small) uniform">
+                    <div class="box">
+                        <h3>Save your Morty</h3>
+                        <!-- <div style="margin-bottom: 0.5em">
+                            <input placeholder="email@moarguitars.com" type="email" id="email" name="email" required>
+                        </div>
+                        <p style="margin-bottom: 2em; font-size: 0.6em">Enter your email to save a copy of this quoteand share it with the Moar Guitars team.</p> -->
+
+                        <!-- Submit -->
+                        <ul class="actions" style="margin-bottom: 0;">
+                            <li style="width:100%; padding:0;"><input id="download" type="submit" value="Download Design" class="button special fit"/></li>
+                            <input type="hidden" name="_next" id="next" value="//order-placed" />
+                        </ul>
                     </div>
                 </div>
 			</div>
@@ -636,7 +652,7 @@
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-<!-- Form Script -->
+<!-- Update Guitar -->
 <script>
 function updateGuitar() {
 
@@ -665,4 +681,52 @@ function updateGuitar() {
     
 }
 
+</script>
+
+<!-- Save to PNG -->
+<script>
+    var btn = document.getElementById('download');
+    var svg = document.querySelector('svg');
+    var canvas = document.querySelector('canvas');
+
+    function triggerDownload (imgURI) {
+      var evt = new MouseEvent('click', {
+        view: window,
+        bubbles: false,
+        cancelable: true
+      });
+
+      var a = document.createElement('a');
+      a.setAttribute('download', 'naked-morty.png');
+      a.setAttribute('href', imgURI);
+      a.setAttribute('target', '_blank');
+
+      a.dispatchEvent(evt);
+    }
+
+    btn.addEventListener('click', function () {
+      var canvas = document.getElementById('canvas');
+      var ctx = canvas.getContext('2d');
+      canvas.width = 1920;
+        canvas.height = 631;
+      var data = (new XMLSerializer()).serializeToString(svg);
+      var DOMURL = window.URL || window.webkitURL || window;
+
+      var img = new Image();
+      var svgBlob = new Blob([data], {type: 'image/svg+xml;charset=utf-8'});
+      var url = DOMURL.createObjectURL(svgBlob);
+
+      img.onload = function () {
+        ctx.drawImage(img,0,0,1920,631);
+        DOMURL.revokeObjectURL(url);
+
+        var imgURI = canvas
+            .toDataURL('image/png')
+            .replace('image/png', 'image/octet-stream');
+
+        triggerDownload(imgURI);
+      };
+
+      img.src = url;
+    });
 </script>

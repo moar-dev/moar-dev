@@ -486,8 +486,8 @@ function updateGuitar() {
     btn.addEventListener('click', function () {
       var canvas = document.getElementById('canvas');
       var ctx = canvas.getContext('2d');
-      canvas.width = 1920;
-        canvas.height = 631;
+      canvas.width =  document.body.getBoundingClientRect().width;
+      canvas.height = 631;
       var data = (new XMLSerializer()).serializeToString(svg);
       var DOMURL = window.URL || window.webkitURL || window;
 
@@ -503,7 +503,7 @@ function updateGuitar() {
             .toDataURL('image/png')
             .replace('image/png', 'image/octet-stream');
 
-        // triggerDownload(imgURI);
+        triggerDownload(imgURI);
       };
 
       img.src = url;

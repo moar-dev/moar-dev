@@ -969,14 +969,7 @@
 
 <!-- Update Guitar -->
 <script>
-  document.addEventListener('DOMContentLoaded', function(updateGuitar) {
-  }, false);
-</script>
-
-<script>
 function updateGuitar() {
-
-
     // Body
       // Body Wood
       var body = document.getElementById("guitar-colour");
@@ -1076,6 +1069,8 @@ function updateGuitar() {
   console.log(tremType);
     
 }
+
+window.onload = updateGuitar;
 
 </script>
 

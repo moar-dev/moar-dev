@@ -8,7 +8,7 @@
     {% include header.html %} 
     
 <!-- Main -->
-<div id="main" class="alt" onload="updateGuitar()">
+<div id="main" class="alt">
 
     <!-- Save Image Modal -->
     <!-- <div class="inner row uniform" style="display:inline; position: absolute; width:100vw; height: 100vh; left: 0; top: 0; box-sizing: border-box; padding: 2em; margin: 0; background: rgba(248,248,255,0.9); z-index: 999999;">
@@ -694,7 +694,7 @@
                     <!-- Trem -->
                     <h3>Bridge & Trem</h3>
                     <!-- Trem -->
-                    <label class="select" for="headstock-colour">Tremolo</label>
+                    <label class="select" for="trem-type">Tremolo</label>
                     <div class="select-wrapper">
                         <select name="guitar-colour" id="trem-type" onchange="updateGuitar()" required>
                             <option name="none" value="hardtail">No Trem (Hardtail)</option>
@@ -704,11 +704,11 @@
                         </select>
                     </div>
                     <!-- Bridge -->
-                    <label class="select" for="headstock-colour" style="margin-top: 1em;">Bridge</label>
+                    <label class="select" for="bridge-type" style="margin-top: 1em;">Bridge</label>
                     <div class="select-wrapper">
                         <select name="guitar-colour" id="bridge-type" onchange="updateGuitar()" required>
-                            <option name="mahogany" value="">Telecaster</option>
-                            <option name="mahogany" value="">Roller</option>
+                            <option name="mahogany" value="telecaster">Telecaster</option>
+                            <option name="mahogany" value="roller">Roller</option>
                         </select>
                     </div>
                 </div>
@@ -739,6 +739,11 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 <!-- Update Guitar -->
+<script>
+  document.addEventListener('DOMContentLoaded', function(updateGuitar) {
+  }, false);
+</script>
+
 <script>
 function updateGuitar() {
 
@@ -810,12 +815,14 @@ function updateGuitar() {
         document.getElementById('trem-jazzmaster').setAttribute("style", "display:block;");
         document.getElementById('bridge-roller').setAttribute("style", "display:block;");
         document.getElementById('bridge-tele').setAttribute("style", "display:none;");
+        document.getElementById('bridge-type').value = 'roller';
       }
         // Hardtail
       else { 
+        document.getElementById('trem').setAttribute("style", "display:none;");
         document.getElementById('bridge-tele').setAttribute("style", "display:block;");
         document.getElementById('bridge-roller').setAttribute("style", "display:none;");
-        document.getElementById('trem').setAttribute("style", "display:none;");
+        document.getElementById('bridge-type').value = 'telecaster';
       }
 
 

@@ -639,10 +639,10 @@
                 <label class="select" for="guitar-colour">Body Wood</label>
                 <div class="select-wrapper">
                     <select name="guitar-colour" id="guitar-colour" onchange="updateGuitar()" required>
-                        <option name="ash" value="#E7CAB0" selected>Ash</option>
+                        <option name="ash" value="#E7CAB0">Ash</option>
                         <option name="mahogany" value="#E3A976">Mahogany</option>
                         <option name="wenge" value="#865F3D">Wenge</option>
-                        <option name="walnut" value="#5A3F28">Walnut</option>
+                        <option name="walnut" value="#5A3F28" selected="selected">Walnut</option>
                     </select>
                 </div>
                 <label class="select" for="headstock-colour" style="margin-top: 1em;">Headstock</label>
@@ -651,7 +651,7 @@
                         <option name="ash" value="#E7CAB0" selected>Ash</option>
                         <option name="mahogany" value="#E3A976">Mahogany</option>
                         <option name="wenge" value="#865F3D">Wenge</option>
-                        <option name="walnut" value="#5A3F28">Walnut</option>
+                        <option name="walnut" value="#5A3F28" selected="selected">Walnut</option>
                     </select>
                   </div>
 
@@ -660,11 +660,11 @@
                 <!-- F Holes -->
                 <h4 style="margin-top: 1em">F Holes</h4>
                 <div style="margin-top: 1em"> 
-                  <input class="binding" type="checkbox" id="check-fhole-top" data-toggle="checkbox" onchange="updateGuitar()"> 
+                  <input class="binding" type="checkbox" id="check-fhole-top" data-toggle="checkbox" onchange="updateGuitar()" checked> 
                   <label class="checkbox" for="check-fhole-top">Top F-Hole</label>
                 </div>
                 <div style="margin-top: 1em"> 
-                  <input class="binding" type="checkbox" id="check-fhole-bottom" data-toggle="checkbox" onchange="updateGuitar()"> 
+                  <input class="binding" type="checkbox" id="check-fhole-bottom" data-toggle="checkbox" onchange="updateGuitar()" checked> 
                   <label class="checkbox" for="check-fhole-bottom">Bottom F-Hole</label>
                 </div>
                 <!-- Binding -->
@@ -699,7 +699,7 @@
                         <select name="guitar-colour" id="trem-type" onchange="updateGuitar()" required>
                             <option name="none" value="hardtail">No Trem (Hardtail)</option>
                             <option name="none" value="tailpiece">Tailpiece</option>
-                            <option name="mahogany" value="jazzmaster">Jazzmaster</option>
+                            <option name="mahogany" value="jazzmaster" selected="selected">Jazzmaster</option>
                             <option name="mahogany" value="bigsby">Bigsby</option>
                         </select>
                     </div>

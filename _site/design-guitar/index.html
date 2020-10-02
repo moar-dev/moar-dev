@@ -1381,6 +1381,13 @@ function updateGuitar() {
     document.getElementById('neck-binding').style.stroke = bindingcolours;
     document.getElementById('headstock-binding').style.stroke = bindingcolours;
 
+    // Inlays
+    if (document.getElementById('check-inlays').checked) {
+      document.getElementById('inlays-dot').setAttribute("style", "display:block;");
+    } else {
+      document.getElementById('inlays-dot').setAttribute("style", "display:none;");
+    }
+
   // Bridge & Trem
     // Trem
     var trem = document.getElementById("trem-type");

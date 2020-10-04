@@ -1177,7 +1177,10 @@
                 <!-- Slider -->
                 <div class="slidecontainer">
                   <h3 style="margin-top: 1em">Pickups</h3>
-                  <h5 style="margin-top: 1em">Bridge</h5>
+                  <div style="margin-top: 1em"> 
+                    <input class="binding" type="checkbox" id="check-bridge-pup" data-toggle="checkbox" onchange="updateGuitar()" checked> 
+                    <label class="checkbox" for="check-bridge-pup">Bridge Pickup</label>
+                  </div>
                   <div class="select-wrapper">
                     <select name="guitar-colour" id="bridge-pickup-type" onchange="updateGuitar()" required> 
                       <option name="mahogany" value="p90" selected="selected">P90</option>
@@ -1186,9 +1189,12 @@
                       <option name="mahogany" value="single-coil">Single Coil</option>
                     </select>
                   </div>
-                  <label class="select" for="pickup1" style="margin-top: 1em;">Position</label>
+                  <label class="select" for="pickup1" style="margin-top: 1em;">Bridge Position</label>
                   <input onchange="updateGuitar()" id="pickup1" type="range" min="2" max="65" value="10">
-                  <h5 style="margin-top: 1em">Neck</h5>
+                  <div style="margin-top: 1em"> 
+                    <input class="binding" type="checkbox" id="check-neck-pup" data-toggle="checkbox" onchange="updateGuitar()" checked> 
+                    <label class="checkbox" for="check-neck-pup">Neck Pickup</label>
+                  </div>
                   <div class="select-wrapper">
                     <select name="guitar-colour" id="neck-pickup-type" onchange="updateGuitar()" required> 
                       <option name="mahogany" value="p90" selected="selected">P90</option>
@@ -1197,7 +1203,7 @@
                       <option name="mahogany" value="single-coil">Single Coil</option>
                     </select>
                   </div>
-                  <label class="select" for="pickup2" style="margin-top: 1em;">Position</label>
+                  <label class="select" for="pickup2" style="margin-top: 1em;">Neck Position</label>
                   <input onchange="updateGuitar()" id="pickup2" type="range" min="-75" max="-2" value="-10">
                 </div>
             </div>
@@ -1410,6 +1416,20 @@ function updateGuitar() {
 
 
   // Pickups
+
+    // show/hide bridge pup
+    if (document.getElementById('check-bridge-pup').checked) {
+      document.getElementById('pickup-bridge').setAttribute("style", "display:block;");
+    } else {
+      document.getElementById('pickup-bridge').setAttribute("style", "display:none;");
+    }
+    // show/hide neck pup
+    if (document.getElementById('check-neck-pup').checked) {
+      document.getElementById('pickup-neck').setAttribute("style", "display:block;");
+    } else {
+      document.getElementById('pickup-neck').setAttribute("style", "display:none;");
+    }
+
     // Bridge Pickup
     var bridgepickup = document.getElementById("bridge-pickup-type");
     var bridgePickupType = bridgepickup.options[bridgepickup.selectedIndex].value;

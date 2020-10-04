@@ -844,13 +844,13 @@
           </g>
         </g>
       </g>
-      <g id="pickup-firebird-neck" transform="translate(-243 -141)">
+      <g id="pickup-firebird-neck" transform="translate(-243 -150.401)">
         <g id="pickup-p90-neck-3" data-name="pickup-p90-neck" transform="translate(937.464 489.627)">
           <g id="Group_8-3" data-name="Group 8" transform="translate(0 0)">
-            <path id="Path_5-5" data-name="Path 5" d="M489.984,439.789c-.042,4.472,0,92.6,0,92.6s.454,4.966-5.485,5.126-32.8,0-32.8,0-6.6,1.816-6.831-5.126,0-92.6,0-92.6-2.094-4.136,6.831-4.264,32.8,0,32.8,0S490.026,435.317,489.984,439.789Z" transform="translate(-444.651 -435.468)" fill="#d5d5d5" stroke="#b4b4b4" stroke-width="1"/>
+            <path id="Path_5-5" data-name="Path 5" d="M489.984,440.651c-.042,5.365,0,111.07,0,111.07s.454,5.957-5.485,6.148-32.8,0-32.8,0-6.6,2.179-6.831-6.148,0-111.07,0-111.07-2.094-4.961,6.831-5.115,32.8,0,32.8,0S490.026,435.287,489.984,440.651Z" transform="translate(-444.651 -435.468)" fill="#d5d5d5" stroke="#b4b4b4" stroke-width="1"/>
           </g>
           <g id="Group_20-3" data-name="Group 20" transform="translate(5.732 0)">
-            <path id="Path_5-6" data-name="Path 5" d="M484.264,439.775c-.042,4.457,0,92.289,0,92.289s-3.192-90.387-5.485-92.289-41.728-4.122-32.8-4.25,32.8,0,32.8,0S484.306,435.317,484.264,439.775Z" transform="translate(-444.663 -435.468)" fill="rgba(255,255,255,0.38)"/>
+            <path id="Path_5-6" data-name="Path 5" d="M484.264,440.684c-.042,5.4,0,111.78,0,111.78s-3.192-109.477-5.485-111.78-41.728-4.993-32.8-5.148,32.8,0,32.8,0S484.306,435.285,484.264,440.684Z" transform="translate(-444.663 -435.468)" fill="rgba(255,255,255,0.38)"/>
           </g>
         </g>
       </g>
@@ -967,13 +967,13 @@
           </g>
         </g>
       </g>
-      <g id="pickup-firebird-bridge" transform="translate(-469 -143)">
+      <g id="pickup-firebird-bridge" transform="translate(-469 -150.401)">
         <g id="pickup-p90-neck-5" data-name="pickup-p90-neck" transform="translate(937.464 489.627)">
           <g id="Group_8-6" data-name="Group 8" transform="translate(0 0)">
-            <path id="Path_5-11" data-name="Path 5" d="M489.984,439.789c-.042,4.472,0,92.6,0,92.6s.454,4.966-5.485,5.126-32.8,0-32.8,0-6.6,1.816-6.831-5.126,0-92.6,0-92.6-2.094-4.136,6.831-4.264,32.8,0,32.8,0S490.026,435.317,489.984,439.789Z" transform="translate(-444.651 -435.468)" fill="#d5d5d5" stroke="#b4b4b4" stroke-width="1"/>
+            <path id="Path_5-11" data-name="Path 5" d="M489.984,440.567c-.042,5.277,0,109.259,0,109.259s.454,5.86-5.485,6.048-32.8,0-32.8,0-6.6,2.143-6.831-6.048,0-109.259,0-109.259-2.094-4.88,6.831-5.032,32.8,0,32.8,0S490.026,435.29,489.984,440.567Z" transform="translate(-444.651 -435.468)" fill="#d5d5d5" stroke="#b4b4b4" stroke-width="1"/>
           </g>
           <g id="Group_20-6" data-name="Group 20" transform="translate(5.732 0)">
-            <path id="Path_5-12" data-name="Path 5" d="M484.264,439.775c-.042,4.457,0,92.289,0,92.289s-3.192-90.387-5.485-92.289-41.728-4.122-32.8-4.25,32.8,0,32.8,0S484.306,435.317,484.264,439.775Z" transform="translate(-444.663 -435.468)" fill="rgba(255,255,255,0.38)"/>
+            <path id="Path_5-12" data-name="Path 5" d="M484.264,440.6c-.042,5.307,0,109.869,0,109.869s-3.192-107.606-5.485-109.869-41.728-4.908-32.8-5.06,32.8,0,32.8,0S484.306,435.289,484.264,440.6Z" transform="translate(-444.663 -435.468)" fill="rgba(255,255,255,0.38)"/>
           </g>
         </g>
       </g>

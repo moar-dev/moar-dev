@@ -1047,24 +1047,24 @@
                   <option name="walnut" value="#834429">Bubinga</option>
                   <option name="mahogany" value="#C99A6F">Cedar</option>
                   <option name="mahogany" value="#E4B372">Pine</option>
-                  <option name="mahogany" value="#E3A976" selected="selected">Mahogany</option>
+                  <option name="mahogany" value="#E3A976">Mahogany</option>
                   <option name="walnut" value="#F1D9BA">Maple</option>
                   <option name="walnut" value="#D8A66B">Swamp Ash</option>
                   <option name="walnut" value="#73543E">Walnut</option>
-                  <option name="wenge" value="#463123">Wenge</option>
+                  <option name="wenge" value="#463123" selected="selected">Wenge</option>
               </select>
             </div>
             <label class="select" for="headstock-colour" style="margin-top: 1em;">Neck</label>
             <div class="select-wrapper">
               <select name="headstock-colour" id="headstock-colour" onchange="updateGuitar()" required>
-                  <option name="mahogany" value="#895641" selected="selected">African Rosewood</option>
+                  <option name="mahogany" value="#895641">African Rosewood</option>
                   <option name="ash" value="#D7B186">Ash</option>
                   <option name="walnut" value="#834429">Bubinga</option>
                   <option name="mahogany" value="#C99A6F">Cedar</option>
                   <option name="mahogany" value="#E3A976">Mahogany</option>
                   <option name="ash" value="#F1D9BA">Maple</option>
                   <option name="walnut" value="#73543E">Walnut</option>
-                  <option name="wenge" value="#463123">Wenge</option>
+                  <option name="wenge" value="#463123" selected="selected">Wenge</option>
               </select>
             </div>
             <label class="select" for="fretboard-colour" style="margin-top: 1em;">Fretboard</label>
@@ -1078,12 +1078,12 @@
                   <option name="maple" value="#F1D9BA">Maple</option>
                   <option name="madagascanrosewood" value="#B45021">Madagascan Rosewood</option>
                   <option name="walnut" value="#707070">Malaysian Blackwood</option>
-                  <option name="ash" value="#CEA87C">Oak</option>
-                  <option name="walnut" value="#AB8C69">Ovangkol</option>
-                  <option name="walnut" value="#C95519">Padouk</option>
-                  <option name="walnut" value="#73543E">Walnut</option>
-                  <option name="wenge" value="#463123">Wenge</option>
-                  <option name="walnut" value="#A57C64">Zebrano</option>
+                  <option name="Oak" value="#CEA87C">Oak</option>
+                  <option name="Ovangkol" value="#AB8C69">Ovangkol</option>
+                  <option name="Padouk" value="#C95519">Padouk</option>
+                  <option name="Walnut" value="#73543E">Walnut</option>
+                  <option name="Wenge" value="#463123">Wenge</option>
+                  <option name="Zebrano" value="#A57C64">Zebrano</option>
               </select>
             </div>
             <!-- Trem -->
@@ -1092,11 +1092,11 @@
             <label class="select" for="trem-type">Tremolo</label>
             <div class="select-wrapper">
                 <select name="guitar-colour" id="trem-type" onchange="updateGuitar()" required>
-                    <option name="none" value="hardtail">Hardtail (Saddled)</option>
-                    <option name="none" value="abr">Hardtail</option>
-                    <option name="none" value="tailpiece">Tailpiece</option>
-                    <option name="mahogany" value="jazzmaster">Jazzmaster</option>
-                    <option name="mahogany" value="bigsby" selected="selected">Bigsby</option>
+                    <option name="hardtail" value="hardtail">Hardtail (Saddled)</option>
+                    <option name="abr" value="abr">Hardtail</option>
+                    <option name="tailpiece" value="tailpiece">Tailpiece</option>
+                    <option name="jazzmaster" value="jazzmaster">Jazzmaster</option>
+                    <option name="bigsby" value="bigsby" selected="selected">Bigsby</option>
                 </select>
             </div>
             <!-- Bridge -->
@@ -1104,7 +1104,7 @@
             <div class="select-wrapper">
                 <select name="guitar-colour" id="bridge-type" onchange="updateGuitar()" required> 
                     <option name="mahogany" value="telecaster">Telecaster</option>
-                    <option name="mahogany" value="roller">Roller</option>
+                    <option name="mahogany" value="roller" selected="selected">Roller</option>
                 </select>
             </div>
 
@@ -1337,8 +1337,6 @@ function updateGuitar() {
     // Trem
     var trem = document.getElementById("trem-type");
     var tremType = trem.options[trem.selectedIndex].value;
-    var bridge = document.getElementById("bridge-type");
-    var bridgeType = bridge.options[bridge.selectedIndex].value;
 
       // Jazzmaster
     if (tremType === 'jazzmaster') {
@@ -1358,8 +1356,8 @@ function updateGuitar() {
       document.getElementById('trem-jazzmaster').setAttribute("style", "display:none;");
       document.getElementById('bridge-tailpiece').setAttribute("style", "display:none;");
       document.getElementById('bridge-gibson').setAttribute("style", "display:none;");
-      document.getElementById('bridge-roller').setAttribute("style", "display:block;");
       document.getElementById('bridge-tele').setAttribute("style", "display:none;");
+      document.getElementById('bridge-roller').setAttribute("style", "display:block;");
       document.getElementById('bridge-type').value = 'roller';
       document.getElementById("bridge-type").disabled = true;
     }
@@ -1395,6 +1393,9 @@ function updateGuitar() {
       document.getElementById('bridge-type').value = 'telecaster';
       document.getElementById("bridge-type").disabled = true;
     }
+
+    var bridge = document.getElementById("bridge-type");
+    var bridgeType = bridge.options[bridge.selectedIndex].value;
 
     if (bridgeType === 'telecaster') {
       document.getElementById('bridge-roller').setAttribute("style", "display:none;");
@@ -1433,7 +1434,7 @@ function updateGuitar() {
       document.getElementById('pickup-firebird-bridge').setAttribute("style", "display:block;");
       document.getElementById('pickup-singlecoil-bridge').setAttribute("style", "display:none;");
     }
-      // Hardtail
+      // default
     else { 
       document.getElementById('pickup-p90-bridge').setAttribute("style", "display:none;");
       document.getElementById('pickup-humbucker-bridge').setAttribute("style", "display:none;");
@@ -1464,7 +1465,7 @@ function updateGuitar() {
       document.getElementById('pickup-firebird-neck').setAttribute("style", "display:block;");
       document.getElementById('pickup-singlecoil-neck').setAttribute("style", "display:none;");
     }
-      // Hardtail
+      // default
     else { 
       document.getElementById('pickup-p90-neck').setAttribute("style", "display:none;");
       document.getElementById('pickup-humbucker-neck').setAttribute("style", "display:none;");

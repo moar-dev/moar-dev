@@ -24,10 +24,9 @@
     <!-- Guitar Builder -->
 	<section>
 			<div class="inner row uniform">
-        <div class="12u 12u(small)" style="margin-bottom: 2em; box-sizing: border-box;">
-          <h1>Yoar Wayfair Design</h1>
+        <div class="12u 12u(small)">
           <!-- SVG -->
-					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" viewBox="0 0 1950 800">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" viewBox="0 0 1950 800">
             <defs>
               <clipPath id="clip-path">
                 <rect width="23.181" height="42.624" fill="none"/>
@@ -1264,203 +1263,204 @@
           </svg>
 
           <canvas style="width: 100%; display: none;" id="canvas"></canvas>
-
-          <!-- Submit -->
-          <!-- <ul class="actions" style="margin-bottom: 0;">
-              <li style="width:100%; padding:0;"><input id="download" type="submit" value="Download Design" class="button fit"/></li>
-              <input type="hidden" name="_next" id="next" value="{{ site.baseurl }}/order-placed" />
-          </ul> -->
         </div>
-        <div class="4u 12u(small) uniform">
-          <div class="box">
-            <h2>Guitar</h2>
-            <!-- Body -->
-            <h3>Woods</h3>
-            <label class="select" for="guitar-colour">Body Wood</label>
-            <div class="select-wrapper">
-              <select name="guitar-colour" id="guitar-colour" onchange="updateGuitar()" required>
-                  <option name="mahogany" value="#D9B894">Alder</option>
-                  <option name="ash" value="#D7B186">Ash</option>
-                  <option name="walnut" value="#834429">Bubinga</option>
-                  <option name="mahogany" value="#C99A6F">Cedar</option>
-                  <option name="mahogany" value="#E4B372">Pine</option>
-                  <option name="mahogany" value="#E3A976">Mahogany</option>
-                  <option name="walnut" value="#F1D9BA">Maple</option>
-                  <option name="walnut" value="#D8A66B">Swamp Ash</option>
-                  <option name="walnut" value="#73543E">Walnut</option>
-                  <option name="wenge" value="#463123" selected="selected">Wenge</option>
-              </select>
-            </div>
-            <label class="select" for="headstock-colour" style="margin-top: 1em;">Neck</label>
-            <div class="select-wrapper">
-              <select name="headstock-colour" id="headstock-colour" onchange="updateGuitar()" required>
-                  <option name="mahogany" value="#895641">African Rosewood</option>
-                  <option name="ash" value="#D7B186">Ash</option>
-                  <option name="walnut" value="#834429">Bubinga</option>
-                  <option name="mahogany" value="#C99A6F">Cedar</option>
-                  <option name="mahogany" value="#E3A976">Mahogany</option>
-                  <option name="ash" value="#F1D9BA">Maple</option>
-                  <option name="walnut" value="#73543E">Walnut</option>
-                  <option name="wenge" value="#463123" selected="selected">Wenge</option>
-              </select>
-            </div>
-            <label class="select" for="fretboard-colour" style="margin-top: 1em;">Fretboard</label>
-            <div class="select-wrapper">
-              <select name="fretboard-colour" id="fretboard-colour" onchange="updateGuitar()" required>
-                  <option name="mahogany" value="#895641">African Rosewood</option>
-                  <option name="walnut" value="#834429">Bubinga</option>
-                  <option name="walnut" value="#A65232">Cocobolo</option>
-                  <option name="ash" value="#323031" selected="selected">Ebony</option>
-                  <option name="mahogany" value="#4F3C31">Indian Rosewood</option>
-                  <option name="maple" value="#F1D9BA">Maple</option>
-                  <option name="madagascanrosewood" value="#B45021">Madagascan Rosewood</option>
-                  <option name="walnut" value="#707070">Malaysian Blackwood</option>
-                  <option name="Oak" value="#CEA87C">Oak</option>
-                  <option name="Ovangkol" value="#AB8C69">Ovangkol</option>
-                  <option name="Padouk" value="#C95519">Padouk</option>
-                  <option name="Walnut" value="#73543E">Walnut</option>
-                  <option name="Wenge" value="#463123">Wenge</option>
-                  <option name="Zebrano" value="#A57C64">Zebrano</option>
-              </select>
-            </div>
-            <!-- Trem -->
-            <h3 style="margin-top: 2em">Bridge & Trem</h3>
-            <!-- Trem -->
-            <label class="select" for="trem-type">Tremolo</label>
-            <div class="select-wrapper">
-                <select name="guitar-colour" id="trem-type" onchange="updateGuitar()" required>
-                    <option name="hardtail" value="hardtail">Hardtail (Saddled)</option>
-                    <option name="abr" value="abr">Hardtail</option>
-                    <option name="tailpiece" value="tailpiece">Tailpiece</option>
-                    <option name="jazzmaster" value="jazzmaster">Jazzmaster</option>
-                    <option name="bigsby" value="bigsby" selected="selected">Bigsby</option>
-                </select>
-            </div>
-            <!-- Bridge -->
-            <label class="select" for="bridge-type" style="margin-top: 1em;">Bridge</label>
-            <div class="select-wrapper">
-                <select name="guitar-colour" id="bridge-type" onchange="updateGuitar()" required> 
-                    <option name="mahogany" value="telecaster">Telecaster</option>
-                    <option name="mahogany" value="roller" selected="selected">Roller</option>
-                </select>
-            </div>
-
-            <!-- Roasted -->
-            <!-- <h4 style="margin-top: 1em;">Roasted Woods</h4>
-            <div style="margin-top: 1em"> 
-              <input class="binding" type="checkbox" id="check-roasted-body" data-toggle="checkbox" onchange="updateGuitar()"> 
-              <label class="checkbox" for="check-roasted-body">Body</label>
-            </div>
-            <div style="margin-top: 1em"> 
-              <input class="binding" type="checkbox" id="check-roasted-neck" data-toggle="checkbox" onchange="updateGuitar()"> 
-              <label class="checkbox" for="check-roasted-neck">Neck</label>
-            </div>
-            <div style="margin-top: 1em"> 
-              <input class="binding" type="checkbox" id="check-roasted-fret" data-toggle="checkbox" onchange="updateGuitar()"> 
-              <label class="checkbox" for="check-roasted-fret">Fretboard</label>
-            </div> -->
-
+        <div class="12u 12u(small)" style="margin-bottom: 1em; box-sizing: border-box;">
+          <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'tab-woods')" id="defaultOpen">Woods and Hardware</button>
+            <button class="tablinks" onclick="openTab(event, 'tab-finish')">Finish and Trim</button>
+            <button class="tablinks" onclick="openTab(event, 'tab-pickups')">Pickups</button>
+            <button class="tablinks" onclick="openTab(event, 'tab-controls')">Controls</button>
           </div>
-        </div>
-        <div class="4u 12u(small) uniform">
-          <div class="box">
-
-            <!-- Finish -->
-            <h2>Finish and Trim</h2>
-            <!-- F Holes -->
-            <h3>F Holes</h3>
-            <div style="margin-top: 1em"> 
-              <input class="binding" type="checkbox" id="check-fhole-top" data-toggle="checkbox" onchange="updateGuitar()" checked> 
-              <label class="checkbox" for="check-fhole-top">Top F-Hole</label>
-            </div>
-            <div style="margin-top: 1em"> 
-              <input class="binding" type="checkbox" id="check-fhole-bottom" data-toggle="checkbox" onchange="updateGuitar()" checked> 
-              <label class="checkbox" for="check-fhole-bottom">Bottom F-Hole</label>
-            </div>
-            <!-- Binding -->
-            <h3 style="margin-top: 1em">Binding</h3>
-            <!-- Binding Colour -->
-            <div class="select-wrapper">
-                <select name="guitar-colour" id="binding-colour" onchange="updateGuitar()" required> 
-                    <option name="mahogany" value="909090">Black</option>
-                    <option name="mahogany" value="ffffff" selected="selected">White</option>
-                </select>
-            </div>
-            <div style="margin-top: 1em"> 
-              <input class="binding" value="" type="checkbox" id="check-binding-body" data-toggle="checkbox" onchange="updateGuitar()"> 
-              <label class="checkbox" for="check-binding-body">Bind Body</label>
-            </div>
-            <div style="margin-top: 1em"> 
-              <input class="binding" value="" type="checkbox" id="check-binding-fhole" data-toggle="checkbox" onchange="updateGuitar()"> 
-              <label class="checkbox" for="check-binding-fhole">Bind F-Hole(s)</label>
-            </div>
-            <div style="margin-top: 1em"> 
-              <input class="binding" value="" type="checkbox" id="check-binding-neck" data-toggle="checkbox" onchange="updateGuitar()"> 
-              <label class="checkbox" for="check-binding-neck">Bind Neck</label>
-            </div>
-            <div style="margin-top: 1em"> 
-              <input class="binding" value="" type="checkbox" id="check-binding-head" data-toggle="checkbox" onchange="updateGuitar()"> 
-              <label class="checkbox" for="check-binding-head">Bind Headstock</label>
-            </div>
-            <h3 style="margin-top: 1em">Inlays</h3>
-            <div style="margin-top: 1em"> 
-              <input class="binding" type="checkbox" id="check-inlays" data-toggle="checkbox" onchange="updateGuitar()" checked> 
-              <label class="checkbox" for="check-inlays">Dot Inlays</label>
+          <div id="tab-woods" class="tabcontent" style="width: 100%">
+            <div class="inner row uniform" style="margin-top: 1em;">
+              <div class="6u 12u(small)">
+                <h4>Select Woods</h4>
+                <label class="select" for="guitar-colour">Body Wood</label>
+                <div class="select-wrapper">
+                  <select name="guitar-colour" id="guitar-colour" onchange="updateGuitar()" required>
+                      <option name="mahogany" value="#D9B894">Alder</option>
+                      <option name="ash" value="#D7B186">Ash</option>
+                      <option name="walnut" value="#834429">Bubinga</option>
+                      <option name="mahogany" value="#C99A6F">Cedar</option>
+                      <option name="mahogany" value="#E4B372">Pine</option>
+                      <option name="mahogany" value="#E3A976">Mahogany</option>
+                      <option name="walnut" value="#F1D9BA">Maple</option>
+                      <option name="walnut" value="#D8A66B">Swamp Ash</option>
+                      <option name="walnut" value="#73543E">Walnut</option>
+                      <option name="wenge" value="#463123" selected="selected">Wenge</option>
+                  </select>
+                </div>
+                <label class="select" for="headstock-colour" style="margin-top: 1em;">Neck</label>
+                <div class="select-wrapper">
+                  <select name="headstock-colour" id="headstock-colour" onchange="updateGuitar()" required>
+                      <option name="mahogany" value="#895641">African Rosewood</option>
+                      <option name="ash" value="#D7B186">Ash</option>
+                      <option name="walnut" value="#834429">Bubinga</option>
+                      <option name="mahogany" value="#C99A6F">Cedar</option>
+                      <option name="mahogany" value="#E3A976">Mahogany</option>
+                      <option name="ash" value="#F1D9BA">Maple</option>
+                      <option name="walnut" value="#73543E">Walnut</option>
+                      <option name="wenge" value="#463123" selected="selected">Wenge</option>
+                  </select>
+                </div>
+                <label class="select" for="fretboard-colour" style="margin-top: 1em;">Fretboard</label>
+                <div class="select-wrapper">
+                  <select name="fretboard-colour" id="fretboard-colour" onchange="updateGuitar()" required>
+                      <option name="mahogany" value="#895641">African Rosewood</option>
+                      <option name="walnut" value="#834429">Bubinga</option>
+                      <option name="walnut" value="#A65232">Cocobolo</option>
+                      <option name="ash" value="#323031" selected="selected">Ebony</option>
+                      <option name="mahogany" value="#4F3C31">Indian Rosewood</option>
+                      <option name="maple" value="#F1D9BA">Maple</option>
+                      <option name="madagascanrosewood" value="#B45021">Madagascan Rosewood</option>
+                      <option name="walnut" value="#707070">Malaysian Blackwood</option>
+                      <option name="Oak" value="#CEA87C">Oak</option>
+                      <option name="Ovangkol" value="#AB8C69">Ovangkol</option>
+                      <option name="Padouk" value="#C95519">Padouk</option>
+                      <option name="Walnut" value="#73543E">Walnut</option>
+                      <option name="Wenge" value="#463123">Wenge</option>
+                      <option name="Zebrano" value="#A57C64">Zebrano</option>
+                  </select>
+                </div>
+              </div>
+              <div class="6u 12u(small)">
+                <h4>Bridge and Tremolo</h4>
+                <!-- Trem -->
+                <label class="select" for="trem-type">Tremolo</label>
+                <div class="select-wrapper">
+                  <select name="guitar-colour" id="trem-type" onchange="updateGuitar()" required>
+                      <option name="hardtail" value="hardtail">Hardtail (Saddled)</option>
+                      <option name="abr" value="abr">Hardtail</option>
+                      <option name="tailpiece" value="tailpiece">Tailpiece</option>
+                      <option name="jazzmaster" value="jazzmaster">Jazzmaster</option>
+                      <option name="bigsby" value="bigsby" selected="selected">Bigsby</option>
+                  </select>
+                </div>
+                <!-- Bridge -->
+                <label class="select" for="bridge-type" style="margin-top: 1em;">Bridge</label>
+                <div class="select-wrapper">
+                  <select name="guitar-colour" id="bridge-type" onchange="updateGuitar()" required> 
+                      <option name="mahogany" value="telecaster">Telecaster</option>
+                      <option name="mahogany" value="roller" selected="selected">Roller</option>
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="4u 12u(small) uniform">
-          <div class="box">
-            <h2>Hardware and Electronics</h2>
-                <!-- Slider -->
+          <div id="tab-finish" class="tabcontent" style="width: 100%">
+            <div class="inner row uniform" style="margin-top: 1em;">
+              <div class="6u 12u(small)">
+                <!-- F Holes -->
+                <h4>F Holes</h4>
+                <div style="margin-top: 1em"> 
+                  <input class="binding" type="checkbox" id="check-fhole-top" data-toggle="checkbox" onchange="updateGuitar()" checked> 
+                  <label class="checkbox" for="check-fhole-top">Top F-Hole</label>
+                </div>
+                <div style="margin-top: 1em"> 
+                  <input class="binding" type="checkbox" id="check-fhole-bottom" data-toggle="checkbox" onchange="updateGuitar()" checked> 
+                  <label class="checkbox" for="check-fhole-bottom">Bottom F-Hole</label>
+                </div>
+                <!-- Inlays -->
+                <h4 style="margin-top: 1em">Inlays</h4>
+                <div style="margin-top: 1em"> 
+                  <input class="binding" type="checkbox" id="check-inlays" data-toggle="checkbox" onchange="updateGuitar()" checked> 
+                  <label class="checkbox" for="check-inlays">Dot Inlays</label>
+                </div>
+              </div>
+              <div class="6u 12u(small)">
+                <!-- Binding -->
+                <h4>Binding</h4>
+                <!-- Binding Colour -->
+                <div class="select-wrapper">
+                    <select name="guitar-colour" id="binding-colour" onchange="updateGuitar()" required> 
+                        <option name="mahogany" value="909090">Black</option>
+                        <option name="mahogany" value="ffffff" selected="selected">White</option>
+                    </select>
+                </div>
+                <div style="margin-top: 1em"> 
+                  <input class="binding" value="" type="checkbox" id="check-binding-body" data-toggle="checkbox" onchange="updateGuitar()"> 
+                  <label class="checkbox" for="check-binding-body">Bind Body</label>
+                </div>
+                <div style="margin-top: 1em"> 
+                  <input class="binding" value="" type="checkbox" id="check-binding-fhole" data-toggle="checkbox" onchange="updateGuitar()"> 
+                  <label class="checkbox" for="check-binding-fhole">Bind F-Hole(s)</label>
+                </div>
+                <div style="margin-top: 1em"> 
+                  <input class="binding" value="" type="checkbox" id="check-binding-neck" data-toggle="checkbox" onchange="updateGuitar()"> 
+                  <label class="checkbox" for="check-binding-neck">Bind Neck</label>
+                </div>
+                <div style="margin-top: 1em"> 
+                  <input class="binding" value="" type="checkbox" id="check-binding-head" data-toggle="checkbox" onchange="updateGuitar()"> 
+                  <label class="checkbox" for="check-binding-head">Bind Headstock</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tab-pickups" class="tabcontent" style="width: 100%">
+            <div class="inner row uniform" style="margin-top: 1em;">
+              <div class="6u 12u(small)">
+                <!-- Bridge -->
+                <h5 style="margin-top: 1em">Bridge Pickup</h5>
+                <div style="margin-top:1em"> 
+                  <input class="binding" type="checkbox" id="check-bridge-pup" data-toggle="checkbox" onchange="updateGuitar()" checked> 
+                  <label class="checkbox" for="check-bridge-pup">Bridge Pickup</label>
+                </div>
+                <div id="selectpup-bridge" class="select-wrapper">
+                  <select name="guitar-colour" id="bridge-pickup-type" onchange="updateGuitar()" required> 
+                    <option name="mahogany" value="p90" selected="selected">P90</option>
+                    <option name="mahogany" value="humbucker">Humbucker</option>
+                    <option name="mahogany" value="firebird">Firebird</option>
+                    <option name="mahogany" value="single-coil">Single Coil</option>
+                  </select>
+                </div>
+                <!-- Middle -->
+                <h5 style="margin-top: 1em">Middle Pickup</h5>
+                <div style="margin-top: 1em"> 
+                  <input class="binding" type="checkbox" id="check-middle-pup" data-toggle="checkbox" onchange="updateGuitar()" checked> 
+                  <label class="checkbox" for="check-middle-pup">Middle Pickup</label>
+                </div>
+                <div id="selectpup-middle" class="select-wrapper">
+                  <select name="guitar-colour" id="middle-pickup-type" onchange="updateGuitar()" required> 
+                    <option name="mahogany" value="p90" selected="selected">P90</option>
+                    <option name="mahogany" value="humbucker">Humbucker</option>
+                    <option name="mahogany" value="firebird">Firebird</option>
+                    <option name="mahogany" value="single-coil">Single Coil</option>
+                  </select>
+                </div>
+                <!-- Neck -->
+                <h5 style="margin-top: 1em">Neck Pickup</h5>
+                <div style="margin-top: 1em"> 
+                  <input class="binding" type="checkbox" id="check-neck-pup" data-toggle="checkbox" onchange="updateGuitar()" checked> 
+                  <label class="checkbox" for="check-neck-pup">Neck Pickup</label>
+                </div>
+                <div id="selectpup-neck" class="select-wrapper">
+                  <select name="guitar-colour" id="neck-pickup-type" onchange="updateGuitar()" required> 
+                    <option name="mahogany" value="p90" selected="selected">P90</option>
+                    <option name="mahogany" value="humbucker">Humbucker</option>
+                    <option name="mahogany" value="firebird">Firebird</option>
+                    <option name="mahogany" value="single-coil">Single Coil</option>
+                  </select>
+                </div>
+              </div>
+              <div class="6u 12u(small)">
                 <div class="slidecontainer">
-                  <h5 style="margin-top: 1em">Bridge Pickup</h5>
-                  <div style="margin-top: 1em"> 
-                    <input class="binding" type="checkbox" id="check-bridge-pup" data-toggle="checkbox" onchange="updateGuitar()" checked> 
-                    <label class="checkbox" for="check-bridge-pup">Bridge Pickup</label>
-                  </div>
-                  <div class="select-wrapper">
-                    <select name="guitar-colour" id="bridge-pickup-type" onchange="updateGuitar()" required> 
-                      <option name="mahogany" value="p90" selected="selected">P90</option>
-                      <option name="mahogany" value="humbucker">Humbucker</option>
-                      <option name="mahogany" value="firebird">Firebird</option>
-                      <option name="mahogany" value="single-coil">Single Coil</option>
-                    </select>
-                  </div>
-                  <label class="select" for="pickup1" style="margin-top: 1em;">Pickup Position</label>
+                  <!-- Bridge -->
+                  <label class="select" for="pickup1" style="margin-top: 1em;">Bridge Pickup Position</label>
                   <input onchange="updateGuitar()" id="pickup1" type="range" min="2" max="65" value="10">
-                  <h5 style="margin-top: 1em">Middle Pickup</h5>
-                  <div style="margin-top: 1em"> 
-                    <input class="binding" type="checkbox" id="check-middle-pup" data-toggle="checkbox" onchange="updateGuitar()" checked> 
-                    <label class="checkbox" for="check-middle-pup">Middle Pickup</label>
-                  </div>
-                  <div class="select-wrapper">
-                    <select name="guitar-colour" id="middle-pickup-type" onchange="updateGuitar()" required> 
-                      <option name="mahogany" value="p90" selected="selected">P90</option>
-                      <option name="mahogany" value="humbucker">Humbucker</option>
-                      <option name="mahogany" value="firebird">Firebird</option>
-                      <option name="mahogany" value="single-coil">Single Coil</option>
-                    </select>
-                  </div>
-                  <label class="select" for="pickup3" style="margin-top: 1em;">Pickup Position</label>
+                  <!-- Middle -->
+                  <label class="select" for="pickup3" style="margin-top: 1em;">Middle Pickup Position</label>
                   <input onchange="updateGuitar()" id="pickup3" type="range" min="-120" max="-50" value="-102">
-                  <h5 style="margin-top: 1em">Neck Pickup</h5>
-                  <div style="margin-top: 1em"> 
-                    <input class="binding" type="checkbox" id="check-neck-pup" data-toggle="checkbox" onchange="updateGuitar()" checked> 
-                    <label class="checkbox" for="check-neck-pup">Neck Pickup</label>
-                  </div>
-                  <div class="select-wrapper">
-                    <select name="guitar-colour" id="neck-pickup-type" onchange="updateGuitar()" required> 
-                      <option name="mahogany" value="p90" selected="selected">P90</option>
-                      <option name="mahogany" value="humbucker">Humbucker</option>
-                      <option name="mahogany" value="firebird">Firebird</option>
-                      <option name="mahogany" value="single-coil">Single Coil</option>
-                    </select>
-                  </div>
-                  <label class="select" for="pickup2" style="margin-top: 1em;">Pickup Position</label>
+                  <!-- Neck -->
+                  <label class="select" for="pickup2" style="margin-top: 1em;">Neck Pickup Position</label>
                   <input onchange="updateGuitar()" id="pickup2" type="range" min="-75" max="-2" value="-10">
                 </div>
-                <h3 style="margin-top: 1em">Electronics</h3>
+              </div>
+            </div>
+          </div>
+          <div id="tab-controls" class="tabcontent" style="width: 100%">
+            <div class="inner row uniform" style="margin-top: 1em;">
+              <div class="6u 12u(small)">
+                <h4>Electronics</h4>
                 <label class="checkbox" for="check-selector">Pickup Selector</label>
                 <div class="select-wrapper">
                       <select name="guitar-colour" id="check-selector" onchange="updateGuitar()" required> 
@@ -1475,7 +1475,19 @@
                     <input class="binding" type="checkbox" id="volume2" data-toggle="checkbox" onchange="updateGuitar()" checked> 
                     <label class="checkbox" for="volume2">Bottom Row</label>
                   </div>
-            </div>            
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+          
+
+          <!-- Submit -->
+          <!-- <ul class="actions" style="margin-bottom: 0;">
+              <li style="width:100%; padding:0;"><input id="download" type="submit" value="Download Design" class="button fit"/></li>
+              <input type="hidden" name="_next" id="next" value="{{ site.baseurl }}/order-placed" />
+          </ul> -->
         </div>
 			</div>
 	</section>
@@ -1491,354 +1503,377 @@
 
 <!-- Update Guitar -->
 <script>
-function updateGuitar() {
-    // Body
-      // Body Wood
-      var bodywood = document.getElementById("guitar-colour");
-      var bodywoodcolour = bodywood.options[bodywood.selectedIndex].value;
-      document.getElementById('body-wood').style.fill = bodywoodcolour;
+  function updateGuitar() {
+      // Body
+        // Body Wood
+        var bodywood = document.getElementById("guitar-colour");
+        var bodywoodcolour = bodywood.options[bodywood.selectedIndex].value;
+        document.getElementById('body-wood').style.fill = bodywoodcolour;
 
-      // Wood Grains
-      if (bodywoodcolour === '#E3A976') {
-        document.getElementById('grain-mahogany').setAttribute("style", "display:block;");
+        // Wood Grains
+        if (bodywoodcolour === '#E3A976') {
+          document.getElementById('grain-mahogany').setAttribute("style", "display:block;");
+        } else {
+          document.getElementById('grain-mahogany').setAttribute("style", "display:none;");
+        }
+
+        console.log(bodywoodcolour);
+
+    // Headsstock
+      // Neck Wood
+      var headstock = document.getElementById("headstock-colour");
+      var headstockwood = headstock.options[headstock.selectedIndex].value;
+      document.getElementById('headstock-wood').style.fill = headstockwood;
+
+      // Fretboard Wood
+      var fretboard = document.getElementById("fretboard-colour");
+      var fretboardwood = fretboard.options[fretboard.selectedIndex].value;
+      document.getElementById('neck-fretboard').style.fill = fretboardwood;
+          
+      // Roasted Woods
+        // Body
+        // if (document.getElementById('check-roasted-body').checked) {
+        //   document.getElementById('grain-mahogany').setAttribute("style", "display:block;");
+        // } else {
+        //   document.getElementById('grain-mahogany').setAttribute("style", "display:none;");
+        // }
+        
+
+    // F-Holes
+      // Top
+      if (document.getElementById('check-fhole-top').checked) {
+        document.getElementById('fhole-top').setAttribute("style", "display:block;");
       } else {
-        document.getElementById('grain-mahogany').setAttribute("style", "display:none;");
+        document.getElementById('fhole-top').setAttribute("style", "display:none;");
+        document.getElementById('fhole-to-binding').setAttribute("style", "display:none;");
+      }
+      // Bottom
+      if (document.getElementById('check-fhole-bottom').checked) {
+        document.getElementById('fhole-bottom').setAttribute("style", "display:block;");
+      } else {
+        document.getElementById('fhole-bottom').setAttribute("style", "display:none;");
+        document.getElementById('fhole-bottom-binding').setAttribute("style", "display:none;");
       }
 
-      console.log(bodywoodcolour);
-
-  // Headsstock
-    // Neck Wood
-    var headstock = document.getElementById("headstock-colour");
-    var headstockwood = headstock.options[headstock.selectedIndex].value;
-    document.getElementById('headstock-wood').style.fill = headstockwood;
-
-    // Fretboard Wood
-    var fretboard = document.getElementById("fretboard-colour");
-    var fretboardwood = fretboard.options[fretboard.selectedIndex].value;
-    document.getElementById('neck-fretboard').style.fill = fretboardwood;
-        
-    // Roasted Woods
-      // Body
-      // if (document.getElementById('check-roasted-body').checked) {
-      //   document.getElementById('grain-mahogany').setAttribute("style", "display:block;");
-      // } else {
-      //   document.getElementById('grain-mahogany').setAttribute("style", "display:none;");
-      // }
-      
-
-  // F-Holes
-    // Top
-    if (document.getElementById('check-fhole-top').checked) {
-      document.getElementById('fhole-top').setAttribute("style", "display:block;");
-    } else {
-      document.getElementById('fhole-top').setAttribute("style", "display:none;");
-      document.getElementById('fhole-to-binding').setAttribute("style", "display:none;");
-    }
-    // Bottom
-    if (document.getElementById('check-fhole-bottom').checked) {
-      document.getElementById('fhole-bottom').setAttribute("style", "display:block;");
-    } else {
-      document.getElementById('fhole-bottom').setAttribute("style", "display:none;");
-      document.getElementById('fhole-bottom-binding').setAttribute("style", "display:none;");
-    }
-
-  // Binding
-    // Body Binding
-    if (document.getElementById('check-binding-body').checked) {
-      document.getElementById('binding').setAttribute("style", "display:block;");
-    } else {
-      document.getElementById('binding').setAttribute("style", "display:none;");
-    }
+    // Binding
+      // Body Binding
+      if (document.getElementById('check-binding-body').checked) {
+        document.getElementById('binding').setAttribute("style", "display:block;");
+      } else {
+        document.getElementById('binding').setAttribute("style", "display:none;");
+      }
 
 
-    // F-Hole Binding
-    var topfholeenable = document.getElementById('fhole-top').style.display;
-    var bottomfholeenable = document.getElementById('fhole-bottom').style.display;
-    var topfholebindingenable = document.getElementById('fhole-to-binding').style.display;
-    var bottomfholebindingenable = document.getElementById('fhole-bottom-binding').style.display;
+      // F-Hole Binding
+      var topfholeenable = document.getElementById('fhole-top').style.display;
+      var bottomfholeenable = document.getElementById('fhole-bottom').style.display;
+      var topfholebindingenable = document.getElementById('fhole-to-binding').style.display;
+      var bottomfholebindingenable = document.getElementById('fhole-bottom-binding').style.display;
 
-      // Both
-    if ((document.getElementById('check-binding-fhole').checked) && (document.getElementById('check-fhole-top').checked) && (document.getElementById('check-fhole-bottom').checked)) {
-      document.getElementById('fhole-to-binding').setAttribute("style", "display:block;");
-      document.getElementById('fhole-bottom-binding').setAttribute("style", "display:block;");
-    }  
-      // Bottom only
-    else if ((document.getElementById('check-binding-fhole').checked) && (document.getElementById('check-fhole-top').checked === false) && (document.getElementById('check-fhole-bottom').checked)) {
-      document.getElementById('fhole-to-binding').setAttribute("style", "display:none;");
-      document.getElementById('fhole-bottom-binding').setAttribute("style", "display:block;");
-    } 
-      // Top only
-    else if ((document.getElementById('check-binding-fhole').checked) && (document.getElementById('check-fhole-top').checked) && (document.getElementById('check-fhole-bottom').checked === false)) {
-      document.getElementById('fhole-to-binding').setAttribute("style", "display:block;");
-      document.getElementById('fhole-bottom-binding').setAttribute("style", "display:none;");
-    } 
-      // Nothing
-    else {
-      document.getElementById('fhole-to-binding').setAttribute("style", "display:none;");
-      document.getElementById('fhole-bottom-binding').setAttribute("style", "display:none;");
-    }
+        // Both
+      if ((document.getElementById('check-binding-fhole').checked) && (document.getElementById('check-fhole-top').checked) && (document.getElementById('check-fhole-bottom').checked)) {
+        document.getElementById('fhole-to-binding').setAttribute("style", "display:block;");
+        document.getElementById('fhole-bottom-binding').setAttribute("style", "display:block;");
+      }  
+        // Bottom only
+      else if ((document.getElementById('check-binding-fhole').checked) && (document.getElementById('check-fhole-top').checked === false) && (document.getElementById('check-fhole-bottom').checked)) {
+        document.getElementById('fhole-to-binding').setAttribute("style", "display:none;");
+        document.getElementById('fhole-bottom-binding').setAttribute("style", "display:block;");
+      } 
+        // Top only
+      else if ((document.getElementById('check-binding-fhole').checked) && (document.getElementById('check-fhole-top').checked) && (document.getElementById('check-fhole-bottom').checked === false)) {
+        document.getElementById('fhole-to-binding').setAttribute("style", "display:block;");
+        document.getElementById('fhole-bottom-binding').setAttribute("style", "display:none;");
+      } 
+        // Nothing
+      else {
+        document.getElementById('fhole-to-binding').setAttribute("style", "display:none;");
+        document.getElementById('fhole-bottom-binding').setAttribute("style", "display:none;");
+      }
 
-    // Neck Binding
-    if (document.getElementById('check-binding-neck').checked) {
-      document.getElementById('neck-binding').setAttribute("style", "display:block;");
-    } else {
-      document.getElementById('neck-binding').setAttribute("style", "display:none;");
-    }
+      // Neck Binding
+      if (document.getElementById('check-binding-neck').checked) {
+        document.getElementById('neck-binding').setAttribute("style", "display:block;");
+      } else {
+        document.getElementById('neck-binding').setAttribute("style", "display:none;");
+      }
 
-    // Headstock Binding
-    if (document.getElementById('check-binding-head').checked) {
-      document.getElementById('headstock-binding').setAttribute("style", "display:block;");
-    } else {
-      document.getElementById('headstock-binding').setAttribute("style", "display:none;");
-    }
+      // Headstock Binding
+      if (document.getElementById('check-binding-head').checked) {
+        document.getElementById('headstock-binding').setAttribute("style", "display:block;");
+      } else {
+        document.getElementById('headstock-binding').setAttribute("style", "display:none;");
+      }
 
-    // Binding Colour
-    var bindingcolour = document.getElementById("binding-colour");
-    var bindingcolours = bindingcolour.options[bindingcolour.selectedIndex].value;
-    document.getElementById('binding').style.fill = bindingcolours;
-    document.getElementById('fhole-to-binding').style.fill = bindingcolours;
-    document.getElementById('fhole-bottom-binding').style.fill = bindingcolours;
-    document.getElementById('neck-binding').style.stroke = bindingcolours;
-    document.getElementById('headstock-binding').style.fill = bindingcolours;
+      // Binding Colour
+      var bindingcolour = document.getElementById("binding-colour");
+      var bindingcolours = bindingcolour.options[bindingcolour.selectedIndex].value;
+      document.getElementById('binding').style.fill = bindingcolours;
+      document.getElementById('fhole-to-binding').style.fill = bindingcolours;
+      document.getElementById('fhole-bottom-binding').style.fill = bindingcolours;
+      document.getElementById('neck-binding').style.stroke = bindingcolours;
+      document.getElementById('headstock-binding').style.fill = bindingcolours;
 
-    // Inlays
-    if (document.getElementById('check-inlays').checked) {
-      document.getElementById('inlays-dot').setAttribute("style", "display:block;");
-    } else {
-      document.getElementById('inlays-dot').setAttribute("style", "display:none;");
-    }
+      // Inlays
+      if (document.getElementById('check-inlays').checked) {
+        document.getElementById('inlays-dot').setAttribute("style", "display:block;");
+      } else {
+        document.getElementById('inlays-dot').setAttribute("style", "display:none;");
+      }
 
-  // Bridge & Trem
-    // Trem
-    var trem = document.getElementById("trem-type");
-    var tremType = trem.options[trem.selectedIndex].value;
+    // Bridge & Trem
+      // Trem
+      var trem = document.getElementById("trem-type");
+      var tremType = trem.options[trem.selectedIndex].value;
 
-      // Jazzmaster
-    if (tremType === 'jazzmaster') {
-      document.getElementById('trem').setAttribute("style", "display:block;");
-      document.getElementById('trem-bigsby').setAttribute("style", "display:none;");
-      document.getElementById('trem-jazzmaster').setAttribute("style", "display:block;");
-      document.getElementById('bridge-tailpiece').setAttribute("style", "display:none;");
-      document.getElementById('bridge-gibson').setAttribute("style", "display:none;");
-      document.getElementById('bridge-roller').setAttribute("style", "display:block;");
-      document.getElementById('bridge-tele').setAttribute("style", "display:none;");
-      document.getElementById('bridge-type').value = 'roller';
-      document.getElementById("bridge-type").disabled = true;
-    }
-    else if (tremType === 'bigsby') {
-      document.getElementById('trem').setAttribute("style", "display:block;");
-      document.getElementById('trem-bigsby').setAttribute("style", "display:block;");
-      document.getElementById('trem-jazzmaster').setAttribute("style", "display:none;");
-      document.getElementById('bridge-tailpiece').setAttribute("style", "display:none;");
-      document.getElementById('bridge-gibson').setAttribute("style", "display:none;");
-      document.getElementById('bridge-tele').setAttribute("style", "display:none;");
-      document.getElementById('bridge-roller').setAttribute("style", "display:block;");
-      document.getElementById('bridge-type').value = 'roller';
-      document.getElementById("bridge-type").disabled = true;
-    }
-    else if (tremType === 'tailpiece') {
-      document.getElementById('trem').setAttribute("style", "display:block;");
-      document.getElementById('trem-bigsby').setAttribute("style", "display:none;");
-      document.getElementById('bridge-tailpiece').setAttribute("style", "display:block;");
-      document.getElementById('bridge-gibson').setAttribute("style", "display:none;");
-      document.getElementById('trem-jazzmaster').setAttribute("style", "display:none;");
-      document.getElementById("bridge-type").disabled = false;
-    }
-    else if (tremType === 'abr') {
-      document.getElementById('trem').setAttribute("style", "display:block;");
-      document.getElementById('trem-bigsby').setAttribute("style", "display:none;");
-      document.getElementById('trem-jazzmaster').setAttribute("style", "display:none;");
-      document.getElementById('bridge-tailpiece').setAttribute("style", "display:none;");
-      document.getElementById('bridge-gibson').setAttribute("style", "display:block;");
-      document.getElementById('bridge-roller').setAttribute("style", "display:block;");
-      document.getElementById('bridge-tele').setAttribute("style", "display:none;");
-      document.getElementById('bridge-type').value = 'roller';
-      document.getElementById("bridge-type").disabled = true;
-    }
-      // Hardtail Tele
-    else { 
-      document.getElementById('trem').setAttribute("style", "display:block;");
-      document.getElementById('trem-bigsby').setAttribute("style", "display:none;");
-      document.getElementById('trem-jazzmaster').setAttribute("style", "display:none;");
-      document.getElementById('bridge-tailpiece').setAttribute("style", "display:none;");
-      document.getElementById('bridge-gibson').setAttribute("style", "display:none;");
-      document.getElementById('bridge-roller').setAttribute("style", "display:none;");
-      document.getElementById('bridge-tele').setAttribute("style", "display:block;");
-      document.getElementById('bridge-type').value = 'telecaster';
-      document.getElementById("bridge-type").disabled = true;
-    }
+        // Jazzmaster
+      if (tremType === 'jazzmaster') {
+        document.getElementById('trem').setAttribute("style", "display:block;");
+        document.getElementById('trem-bigsby').setAttribute("style", "display:none;");
+        document.getElementById('trem-jazzmaster').setAttribute("style", "display:block;");
+        document.getElementById('bridge-tailpiece').setAttribute("style", "display:none;");
+        document.getElementById('bridge-gibson').setAttribute("style", "display:none;");
+        document.getElementById('bridge-roller').setAttribute("style", "display:block;");
+        document.getElementById('bridge-tele').setAttribute("style", "display:none;");
+        document.getElementById('bridge-type').value = 'roller';
+        document.getElementById("bridge-type").disabled = true;
+      }
+      else if (tremType === 'bigsby') {
+        document.getElementById('trem').setAttribute("style", "display:block;");
+        document.getElementById('trem-bigsby').setAttribute("style", "display:block;");
+        document.getElementById('trem-jazzmaster').setAttribute("style", "display:none;");
+        document.getElementById('bridge-tailpiece').setAttribute("style", "display:none;");
+        document.getElementById('bridge-gibson').setAttribute("style", "display:none;");
+        document.getElementById('bridge-tele').setAttribute("style", "display:none;");
+        document.getElementById('bridge-roller').setAttribute("style", "display:block;");
+        document.getElementById('bridge-type').value = 'roller';
+        document.getElementById("bridge-type").disabled = true;
+      }
+      else if (tremType === 'tailpiece') {
+        document.getElementById('trem').setAttribute("style", "display:block;");
+        document.getElementById('trem-bigsby').setAttribute("style", "display:none;");
+        document.getElementById('bridge-tailpiece').setAttribute("style", "display:block;");
+        document.getElementById('bridge-gibson').setAttribute("style", "display:none;");
+        document.getElementById('trem-jazzmaster').setAttribute("style", "display:none;");
+        document.getElementById("bridge-type").disabled = false;
+      }
+      else if (tremType === 'abr') {
+        document.getElementById('trem').setAttribute("style", "display:block;");
+        document.getElementById('trem-bigsby').setAttribute("style", "display:none;");
+        document.getElementById('trem-jazzmaster').setAttribute("style", "display:none;");
+        document.getElementById('bridge-tailpiece').setAttribute("style", "display:none;");
+        document.getElementById('bridge-gibson').setAttribute("style", "display:block;");
+        document.getElementById('bridge-roller').setAttribute("style", "display:block;");
+        document.getElementById('bridge-tele').setAttribute("style", "display:none;");
+        document.getElementById('bridge-type').value = 'roller';
+        document.getElementById("bridge-type").disabled = true;
+      }
+        // Hardtail Tele
+      else { 
+        document.getElementById('trem').setAttribute("style", "display:block;");
+        document.getElementById('trem-bigsby').setAttribute("style", "display:none;");
+        document.getElementById('trem-jazzmaster').setAttribute("style", "display:none;");
+        document.getElementById('bridge-tailpiece').setAttribute("style", "display:none;");
+        document.getElementById('bridge-gibson').setAttribute("style", "display:none;");
+        document.getElementById('bridge-roller').setAttribute("style", "display:none;");
+        document.getElementById('bridge-tele').setAttribute("style", "display:block;");
+        document.getElementById('bridge-type').value = 'telecaster';
+        document.getElementById("bridge-type").disabled = true;
+      }
 
-    var bridge = document.getElementById("bridge-type");
-    var bridgeType = bridge.options[bridge.selectedIndex].value;
+      var bridge = document.getElementById("bridge-type");
+      var bridgeType = bridge.options[bridge.selectedIndex].value;
 
-    if (bridgeType === 'telecaster') {
-      document.getElementById('bridge-roller').setAttribute("style", "display:none;");
-      document.getElementById('bridge-tele').setAttribute("style", "display:block;");
-      document.getElementById('bridge-type').value = 'telecaster';
-    }
-    else if (bridgeType === 'roller') {
-      document.getElementById('bridge-roller').setAttribute("style", "display:block;");
-      document.getElementById('bridge-tele').setAttribute("style", "display:none;");
-      document.getElementById('bridge-type').value = 'roller';
-    }
+      if (bridgeType === 'telecaster') {
+        document.getElementById('bridge-roller').setAttribute("style", "display:none;");
+        document.getElementById('bridge-tele').setAttribute("style", "display:block;");
+        document.getElementById('bridge-type').value = 'telecaster';
+      }
+      else if (bridgeType === 'roller') {
+        document.getElementById('bridge-roller').setAttribute("style", "display:block;");
+        document.getElementById('bridge-tele').setAttribute("style", "display:none;");
+        document.getElementById('bridge-type').value = 'roller';
+      }
 
 
 
-  // Pickups
+    // Pickups
 
-    // show/hide bridge pup
-    if (document.getElementById('check-bridge-pup').checked) {
-      document.getElementById('pickup-bridge').setAttribute("style", "display:block;");
-    } else {
-      document.getElementById('pickup-bridge').setAttribute("style", "display:none;");
-    }
-    // show/hide middle pup
-    if (document.getElementById('check-middle-pup').checked) {
-      document.getElementById('pickup-middle').setAttribute("style", "display:block;");
-    } else {
-      document.getElementById('pickup-middle').setAttribute("style", "display:none;");
-    }
-    // show/hide neck pup
-    if (document.getElementById('check-neck-pup').checked) {
-      document.getElementById('pickup-neck').setAttribute("style", "display:block;");
-    } else {
-      document.getElementById('pickup-neck').setAttribute("style", "display:none;");
-    }
+      // show/hide bridge pup
+      if (document.getElementById('check-bridge-pup').checked) {
+        document.getElementById('pickup-bridge').setAttribute("style", "display:block;");
+        document.getElementById('selectpup-bridge').setAttribute("style", "display:block;");
+      } else {
+        document.getElementById('pickup-bridge').setAttribute("style", "display:none;");
+        document.getElementById('selectpup-bridge').setAttribute("style", "display:none;");
+      }
+      // show/hide middle pup
+      if (document.getElementById('check-middle-pup').checked) {
+        document.getElementById('pickup-middle').setAttribute("style", "display:block;");
+        document.getElementById('selectpup-middle').setAttribute("style", "display:block;");
+      } else {
+        document.getElementById('pickup-middle').setAttribute("style", "display:none;");
+        document.getElementById('selectpup-middle').setAttribute("style", "display:none;");
+      }
+      // show/hide neck pup
+      if (document.getElementById('check-neck-pup').checked) {
+        document.getElementById('pickup-neck').setAttribute("style", "display:block;");
+        document.getElementById('selectpup-neck').setAttribute("style", "display:block;");
+      } else {
+        document.getElementById('pickup-neck').setAttribute("style", "display:none;");
+        document.getElementById('selectpup-neck').setAttribute("style", "display:none;");
+      }
 
-    // Bridge Pickup
-    var bridgepickup = document.getElementById("bridge-pickup-type");
-    var bridgePickupType = bridgepickup.options[bridgepickup.selectedIndex].value;
+      // Bridge Pickup
+      var bridgepickup = document.getElementById("bridge-pickup-type");
+      var bridgePickupType = bridgepickup.options[bridgepickup.selectedIndex].value;
 
-    if (bridgePickupType === 'p90') {
-      document.getElementById('pickup-p90-bridge').setAttribute("style", "display:block;");
-      document.getElementById('pickup-humbucker-bridge').setAttribute("style", "display:none;");
-      document.getElementById('pickup-firebird-bridge').setAttribute("style", "display:none;");
-      document.getElementById('pickup-singlecoil-bridge').setAttribute("style", "display:none;");
-    }
-    else if (bridgePickupType === 'humbucker') {
-      document.getElementById('pickup-p90-bridge').setAttribute("style", "display:none;");
-      document.getElementById('pickup-humbucker-bridge').setAttribute("style", "display:block;");
-      document.getElementById('pickup-firebird-bridge').setAttribute("style", "display:none;");
-      document.getElementById('pickup-singlecoil-bridge').setAttribute("style", "display:none;");
-    }
-    else if (bridgePickupType === 'firebird') {
-      document.getElementById('pickup-p90-bridge').setAttribute("style", "display:none;");
-      document.getElementById('pickup-humbucker-bridge').setAttribute("style", "display:none;");
-      document.getElementById('pickup-firebird-bridge').setAttribute("style", "display:block;");
-      document.getElementById('pickup-singlecoil-bridge').setAttribute("style", "display:none;");
-    }
+      if (bridgePickupType === 'p90') {
+        document.getElementById('pickup-p90-bridge').setAttribute("style", "display:block;");
+        document.getElementById('pickup-humbucker-bridge').setAttribute("style", "display:none;");
+        document.getElementById('pickup-firebird-bridge').setAttribute("style", "display:none;");
+        document.getElementById('pickup-singlecoil-bridge').setAttribute("style", "display:none;");
+      }
+      else if (bridgePickupType === 'humbucker') {
+        document.getElementById('pickup-p90-bridge').setAttribute("style", "display:none;");
+        document.getElementById('pickup-humbucker-bridge').setAttribute("style", "display:block;");
+        document.getElementById('pickup-firebird-bridge').setAttribute("style", "display:none;");
+        document.getElementById('pickup-singlecoil-bridge').setAttribute("style", "display:none;");
+      }
+      else if (bridgePickupType === 'firebird') {
+        document.getElementById('pickup-p90-bridge').setAttribute("style", "display:none;");
+        document.getElementById('pickup-humbucker-bridge').setAttribute("style", "display:none;");
+        document.getElementById('pickup-firebird-bridge').setAttribute("style", "display:block;");
+        document.getElementById('pickup-singlecoil-bridge').setAttribute("style", "display:none;");
+      }
+        // default
+      else { 
+        document.getElementById('pickup-p90-bridge').setAttribute("style", "display:none;");
+        document.getElementById('pickup-humbucker-bridge').setAttribute("style", "display:none;");
+        document.getElementById('pickup-firebird-bridge').setAttribute("style", "display:none;");
+        document.getElementById('pickup-singlecoil-bridge').setAttribute("style", "display:block;");
+      }
+
+      // Middle Pickup
+      var middlepickup = document.getElementById("middle-pickup-type");
+      var middlePickupType = middlepickup.options[middlepickup.selectedIndex].value;
+
+      if (middlePickupType === 'p90') {
+        document.getElementById('pickup-p90-middle').setAttribute("style", "display:block;");
+        document.getElementById('pickup-humbucker-middle').setAttribute("style", "display:none;");
+        document.getElementById('pickup-firebird-middle').setAttribute("style", "display:none;");
+        document.getElementById('pickup-singlecoil-middle').setAttribute("style", "display:none;");
+      }
+      else if (middlePickupType === 'humbucker') {
+        document.getElementById('pickup-p90-middle').setAttribute("style", "display:none;");
+        document.getElementById('pickup-humbucker-middle').setAttribute("style", "display:block;");
+        document.getElementById('pickup-firebird-middle').setAttribute("style", "display:none;");
+        document.getElementById('pickup-singlecoil-middle').setAttribute("style", "display:none;");
+      }
+      else if (middlePickupType === 'firebird') {
+        document.getElementById('pickup-p90-middle').setAttribute("style", "display:none;");
+        document.getElementById('pickup-humbucker-middle').setAttribute("style", "display:none;");
+        document.getElementById('pickup-firebird-middle').setAttribute("style", "display:block;");
+        document.getElementById('pickup-singlecoil-middle').setAttribute("style", "display:none;");
+      }
       // default
-    else { 
-      document.getElementById('pickup-p90-bridge').setAttribute("style", "display:none;");
-      document.getElementById('pickup-humbucker-bridge').setAttribute("style", "display:none;");
-      document.getElementById('pickup-firebird-bridge').setAttribute("style", "display:none;");
-      document.getElementById('pickup-singlecoil-bridge').setAttribute("style", "display:block;");
-    }
+      else { 
+        document.getElementById('pickup-p90-middle').setAttribute("style", "display:none;");
+        document.getElementById('pickup-humbucker-middle').setAttribute("style", "display:none;");
+        document.getElementById('pickup-firebird-middle').setAttribute("style", "display:none;");
+        document.getElementById('pickup-singlecoil-middle').setAttribute("style", "display:block;");
+      }
 
-    // Middle Pickup
-    var middlepickup = document.getElementById("middle-pickup-type");
-    var middlePickupType = middlepickup.options[middlepickup.selectedIndex].value;
+      // Neck Pickup
+      var neckpickup = document.getElementById("neck-pickup-type");
+      var neckPickupType = neckpickup.options[neckpickup.selectedIndex].value;
 
-    if (middlePickupType === 'p90') {
-      document.getElementById('pickup-p90-middle').setAttribute("style", "display:block;");
-      document.getElementById('pickup-humbucker-middle').setAttribute("style", "display:none;");
-      document.getElementById('pickup-firebird-middle').setAttribute("style", "display:none;");
-      document.getElementById('pickup-singlecoil-middle').setAttribute("style", "display:none;");
-    }
-    else if (middlePickupType === 'humbucker') {
-      document.getElementById('pickup-p90-middle').setAttribute("style", "display:none;");
-      document.getElementById('pickup-humbucker-middle').setAttribute("style", "display:block;");
-      document.getElementById('pickup-firebird-middle').setAttribute("style", "display:none;");
-      document.getElementById('pickup-singlecoil-middle').setAttribute("style", "display:none;");
-    }
-    else if (middlePickupType === 'firebird') {
-      document.getElementById('pickup-p90-middle').setAttribute("style", "display:none;");
-      document.getElementById('pickup-humbucker-middle').setAttribute("style", "display:none;");
-      document.getElementById('pickup-firebird-middle').setAttribute("style", "display:block;");
-      document.getElementById('pickup-singlecoil-middle').setAttribute("style", "display:none;");
-    }
-    // default
-    else { 
-      document.getElementById('pickup-p90-middle').setAttribute("style", "display:none;");
-      document.getElementById('pickup-humbucker-middle').setAttribute("style", "display:none;");
-      document.getElementById('pickup-firebird-middle').setAttribute("style", "display:none;");
-      document.getElementById('pickup-singlecoil-middle').setAttribute("style", "display:block;");
-    }
+      if (neckPickupType === 'p90') {
+        document.getElementById('pickup-p90-neck').setAttribute("style", "display:block;");
+        document.getElementById('pickup-humbucker-neck').setAttribute("style", "display:none;");
+        document.getElementById('pickup-firebird-neck').setAttribute("style", "display:none;");
+        document.getElementById('pickup-singlecoil-neck').setAttribute("style", "display:none;");
+      }
+      else if (neckPickupType === 'humbucker') {
+        document.getElementById('pickup-p90-neck').setAttribute("style", "display:none;");
+        document.getElementById('pickup-humbucker-neck').setAttribute("style", "display:block;");
+        document.getElementById('pickup-firebird-neck').setAttribute("style", "display:none;");
+        document.getElementById('pickup-singlecoil-neck').setAttribute("style", "display:none;");
+      }
+      else if (neckPickupType === 'firebird') {
+        document.getElementById('pickup-p90-neck').setAttribute("style", "display:none;");
+        document.getElementById('pickup-humbucker-neck').setAttribute("style", "display:none;");
+        document.getElementById('pickup-firebird-neck').setAttribute("style", "display:block;");
+        document.getElementById('pickup-singlecoil-neck').setAttribute("style", "display:none;");
+      }
+        // default
+      else { 
+        document.getElementById('pickup-p90-neck').setAttribute("style", "display:none;");
+        document.getElementById('pickup-humbucker-neck').setAttribute("style", "display:none;");
+        document.getElementById('pickup-firebird-neck').setAttribute("style", "display:none;");
+        document.getElementById('pickup-singlecoil-neck').setAttribute("style", "display:block;");
+      }
+  	
+      // Electronics
+      var pickup1 = 'translate(' + document.getElementById("pickup1").value + ', -2)';
+      var pickup2 = 'translate(' + document.getElementById("pickup2").value + ', -2)';
+      var pickup3 = 'translate(' + document.getElementById("pickup3").value + ', -2)';
 
-    // Neck Pickup
-    var neckpickup = document.getElementById("neck-pickup-type");
-    var neckPickupType = neckpickup.options[neckpickup.selectedIndex].value;
+      // Pickup Position
+      document.getElementById('pickup-bridge').setAttribute('transform', pickup1);
+      document.getElementById('pickup-neck').setAttribute('transform', pickup2);
+      document.getElementById('pickup-middle').setAttribute('transform', pickup3);
 
-    if (neckPickupType === 'p90') {
-      document.getElementById('pickup-p90-neck').setAttribute("style", "display:block;");
-      document.getElementById('pickup-humbucker-neck').setAttribute("style", "display:none;");
-      document.getElementById('pickup-firebird-neck').setAttribute("style", "display:none;");
-      document.getElementById('pickup-singlecoil-neck').setAttribute("style", "display:none;");
+      // Pup selector
+      var selector = document.getElementById("check-selector");
+      var selectorpos = selector.options[selector.selectedIndex].value;
+
+      if (selectorpos === 'pos1') {
+        document.getElementById('selector-switch-1').setAttribute("style", "display:none;");
+        document.getElementById('selector-switch-2').setAttribute("style", "display:block;");
+      } else {
+        document.getElementById('selector-switch-1').setAttribute("style", "display:block;");
+        document.getElementById('selector-switch-2').setAttribute("style", "display:none;");
+      }
+
+      // Volume and Tone
+      if (document.getElementById('volume1').checked) {
+        document.getElementById('pot-1').setAttribute("style", "display:block;");
+        document.getElementById('pot-2').setAttribute("style", "display:block;");
+      } else {
+        document.getElementById('pot-1').setAttribute("style", "display:none;");
+        document.getElementById('pot-2').setAttribute("style", "display:none;");
+      }
+      if (document.getElementById('volume2').checked) {
+        document.getElementById('pot-3').setAttribute("style", "display:block;");
+        document.getElementById('pot-4').setAttribute("style", "display:block;");
+      } else {
+        document.getElementById('pot-3').setAttribute("style", "display:none;");
+        document.getElementById('pot-4').setAttribute("style", "display:none;");
+      }
+
+  }
+
+  window.onload = updateGuitar;
+</script>
+
+<!-- Tabs -->
+<script>
+  function openTab(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
     }
-    else if (neckPickupType === 'humbucker') {
-      document.getElementById('pickup-p90-neck').setAttribute("style", "display:none;");
-      document.getElementById('pickup-humbucker-neck').setAttribute("style", "display:block;");
-      document.getElementById('pickup-firebird-neck').setAttribute("style", "display:none;");
-      document.getElementById('pickup-singlecoil-neck').setAttribute("style", "display:none;");
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-    else if (neckPickupType === 'firebird') {
-      document.getElementById('pickup-p90-neck').setAttribute("style", "display:none;");
-      document.getElementById('pickup-humbucker-neck').setAttribute("style", "display:none;");
-      document.getElementById('pickup-firebird-neck').setAttribute("style", "display:block;");
-      document.getElementById('pickup-singlecoil-neck').setAttribute("style", "display:none;");
-    }
-      // default
-    else { 
-      document.getElementById('pickup-p90-neck').setAttribute("style", "display:none;");
-      document.getElementById('pickup-humbucker-neck').setAttribute("style", "display:none;");
-      document.getElementById('pickup-firebird-neck').setAttribute("style", "display:none;");
-      document.getElementById('pickup-singlecoil-neck').setAttribute("style", "display:block;");
-    }
-	
-    // Electronics
-    var pickup1 = 'translate(' + document.getElementById("pickup1").value + ', -2)';
-    var pickup2 = 'translate(' + document.getElementById("pickup2").value + ', -2)';
-    var pickup3 = 'translate(' + document.getElementById("pickup3").value + ', -2)';
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
 
-    // Pickup Position
-    document.getElementById('pickup-bridge').setAttribute('transform', pickup1);
-    document.getElementById('pickup-neck').setAttribute('transform', pickup2);
-    document.getElementById('pickup-middle').setAttribute('transform', pickup3);
-
-    // Pup selector
-    var selector = document.getElementById("check-selector");
-    var selectorpos = selector.options[selector.selectedIndex].value;
-
-    if (selectorpos === 'pos1') {
-      document.getElementById('selector-switch-1').setAttribute("style", "display:block;");
-      document.getElementById('selector-switch-2').setAttribute("style", "display:none;");
-    } else {
-      document.getElementById('selector-switch-1').setAttribute("style", "display:none;");
-      document.getElementById('selector-switch-2').setAttribute("style", "display:block;");
-    }
-
-    // Volume and Tone
-    if (document.getElementById('volume1').checked) {
-      document.getElementById('pot-1').setAttribute("style", "display:block;");
-      document.getElementById('pot-2').setAttribute("style", "display:block;");
-    } else {
-      document.getElementById('pot-1').setAttribute("style", "display:none;");
-      document.getElementById('pot-2').setAttribute("style", "display:none;");
-    }
-    if (document.getElementById('volume2').checked) {
-      document.getElementById('pot-3').setAttribute("style", "display:block;");
-      document.getElementById('pot-4').setAttribute("style", "display:block;");
-    } else {
-      document.getElementById('pot-3').setAttribute("style", "display:none;");
-      document.getElementById('pot-4').setAttribute("style", "display:none;");
-    }
-    
-}
-
-window.onload = updateGuitar;
-
-
+  document.getElementById("defaultOpen").click();
 </script>
 
 <!-- Save to PNG -->

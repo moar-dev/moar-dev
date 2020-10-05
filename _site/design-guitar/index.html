@@ -240,11 +240,11 @@
                   <option name="walnut" value="#834429">Bubinga</option>
                   <option name="mahogany" value="#C99A6F">Cedar</option>
                   <option name="mahogany" value="#E4B372">Pine</option>
-                  <option name="mahogany" value="#E3A976">Mahogany</option>
+                  <option name="mahogany" value="#E3A976" selected="selected">Mahogany</option>
                   <option name="walnut" value="#F1D9BA">Maple</option>
                   <option name="walnut" value="#D8A66B">Swamp Ash</option>
                   <option name="walnut" value="#73543E">Walnut</option>
-                  <option name="wenge" value="#463123" selected="selected">Wenge</option>
+                  <option name="wenge" value="#463123">Wenge</option>
               </select>
             </div>
             <label class="select" for="headstock-colour" style="margin-top: 1em;">Neck</label>
@@ -254,10 +254,10 @@
                   <option name="ash" value="#D7B186">Ash</option>
                   <option name="walnut" value="#834429">Bubinga</option>
                   <option name="mahogany" value="#C99A6F">Cedar</option>
-                  <option name="mahogany" value="#E3A976">Mahogany</option>
+                  <option name="mahogany" value="#E3A976" selected="selected">Mahogany</option>
                   <option name="ash" value="#F1D9BA">Maple</option>
                   <option name="walnut" value="#73543E">Walnut</option>
-                  <option name="wenge" value="#463123" selected="selected">Wenge</option>
+                  <option name="wenge" value="#463123">Wenge</option>
               </select>
             </div>
             <label class="select" for="fretboard-colour" style="margin-top: 1em;">Fretboard</label>
@@ -288,9 +288,9 @@
               <select name="guitar-colour" id="trem-type" onchange="updateGuitar()" required>
                   <option name="hardtail" value="hardtail">Hardtail (Saddled)</option>
                   <option name="abr" value="abr">Hardtail</option>
-                  <option name="tailpiece" value="tailpiece">Tailpiece</option>
+                  <option name="tailpiece" value="tailpiece" selected="selected">Tailpiece</option>
                   <option name="jazzmaster" value="jazzmaster">Jazzmaster</option>
-                  <option name="bigsby" value="bigsby" selected="selected">Bigsby</option>
+                  <option name="bigsby" value="bigsby">Bigsby</option>
               </select>
             </div>
             <!-- Bridge -->
@@ -310,13 +310,13 @@
               <label class="checkbox" for="check-fhole-top">Top F-Hole</label>
             </div>
             <div style="margin-top: 1em"> 
-              <input class="binding" type="checkbox" id="check-fhole-bottom" data-toggle="checkbox" onchange="updateGuitar()" checked> 
+              <input class="binding" type="checkbox" id="check-fhole-bottom" data-toggle="checkbox" onchange="updateGuitar()"> 
               <label class="checkbox" for="check-fhole-bottom">Bottom F-Hole</label>
             </div>
             <!-- Inlays -->
             <h4 style="margin-top: 1em">Inlays</h4>
             <div style="margin-top: 1em"> 
-              <input class="binding" type="checkbox" id="check-inlays" data-toggle="checkbox" onchange="updateGuitar()" checked> 
+              <input class="binding" type="checkbox" id="check-inlays" data-toggle="checkbox" onchange="updateGuitar()"> 
               <label class="checkbox" for="check-inlays">Dot Inlays</label>
             </div>
           </div>
@@ -335,11 +335,11 @@
               <label class="checkbox" for="check-binding-body">Bind Body</label>
             </div>
             <div style="margin-top: 1em"> 
-              <input class="binding" value="" type="checkbox" id="check-binding-fhole" data-toggle="checkbox" onchange="updateGuitar()"> 
+              <input class="binding" value="" type="checkbox" id="check-binding-fhole" data-toggle="checkbox" onchange="updateGuitar()" checked> 
               <label class="checkbox" for="check-binding-fhole">Bind F-Hole(s)</label>
             </div>
             <div style="margin-top: 1em"> 
-              <input class="binding" value="" type="checkbox" id="check-binding-neck" data-toggle="checkbox" onchange="updateGuitar()"> 
+              <input class="binding" value="" type="checkbox" id="check-binding-neck" data-toggle="checkbox" onchange="updateGuitar()" checked> 
               <label class="checkbox" for="check-binding-neck">Bind Neck</label>
             </div>
             <div style="margin-top: 1em"> 
@@ -356,8 +356,8 @@
             </div>
             <div id="selectpup-bridge" class="select-wrapper">
               <select name="guitar-colour" id="bridge-pickup-type" onchange="updateGuitar()" required> 
-                <option name="mahogany" value="p90" selected="selected">P90</option>
-                <option name="mahogany" value="humbucker">Humbucker</option>
+                <option name="mahogany" value="p90">P90</option>
+                <option name="mahogany" value="humbucker" selected="selected">Humbucker</option>
                 <option name="mahogany" value="firebird">Firebird</option>
                 <option name="mahogany" value="single-coil">Single Coil</option>
               </select>
@@ -365,29 +365,29 @@
             <!-- Middle -->
             <h4 style="margin-top: 1em">Middle Pickup</h4>
             <div style="margin-top: 1em"> 
-              <input class="binding" type="checkbox" id="check-middle-pup" data-toggle="checkbox" onchange="updateGuitar()"> 
+              <input class="binding" type="checkbox" id="check-middle-pup" data-toggle="checkbox" onchange="updateGuitar()" checked> 
               <label class="checkbox" for="check-middle-pup">Middle Pickup</label>
             </div>
             <div id="selectpup-middle" class="select-wrapper">
               <select name="guitar-colour" id="middle-pickup-type" onchange="updateGuitar()" required> 
-                <option name="mahogany" value="p90" selected="selected">P90</option>
+                <option name="mahogany" value="p90" >P90</option>
                 <option name="mahogany" value="humbucker">Humbucker</option>
                 <option name="mahogany" value="firebird">Firebird</option>
-                <option name="mahogany" value="single-coil">Single Coil</option>
+                <option name="mahogany" value="single-coil" selected="selected">Single Coil</option>
               </select>
             </div>
             <!-- Neck -->
             <h4 style="margin-top: 1em">Neck Pickup</h4>
             <div style="margin-top: 1em"> 
-              <input class="binding" type="checkbox" id="check-neck-pup" data-toggle="checkbox" onchange="updateGuitar()"> 
+              <input class="binding" type="checkbox" id="check-neck-pup" data-toggle="checkbox" onchange="updateGuitar()" checked> 
               <label class="checkbox" for="check-neck-pup">Neck Pickup</label>
             </div>
             <div id="selectpup-neck" class="select-wrapper">
               <select name="guitar-colour" id="neck-pickup-type" onchange="updateGuitar()" required> 
-                <option name="mahogany" value="p90" selected="selected">P90</option>
+                <option name="mahogany" value="p90">P90</option>
                 <option name="mahogany" value="humbucker">Humbucker</option>
                 <option name="mahogany" value="firebird">Firebird</option>
-                <option name="mahogany" value="single-coil">Single Coil</option>
+                <option name="mahogany" value="single-coil" selected="selected">Single Coil</option>
               </select>
             </div>
           </div>
@@ -396,8 +396,8 @@
             <label class="checkbox" for="check-selector">Pickup Selector</label>
             <div class="select-wrapper">
                   <select name="guitar-colour" id="check-selector" onchange="updateGuitar()" required> 
-                    <option name="mahogany" value="pos1" selected="selected">Neck</option>
-                    <option name="mahogany" value="pos2">Bridge</option>
+                    <option name="mahogany" value="pos1">Neck</option>
+                    <option name="mahogany" value="pos2" selected="selected">Bridge</option>
                   </select>
             </div>
             <h4 style="margin-top: 1em">Volume & Tone</h4>

@@ -23,8 +23,10 @@
 
     <!-- Guitar Builder -->
 	<section>
-			<div class="inner row uniform">
+			<div class="inner row uniform" style="margin-bottom: 4em; box-sizing: border-box;">
         <div class="12u 12u(small)" style="margin-bottom: 1em; box-sizing: border-box;">
+          <h1>Design your own Wayfair</h1>
+          <p>These are just a few of the options that you can select. If you're serious about ordering, head to the Wayfair page and submit your dream spec.</p>
           <div class="tab">
             <button class="tablinks" onclick="openTab(event, 'tab-woods')" id="defaultOpen">Woods</button>
             <button class="tablinks" onclick="openTab(event, 'tab-hardware')">Hardware</button>
@@ -34,7 +36,7 @@
             <button class="tablinks" onclick="openTab(event, 'tab-controls')">Controls</button>
           </div>
         </div>  
-        <div class="3u 12u(small)" style="margin-bottom: 1em; box-sizing: border-box;">
+        <div class="3u 12u(small)">
           <div id="tab-woods" class="tabcontent" style="width: 100%">
             <h4>Select Woods</h4>
             <label class="select" for="guitar-colour">Body Wood</label>
@@ -154,7 +156,7 @@
           </div>
           <div id="tab-pickups" class="tabcontent" style="width: 100%">
             <!-- Bridge -->
-            <h5 style="margin-top: 1em">Bridge Pickup</h5>
+            <h4 style="margin-top: 1em">Bridge Pickup</h4>
             <div style="margin-top:1em"> 
               <input class="binding" type="checkbox" id="check-bridge-pup" data-toggle="checkbox" onchange="updateGuitar()" checked> 
               <label class="checkbox" for="check-bridge-pup">Bridge Pickup</label>
@@ -168,7 +170,7 @@
               </select>
             </div>
             <!-- Middle -->
-            <h5 style="margin-top: 1em">Middle Pickup</h5>
+            <h4 style="margin-top: 1em">Middle Pickup</h4>
             <div style="margin-top: 1em"> 
               <input class="binding" type="checkbox" id="check-middle-pup" data-toggle="checkbox" onchange="updateGuitar()"> 
               <label class="checkbox" for="check-middle-pup">Middle Pickup</label>
@@ -182,7 +184,7 @@
               </select>
             </div>
             <!-- Neck -->
-            <h5 style="margin-top: 1em">Neck Pickup</h5>
+            <h4 style="margin-top: 1em">Neck Pickup</h4>
             <div style="margin-top: 1em"> 
               <input class="binding" type="checkbox" id="check-neck-pup" data-toggle="checkbox" onchange="updateGuitar()"> 
               <label class="checkbox" for="check-neck-pup">Neck Pickup</label>
@@ -205,12 +207,12 @@
                     <option name="mahogany" value="pos2">Bridge</option>
                   </select>
             </div>
-            <h5 style="margin-top: 1em">Volume & Tone</h5>
+            <h4 style="margin-top: 1em">Volume & Tone</h4>
             <div style="margin-top: 1em"> 
               <input class="binding" type="checkbox" id="volume1" data-toggle="checkbox" onchange="updateGuitar()" checked> 
-              <label class="checkbox" for="volume1">Top Row</label>
+              <label class="checkbox" for="volume1">Knob 1</label>
               <input class="binding" type="checkbox" id="volume2" data-toggle="checkbox" onchange="updateGuitar()" checked> 
-              <label class="checkbox" for="volume2">Bottom Row</label>
+              <label class="checkbox" for="volume2">Knob 2</label>
             </div>
           </div>
         </div>
@@ -1474,15 +1476,18 @@
             </div>
           </div>
         </div>
+        <div class="12u 12u(small)" style="margin-top: 4em; box-sizing: border-box;">
+          <div class="box">
+            <!-- <input placeholder="Guitar name" type="text" id="guitarname" name="guitarname" required> -->
+            <ul class="actions" style="margin-bottom: 0;">
+                <li style="width:100%; padding:0;"><input id="download" type="submit" value="Download Design" class="button fit"/></li>
+                <input type="hidden" name="_next" id="next" value="{{ site.baseurl }}/order-placed" />
+            </ul>
+          </div>
+        </div>  
 
 
-          
-
-          <!-- Submit -->
-          <!-- <ul class="actions" style="margin-bottom: 0;">
-              <li style="width:100%; padding:0;"><input id="download" type="submit" value="Download Design" class="button fit"/></li>
-              <input type="hidden" name="_next" id="next" value="{{ site.baseurl }}/order-placed" />
-          </ul> -->
+        
         </div>
 			</div>
 	</section>
@@ -1834,15 +1839,19 @@
       // Volume and Tone
       if (document.getElementById('volume1').checked) {
         document.getElementById('pot-1').setAttribute("style", "display:block;");
-        document.getElementById('pot-2').setAttribute("style", "display:block;");
+        document.getElementById('pot-3').setAttribute("style", "display:none;");
+        document.getElementById('pot-4').setAttribute("style", "display:none;");
       } else {
         document.getElementById('pot-1').setAttribute("style", "display:none;");
-        document.getElementById('pot-2').setAttribute("style", "display:none;");
+        document.getElementById('pot-3').setAttribute("style", "display:none;");
+        document.getElementById('pot-4').setAttribute("style", "display:none;");
       }
       if (document.getElementById('volume2').checked) {
-        document.getElementById('pot-3').setAttribute("style", "display:block;");
-        document.getElementById('pot-4').setAttribute("style", "display:block;");
+        document.getElementById('pot-2').setAttribute("style", "display:block;");
+        document.getElementById('pot-3').setAttribute("style", "display:none;");
+        document.getElementById('pot-4').setAttribute("style", "display:none;");
       } else {
+        document.getElementById('pot-2').setAttribute("style", "display:none;");
         document.getElementById('pot-3').setAttribute("style", "display:none;");
         document.getElementById('pot-4').setAttribute("style", "display:none;");
       }

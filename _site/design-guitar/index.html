@@ -1826,9 +1826,9 @@
           <div class="box">
             <!-- Submit to Airtable -->
             <form id="guitar-design-form" method="post" enctype='application/json' name="fields">
-              <input placeholder="Guitar name" type="text" id="guitar-name" name="guitar-name" onchange="updateField()">
-              <input placeholder="Creator name" type="text" id="creator-name" name="creator-name" onchange="updateField()">
-              <input placeholder="Creator Instagram" value="@" type="text" id="creator-instagram" name="creator-instagram" onchange="updateField()">
+              <input placeholder="Guitar name" type="text" id="guitar-name" name="guitar-name">
+              <input placeholder="Creator name" type="text" id="creator-name" name="creator-name">
+              <input placeholder="Creator Instagram" value="@" type="text" id="creator-instagram" name="creator-instagram">
               <ul class="actions" style="margin-bottom: 0;">
                 <li style="width:100%; padding:0;"><input id="save-design" type="submit" value="Save and Submit" class="button fit"/></li>
                 <!-- <input type="hidden" name="_next" id="next" value="//order-placed" /> -->
@@ -1882,9 +1882,6 @@
 
 </body>
 </html>
-
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 <!-- Update Guitar -->
 <script>
@@ -2416,6 +2413,31 @@
   document.getElementById("defaultOpen").click();
 </script>
 
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    var form = document.querySelector("#guitar-design-form");
+    var guitarDesign = url;
+    var gname = document.getElementById('guitar-name').value;
+    var cname = document.getElementById('creator-design').value;
+    var cinsta = document.getElementById('creator-instagram').value;
+
+    // When the form is submitted...
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // POST the data
+      axios.post("https://api.airtable.com/v0/appZwoSS7LA9GWVKP/submitted-guitars?api_key=keykx6o2ysAy0m8xs", {
+        "fields": {
+          "guitar-design": guitarDesign,
+          "guitar-name": gname,
+          "creator-name": cname,
+          "creator-instagram": cinsta
+        }
+      });
+    });
+</script>
+
 <!-- Save to PNG -->
 <script>
     var btn = document.getElementById('save-design');
@@ -2461,29 +2483,6 @@
 
 
       img.src = url;
-
-    });
-
-    var airtable_write_endpoint = "https://api.airtable.com/v0/appZwoSS7LA9GWVKP/submitted-guitars?keykx6o2ysAy0m8xs";
-    var form = document.querySelector("#guitar-design-form");
-    var guitarDesign = imgURI;
-    var guitarName = document.getElementById('guitar-name');
-    var creatorName = document.getElementById('creator-design');
-    var creatorInstagram = document.getElementById('creator-instagram');
-
-    // When the form is submitted...
-    form.addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      // POST the data
-      axios.post(airtable_write_endpoint, {
-        "fields": {
-          "guitar-design": guitarDesign
-          "guitar-name": guitarName.value
-          "creator-name": creatorName.value
-          "creator-instagram": creatorInstagram.value
-        }
-      });
 
     });
 </script>

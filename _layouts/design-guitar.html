@@ -2185,8 +2185,9 @@
 </script>
 
 <!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
+    const axios = require('axios').default;
+
     var form = document.querySelector("#guitar-design-form");
     var guitarDesign = url;
     var gname = document.getElementById('guitar-name').value;

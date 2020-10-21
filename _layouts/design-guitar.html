@@ -12,7 +12,7 @@
     <p style="margin-bottom: 0.4em;">Tap and hold to save the image, or right click to download.</p>
     <p>Don't forget to tag @moarguitars in your post, so that we can reshare your story</p>
     <ul class="actions" style="margin-bottom: 0; ">
-      <li style="width:100%; padding:0;"><input id="preview-design" type="button" value="Hide Preview" onclick="toggle()" class="button fit"/></li>
+      <li style="width:100%; padding:0;"><input id="preview-design" type="button" value="< Go Back" onclick="toggle()" class="button fit"/></li>
     </ul>
   </div>
 </div>
@@ -51,8 +51,243 @@
             <button class="tablinks" onclick="openTab(event, 'tab-controls')">Controls</button>
           </div>
         </div> 
+        <!-- Options -->
+        <div class="12u 12u(small)" style="padding-top: 0;">
+          <div id="tab-woods" class="tabcontent row uniform" style="width: 100%">
+            <div class="4u 12u(small)" style="padding-top:0;">
+              <label class="select" for="guitar-colour">Body Wood</label>
+              <div class="select-wrapper">
+                <select name="guitar-colour" id="guitar-colour" onchange="updateGuitar()" required>
+                    <option name="mahogany" value="#D9B894">Alder</option>
+                    <option name="ash" value="#D7B186">Ash</option>
+                    <option name="walnut" value="#834429">Bubinga</option>
+                    <option name="mahogany" value="#C99A6F">Cedar</option>
+                    <option name="mahogany" value="#E4B372">Pine</option>
+                    <option name="mahogany" value="#E3A976">Mahogany</option>
+                    <option name="walnut" value="#F1D9BA" selected="selected">Maple</option>
+                    <option name="walnut" value="#D8A66B">Swamp Ash</option>
+                    <option name="walnut" value="#73543E" >Walnut</option>
+                    <option name="wenge" value="#463123">Wenge</option>
+                </select>
+              </div>
+            </div>
+            <div class="4u 12u(small)" style="padding-top:0;">
+              <label class="select" for="headstock-colour">Neck</label>
+              <div class="select-wrapper">
+                <select name="headstock-colour" id="headstock-colour" onchange="updateGuitar()" required>
+                    <option name="mahogany" value="#895641">African Rosewood</option>
+                    <option name="ash" value="#D7B186">Ash</option>
+                    <option name="walnut" value="#834429">Bubinga</option>
+                    <option name="mahogany" value="#C99A6F">Cedar</option>
+                    <option name="mahogany" value="#E3A976">Mahogany</option>
+                    <option name="ash" value="#F1D9BA" selected="selected">Maple</option>
+                    <option name="walnut" value="#73543E">Walnut</option>
+                    <option name="wenge" value="#463123">Wenge</option>
+                </select>
+              </div>
+            </div>
+            <div class="4u 12u(small)" style="padding-top:0;">
+              <label class="select" for="fretboard-colour">Fretboard</label>
+              <div class="select-wrapper">
+                <select name="fretboard-colour" id="fretboard-colour" onchange="updateGuitar()" required>
+                    <option name="mahogany" value="#895641">African Rosewood</option>
+                    <option name="walnut" value="#834429">Bubinga</option>
+                    <option name="walnut" value="#A65232">Cocobolo</option>
+                    <option name="ash" value="#323031" selected="selected">Ebony</option>
+                    <option name="mahogany" value="#4F3C31">Indian Rosewood</option>
+                    <option name="maple" value="#F1D9BA">Maple</option>
+                    <option name="madagascanrosewood" value="#B45021">Madagascan Rosewood</option>
+                    <option name="walnut" value="#707070">Malaysian Blackwood</option>
+                    <option name="Oak" value="#CEA87C">Oak</option>
+                    <option name="Ovangkol" value="#AB8C69">Ovangkol</option>
+                    <option name="Padouk" value="#C95519">Padouk</option>
+                    <option name="Walnut" value="#73543E">Walnut</option>
+                    <option name="Wenge" value="#463123">Wenge</option>
+                    <option name="Zebrano" value="#A57C64">Zebrano</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div id="tab-hardware" class="tabcontent row uniform" style="width: 100%">
+            <div class="4u 12u(small)">
+              <!-- Trem -->
+              <label class="select" for="trem-type">Tremolo</label>
+              <div class="select-wrapper">
+                <select name="guitar-colour" id="trem-type" onchange="updateGuitar()" required>
+                    <option name="hardtail" value="hardtail">Hardtail (Saddled)</option>
+                    <option name="abr" value="abr" selected="selected">Hardtail</option>
+                    <option name="tailpiece" value="tailpiece" >Tailpiece</option>
+                    <option name="jazzmaster" value="jazzmaster">Jazzmaster</option>
+                    <option name="bigsby" value="bigsby">Bigsby</option>
+                </select>
+              </div>
+            </div>
+            <div class="4u 12u(small)">
+              <!-- Bridge -->
+              <label class="select" for="bridge-type">Bridge</label>
+              <div class="select-wrapper">
+                <select name="guitar-colour" id="bridge-type" onchange="updateGuitar()" required> 
+                    <option name="mahogany" value="telecaster">Cut-off T-style Bridge</option>
+                    <option name="mahogany" value="roller" selected="selected">Tunomatic</option>
+                </select>
+              </div>
+            </div>
+            <div class="4u 12u(small)">
+              <!-- Hardware Colour -->
+              <label class="select" for="hardware-colour">Hardware Colour</label>
+              <div class="select-wrapper">
+                <select name="guitar-colour" id="hardware-colour" onchange="updateGuitar()" required> 
+                    <option value="silver" selected="selected" >Silver</option>
+                    <option value="gold" >Gold</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div id="tab-finish" class="tabcontent row uniform" style="width: 100%">
+            <div class="4u 12u(small)">
+              <!-- F Holes -->
+              <div > 
+                <h4>Top F-Hole</h4>
+                <input class="binding" type="checkbox" id="check-fhole-top" data-toggle="checkbox" onchange="updateGuitar()" checked> 
+                <label class="checkbox" for="check-fhole-top">Top F-Hole</label>
+              </div>
+            </div>
+            <div class="4u 12u(small)">
+              <div style=""> 
+                <h4>Bottom F-Hole</h4>
+                <input class="binding" type="checkbox" id="check-fhole-bottom" data-toggle="checkbox" onchange="updateGuitar()" checked> 
+                <label class="checkbox" for="check-fhole-bottom">Bottom F-Hole</label>
+              </div>
+            </div>
+            <div class="4u 12u(small)">
+              <!-- Inlays -->
+              <h4>Inlays</h4>
+              <div> 
+                <input class="binding" type="checkbox" id="check-inlays" data-toggle="checkbox" onchange="updateGuitar()"> 
+                <label class="checkbox" for="check-inlays">Dot Inlays</label>
+              </div>
+            </div>
+          </div>
+          <div id="tab-binding" class="tabcontent row uniform" style="width: 100%">
+            <div class="4u 12u(small)">
+              <!-- Binding -->
+              <h4>Binding Colour</h4>
+              <!-- Binding Colour -->
+              <div class="select-wrapper">
+                  <select name="guitar-colour" id="binding-colour" onchange="updateGuitar()" required> 
+                      <option name="mahogany" value="909090">Black</option>
+                      <option name="mahogany" value="ffffff" selected="selected">White</option>
+                  </select>
+              </div>
+            </div>
+            <div class="4u 12u(small)">
+              <h4>Body Binding</h4>
+              <div style="margin-top: 1em"> 
+                <input class="binding" value="" type="checkbox" id="check-binding-body" data-toggle="checkbox" onchange="updateGuitar()"> 
+                <label class="checkbox" for="check-binding-body">Bind Body</label>
+              </div>
+              <div style="margin-top: 1em"> 
+                <input class="binding" value="" type="checkbox" id="check-binding-fhole" data-toggle="checkbox" onchange="updateGuitar()"> 
+                <label class="checkbox" for="check-binding-fhole">Bind F-Hole(s)</label>
+              </div>
+            </div>
+            <div class="4u 12u(small)">
+              <h4>Neck Binding</h4>
+              <div style="margin-top: 1em"> 
+                <input class="binding" value="" type="checkbox" id="check-binding-neck" data-toggle="checkbox" onchange="updateGuitar()" checked> 
+                <label class="checkbox" for="check-binding-neck">Bind Neck</label>
+              </div>
+              <div style="margin-top: 1em"> 
+                <input class="binding" value="" type="checkbox" id="check-binding-head" data-toggle="checkbox" onchange="updateGuitar()"> 
+                <label class="checkbox" for="check-binding-head">Bind Headstock</label>
+              </div>
+            </div>
+          </div>
+          <div id="tab-pickups" class="tabcontent row uniform" style="width: 100%">
+            <div class="4u 12u(small)">
+              <!-- Bridge -->
+              <h4>Bridge Pickup</h4>
+              <div> 
+                <input class="binding" type="checkbox" id="check-bridge-pup" data-toggle="checkbox" onchange="updateGuitar()" checked> 
+                <label class="checkbox" for="check-bridge-pup">Bridge Pickup</label>
+              </div>
+              <div id="selectpup-bridge" class="select-wrapper">
+                <select name="guitar-colour" id="bridge-pickup-type" onchange="updateGuitar()" required> 
+                  <option name="mahogany" value="p90" selected="selected">P90</option>
+                  <option name="mahogany" value="humbucker">Humbucker</option>
+                  <option name="mahogany" value="minihumbucker">Mini Humbucker</option>
+                  <option name="mahogany" value="firebird">Firebird</option>
+                  <option name="mahogany" value="single-coil">Single Coil</option>
+                </select>
+                <label class="select" for="pickup1" style="margin-top: 1em;">Bridge Pickup Position</label>
+                <input onchange="updateGuitar()" id="pickup1" type="range" min="2" max="65" value="10" >
+              </div>
+            </div>
+            <div class="4u 12u(small)">
+              <!-- Middle -->
+              <h4>Middle Pickup</h4>
+              <div> 
+                <input class="binding" type="checkbox" id="check-middle-pup" data-toggle="checkbox" onchange="updateGuitar()"> 
+                <label class="checkbox" for="check-middle-pup">Middle Pickup</label>
+              </div>
+              <div id="selectpup-middle" class="select-wrapper">
+                <select name="guitar-colour" id="middle-pickup-type" onchange="updateGuitar()" required> 
+                  <option name="mahogany" value="p90" >P90</option>
+                  <option name="mahogany" value="humbucker">Humbucker</option>
+                  <option name="mahogany" value="minihumbucker">Mini Humbucker</option>
+                  <option name="mahogany" value="firebird">Firebird</option>
+                  <option name="mahogany" value="single-coil" selected="selected">Single Coil</option>
+                </select>
+                <label class="select" for="pickup3" style="margin-top: 1em;">Middle Pickup Position</label>
+                <input onchange="updateGuitar()" id="pickup3" type="range" min="-120" max="-50" value="-102">
+              </div>
+            </div>
+            <div class="4u 12u(small)">
+              <!-- Neck -->
+              <h4>Neck Pickup</h4>
+              <div>
+                <input class="binding" type="checkbox" id="check-neck-pup" data-toggle="checkbox" onchange="updateGuitar()"> 
+                <label class="checkbox" for="check-neck-pup">Neck Pickup</label>
+                <div id="selectpup-neck" class="select-wrapper">
+                  <select name="guitar-colour" id="neck-pickup-type" onchange="updateGuitar()" required> 
+                    <option name="mahogany" value="p90">P90</option>
+                    <option name="mahogany" value="humbucker">Humbucker</option>
+                    <option name="mahogany" value="minihumbucker">Mini Humbucker</option>
+                    <option name="mahogany" value="firebird">Firebird</option>
+                    <option name="mahogany" value="single-coil" selected="selected">Single Coil</option>
+                  </select>
+                  <label class="select" for="pickup2" style="margin-top: 1em;">Neck Pickup Position</label>
+                  <input onchange="updateGuitar()" id="pickup2" type="range" min="-75" max="-2" value="-10">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="tab-controls" class="tabcontent row uniform" style="width: 100%">
+            <div class="4u 12u(small)">
+              <label class="checkbox" for="check-selector">Pickup Selector</label>
+              <div class="select-wrapper">
+                    <select name="guitar-colour" id="check-selector" onchange="updateGuitar()" required> 
+                      <option value="none">No Selector</option>
+                      <option value="pos1">Neck</option>
+                      <option value="pos2" selected="selected">Bridge</option>
+                    </select>
+              </div>
+            </div>
+            <div class="4u 12u(small)">
+              <h4>Volume & Tone</h4>
+              <div>
+                <input class="binding" type="checkbox" id="volume1" data-toggle="checkbox" onchange="updateGuitar()" checked> 
+                <label class="checkbox" for="volume1">Knob 1</label>
+              </div>
+              <div>
+                <input class="binding" type="checkbox" id="volume2" data-toggle="checkbox" onchange="updateGuitar()" checked> 
+                <label class="checkbox" for="volume2">Knob 2</label>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- Guitar -->
-        <div class="9u 12u(small)">
+        <div class="12u 12u(small)" style="margin-top: 2em">
           <!-- SVG -->
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" viewBox="0 0 1950 800">
             <defs>
@@ -1430,211 +1665,7 @@
           <!-- Canvas -->
           <canvas style="width: 100%; display: none;" id="canvas"></canvas>
         </div> 
-        <!-- Options -->
-        <div class="3u 12u(small)">
-          <div id="tab-woods" class="tabcontent" style="width: 100%">
-            <h4>Select Woods</h4>
-            <label class="select" for="guitar-colour">Body Wood</label>
-            <div class="select-wrapper">
-              <select name="guitar-colour" id="guitar-colour" onchange="updateGuitar()" required>
-                  <option name="mahogany" value="#D9B894">Alder</option>
-                  <option name="ash" value="#D7B186">Ash</option>
-                  <option name="walnut" value="#834429">Bubinga</option>
-                  <option name="mahogany" value="#C99A6F">Cedar</option>
-                  <option name="mahogany" value="#E4B372">Pine</option>
-                  <option name="mahogany" value="#E3A976">Mahogany</option>
-                  <option name="walnut" value="#F1D9BA" selected="selected">Maple</option>
-                  <option name="walnut" value="#D8A66B">Swamp Ash</option>
-                  <option name="walnut" value="#73543E" >Walnut</option>
-                  <option name="wenge" value="#463123">Wenge</option>
-              </select>
-            </div>
-            <label class="select" for="headstock-colour" style="margin-top: 1em;">Neck</label>
-            <div class="select-wrapper">
-              <select name="headstock-colour" id="headstock-colour" onchange="updateGuitar()" required>
-                  <option name="mahogany" value="#895641">African Rosewood</option>
-                  <option name="ash" value="#D7B186">Ash</option>
-                  <option name="walnut" value="#834429">Bubinga</option>
-                  <option name="mahogany" value="#C99A6F">Cedar</option>
-                  <option name="mahogany" value="#E3A976">Mahogany</option>
-                  <option name="ash" value="#F1D9BA" selected="selected">Maple</option>
-                  <option name="walnut" value="#73543E">Walnut</option>
-                  <option name="wenge" value="#463123">Wenge</option>
-              </select>
-            </div>
-            <label class="select" for="fretboard-colour" style="margin-top: 1em;">Fretboard</label>
-            <div class="select-wrapper">
-              <select name="fretboard-colour" id="fretboard-colour" onchange="updateGuitar()" required>
-                  <option name="mahogany" value="#895641">African Rosewood</option>
-                  <option name="walnut" value="#834429">Bubinga</option>
-                  <option name="walnut" value="#A65232">Cocobolo</option>
-                  <option name="ash" value="#323031" selected="selected">Ebony</option>
-                  <option name="mahogany" value="#4F3C31">Indian Rosewood</option>
-                  <option name="maple" value="#F1D9BA">Maple</option>
-                  <option name="madagascanrosewood" value="#B45021">Madagascan Rosewood</option>
-                  <option name="walnut" value="#707070">Malaysian Blackwood</option>
-                  <option name="Oak" value="#CEA87C">Oak</option>
-                  <option name="Ovangkol" value="#AB8C69">Ovangkol</option>
-                  <option name="Padouk" value="#C95519">Padouk</option>
-                  <option name="Walnut" value="#73543E">Walnut</option>
-                  <option name="Wenge" value="#463123">Wenge</option>
-                  <option name="Zebrano" value="#A57C64">Zebrano</option>
-              </select>
-            </div>
-          </div>
-          <div id="tab-hardware" class="tabcontent" style="width: 100%">
-            <h4>Bridge and Tremolo</h4>
-            <!-- Trem -->
-            <label class="select" for="trem-type">Tremolo</label>
-            <div class="select-wrapper">
-              <select name="guitar-colour" id="trem-type" onchange="updateGuitar()" required>
-                  <option name="hardtail" value="hardtail">Hardtail (Saddled)</option>
-                  <option name="abr" value="abr" selected="selected">Hardtail</option>
-                  <option name="tailpiece" value="tailpiece" >Tailpiece</option>
-                  <option name="jazzmaster" value="jazzmaster">Jazzmaster</option>
-                  <option name="bigsby" value="bigsby">Bigsby</option>
-              </select>
-            </div>
-            <!-- Bridge -->
-            <label class="select" for="bridge-type" style="margin-top: 1em;">Bridge</label>
-            <div class="select-wrapper">
-              <select name="guitar-colour" id="bridge-type" onchange="updateGuitar()" required> 
-                  <option name="mahogany" value="telecaster">Telecaster</option>
-                  <option name="mahogany" value="roller" selected="selected">Roller</option>
-              </select>
-            </div>
-            <!-- Hardware Colour -->
-            <label class="select" for="hardware-colour" style="margin-top: 1em;">Hardware Colour</label>
-            <div class="select-wrapper">
-              <select name="guitar-colour" id="hardware-colour" onchange="updateGuitar()" required> 
-                  <option value="silver" selected="selected" >Silver</option>
-                  <option value="gold" >Gold</option>
-              </select>
-            </div>
-          </div>
-          <div id="tab-finish" class="tabcontent" style="width: 100%">
-            <!-- F Holes -->
-            <h4>Trim</h4>
-            <div style="margin-top: 1em"> 
-              <input class="binding" type="checkbox" id="check-fhole-top" data-toggle="checkbox" onchange="updateGuitar()" checked> 
-              <label class="checkbox" for="check-fhole-top">Top F-Hole</label>
-            </div>
-            <div style="margin-top: 1em"> 
-              <input class="binding" type="checkbox" id="check-fhole-bottom" data-toggle="checkbox" onchange="updateGuitar()" checked> 
-              <label class="checkbox" for="check-fhole-bottom">Bottom F-Hole</label>
-            </div>
-            <!-- Inlays -->
-            <h4 style="margin-top: 1em">Inlays</h4>
-            <div style="margin-top: 1em"> 
-              <input class="binding" type="checkbox" id="check-inlays" data-toggle="checkbox" onchange="updateGuitar()"> 
-              <label class="checkbox" for="check-inlays">Dot Inlays</label>
-            </div>
-          </div>
-          <div id="tab-binding" class="tabcontent" style="width: 100%">
-            <!-- Binding -->
-            <h4>Binding</h4>
-            <!-- Binding Colour -->
-            <div class="select-wrapper">
-                <select name="guitar-colour" id="binding-colour" onchange="updateGuitar()" required> 
-                    <option name="mahogany" value="909090">Black</option>
-                    <option name="mahogany" value="ffffff" selected="selected">White</option>
-                </select>
-            </div>
-            <div style="margin-top: 1em"> 
-              <input class="binding" value="" type="checkbox" id="check-binding-body" data-toggle="checkbox" onchange="updateGuitar()"> 
-              <label class="checkbox" for="check-binding-body">Bind Body</label>
-            </div>
-            <div style="margin-top: 1em"> 
-              <input class="binding" value="" type="checkbox" id="check-binding-fhole" data-toggle="checkbox" onchange="updateGuitar()"> 
-              <label class="checkbox" for="check-binding-fhole">Bind F-Hole(s)</label>
-            </div>
-            <div style="margin-top: 1em"> 
-              <input class="binding" value="" type="checkbox" id="check-binding-neck" data-toggle="checkbox" onchange="updateGuitar()" checked> 
-              <label class="checkbox" for="check-binding-neck">Bind Neck</label>
-            </div>
-            <div style="margin-top: 1em"> 
-              <input class="binding" value="" type="checkbox" id="check-binding-head" data-toggle="checkbox" onchange="updateGuitar()"> 
-              <label class="checkbox" for="check-binding-head">Bind Headstock</label>
-            </div>
-          </div>
-          <div id="tab-pickups" class="tabcontent" style="width: 100%">
-            <!-- Bridge -->
-            <h4 style="margin-top: 1em">Bridge Pickup</h4>
-            <div style="margin-top:1em"> 
-              <input class="binding" type="checkbox" id="check-bridge-pup" data-toggle="checkbox" onchange="updateGuitar()" checked> 
-              <label class="checkbox" for="check-bridge-pup">Bridge Pickup</label>
-            </div>
-            <div id="selectpup-bridge" class="select-wrapper">
-              <select name="guitar-colour" id="bridge-pickup-type" onchange="updateGuitar()" required> 
-                <option name="mahogany" value="p90" selected="selected">P90</option>
-                <option name="mahogany" value="humbucker">Humbucker</option>
-                <option name="mahogany" value="minihumbucker">Mini Humbucker</option>
-                <option name="mahogany" value="firebird">Firebird</option>
-                <option name="mahogany" value="single-coil">Single Coil</option>
-              </select>
-            <!-- </div>
-            <div style="display:inline-block; width: 30%;"> -->
-              <label class="select" for="pickup1" style="margin-top: 1em;">Bridge Pickup Position</label>
-              <input onchange="updateGuitar()" id="pickup1" type="range" min="2" max="65" value="10" >
-            </div>
-            <!-- Middle -->
-            <h4 style="margin-top: 1em">Middle Pickup</h4>
-            <div style="margin-top: 1em"> 
-              <input class="binding" type="checkbox" id="check-middle-pup" data-toggle="checkbox" onchange="updateGuitar()"> 
-              <label class="checkbox" for="check-middle-pup">Middle Pickup</label>
-            </div>
-            <div id="selectpup-middle" class="select-wrapper">
-              <select name="guitar-colour" id="middle-pickup-type" onchange="updateGuitar()" required> 
-                <option name="mahogany" value="p90" >P90</option>
-                <option name="mahogany" value="humbucker">Humbucker</option>
-                <option name="mahogany" value="minihumbucker">Mini Humbucker</option>
-                <option name="mahogany" value="firebird">Firebird</option>
-                <option name="mahogany" value="single-coil" selected="selected">Single Coil</option>
-              </select>
-            <!-- </div>
-            <div style="display:inline-block; width: 30%;"> -->
-              <label class="select" for="pickup3" style="margin-top: 1em;">Middle Pickup Position</label>
-              <input onchange="updateGuitar()" id="pickup3" type="range" min="-120" max="-50" value="-102">
-            </div>
-            <!-- Neck -->
-            <h4 style="margin-top: 1em">Neck Pickup</h4>
-            <div style="margin-top: 1em"> 
-              <input class="binding" type="checkbox" id="check-neck-pup" data-toggle="checkbox" onchange="updateGuitar()"> 
-              <label class="checkbox" for="check-neck-pup">Neck Pickup</label>
-            </div>
-            <div id="selectpup-neck" class="select-wrapper">
-              <select name="guitar-colour" id="neck-pickup-type" onchange="updateGuitar()" required> 
-                <option name="mahogany" value="p90">P90</option>
-                <option name="mahogany" value="humbucker">Humbucker</option>
-                <option name="mahogany" value="minihumbucker">Mini Humbucker</option>
-                <option name="mahogany" value="firebird">Firebird</option>
-                <option name="mahogany" value="single-coil" selected="selected">Single Coil</option>
-              </select>
-            <!-- </div>
-            <div style="display:inline-block; width: 30%;"> -->
-              <label class="select" for="pickup2" style="margin-top: 1em;">Neck Pickup Position</label>
-              <input onchange="updateGuitar()" id="pickup2" type="range" min="-75" max="-2" value="-10">
-            </div>
-          </div>
-          <div id="tab-controls" class="tabcontent" style="width: 100%">
-            <h4>Electronics</h4>
-            <label class="checkbox" for="check-selector">Pickup Selector</label>
-            <div class="select-wrapper">
-                  <select name="guitar-colour" id="check-selector" onchange="updateGuitar()" required> 
-                    <option name="mahogany" value="none">No Selector</option>
-                    <option name="mahogany" value="pos1">Neck</option>
-                    <option name="mahogany" value="pos2" selected="selected">Bridge</option>
-                  </select>
-            </div>
-            <h4 style="margin-top: 1em">Volume & Tone</h4>
-            <div style="margin-top: 1em"> 
-              <input class="binding" type="checkbox" id="volume1" data-toggle="checkbox" onchange="updateGuitar()" checked> 
-              <label class="checkbox" for="volume1">Knob 1</label>
-              <input class="binding" type="checkbox" id="volume2" data-toggle="checkbox" onchange="updateGuitar()" checked> 
-              <label class="checkbox" for="volume2">Knob 2</label>
-            </div>
-          </div>
-        </div>
+
         
         <!-- Submission Form -->
         <div class="12u 12u(small)" style="margin-top: 4em; box-sizing: border-box;">
@@ -1647,7 +1678,7 @@
               <label class="select" for="creator-instagram" style="margin-top: 1em;">Your Instagram</label>
               <input placeholder="@moarguitars" type="text" id="creator-instagram" name="creator-instagram" onchange="updateDesign()">
               <ul class="actions" style="margin-bottom: 0;">
-                <li style="width:100%; padding:0;"><input id="preview-design" type="button" value="Generate Preview" onclick="toggle()" class="special button fit"/></li>
+                <li style="width:100%; padding:0;"><input id="preview-design" type="button" value="Generate Preview" onclick="updateDesign(),toggle()" class="special button fit"/></li>
                 <li style="width:100%; padding:0; display: none;"><input id="save-design" type="button" value="Submit to Moar" class="button fit"/></li>
               </ul>
             </form>
@@ -2280,6 +2311,7 @@
             document.getElementById('guitarpreview').src = imgURI;
             document.getElementById('axename').innerHTML = gname;
             document.getElementById('axecreator').innerHTML = cinsta;
+            
 
       };
 

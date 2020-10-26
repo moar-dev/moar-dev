@@ -13,6 +13,9 @@
 <loc>http://localhost:4000/contact/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/decode-guitar/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/deposit-paid/</loc>
 </url>
 <url>

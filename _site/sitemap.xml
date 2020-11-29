@@ -13,7 +13,7 @@
 <loc>http://localhost:4000/contact/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/decode-guitar/</loc>
+<loc>http://localhost:4000/decode/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/deposit-paid/</loc>

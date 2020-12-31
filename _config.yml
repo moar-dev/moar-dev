@@ -4,7 +4,7 @@ subtitle: Hand-made in Copenhagen
 email: mail@johnhayn.es
 description:  The world's local guitar builder. My unique and carefully hand-crafted guitars are played on stages all around the world, but each one starts its journey from my workshop in Copenhagen, Denmark.
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: # the base hostname & protocol for your site
+url: https://www.moarguitars.com # the base hostname & protocol for your site
 author:
 street_address: 
 city: Copenhagen S
@@ -14,7 +14,7 @@ country: Denmark
 phone: (0045) 5387 2888
 permalink: /:title/
 
-repository: moar-dev.github.io/moar-dev
+repository: moarguitars.github.io/moarguitars
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"
@@ -40,7 +40,7 @@ plugins:
 airtable:
   enable_sync: true
   base_uid: 'appp7C1MblPCnMePn'
-  airtable_api_key: 'keykx6o2ysAy0m8xs'
+  airtable_api_key: ${{ secrets.GH_PAGES_TOKEN }}
   tables:
     - name: 'Use Cases' 
     - name: 'Whitepapers'    

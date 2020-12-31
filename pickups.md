@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Pickups
+title: Buy Pickups
 description: 'Hand-wound, bespoke pickups'
 seo_description:
 show_tile: true

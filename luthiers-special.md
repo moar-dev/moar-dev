@@ -7,7 +7,7 @@ seo_description:
 show_tile: true
 nav-menu: true
 order: 2
-image: 'assets/images/luthiers-special/luthiers-special-being-built.jpg'
+image: '/assets/images/luthiers-special/luthiers-special-being-built.jpg'
 ---
 
 <!-- Main -->
@@ -27,7 +27,7 @@ image: 'assets/images/luthiers-special/luthiers-special-being-built.jpg'
 				<p>Finally, when the guitar is finished, it is hand-delivered to you at home and set up perfectly in the humidity that it will live in.</p>
 			</div>
 		</section>
-		<section class="12u 12u$(small) row 100%">
+		<section class="12u 12u$(small) row 100%" style="margin-top: 2em">
 			<div class="8u 12u$(small) box">
 				<h3>Make Enquiry</h3>
 				<p>A member of the Moar Guitars team will be in touch to answer your questions</p>

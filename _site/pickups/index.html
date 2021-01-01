@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 
 <head>
@@ -19,7 +14,7 @@
 	<!-- Open Graph -->
 	<meta property="og:locale" content="en_GB">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="Buy Pickups">
+	<meta property="og:title" content="Pickups">
 	<meta property="og:url" content="http://localhost:4000/pickups/">
 	<meta property="og:image" content="https://moarguitars.com/assets/images/moar-guitars--og.png" />
 	<meta property="og:site_name" content="Moar Guitars">
@@ -177,7 +172,7 @@
 		    
 		
 		    
-		        <li><a href="http://localhost:4000/guitars/">Guitars</a></li>
+		        <li><a href="http://localhost:4000/guitars/">View Guitars</a></li>
 		    
 		
 		    
@@ -189,7 +184,7 @@
 		    
 		
 		    
-		        <li><a href="http://localhost:4000/pickups/">Buy Pickups</a></li>
+		        <li><a href="http://localhost:4000/pickups/">Pickups</a></li>
 		    
 		
 		    
@@ -217,33 +212,742 @@
 	</ul>
 </nav>
 
- <!-- Main -->
+ 
+    <script
+    src="https://www.paypal.com/sdk/js?client-id=AfPXI6xS8kZLXEBXVNF8VdA6t_6g5ZUaLjnut-H7bnKYT9sdWZ_cr98VI32hpi5CC2AXMntBPovJsLUo"></script>
+    
+<!-- Main -->
 <div id="main" class="alt">
-
-
-
-<!-- Intro -->
-<section>
-	<div class="inner row 100%" style="margin-top: 6em">
-		<section class="6u 12u$(small)">
-			<h2>Pickups</h2>
-			<p>I wind all my own pickups. Each time one of my guitars is ordered I chat to the customer about what kind of pickups they want, what kind of sound they have in mind, what kind of output they want, what kind of circuit they would like, what aesthetic they want, what other guitars they have, what they think they are currently missing in their rig, what their favourite pedal is, what their favourite guitar sound is, what kind of music they have in mind when they think about the commissioned build, etc etc.</p>
-			<p>Each pickup I wind is made specifically for each build. I don’t have a stock of pre-wound pickups, (mainly because I don’t have the time to wind them!) but you can be sure that when you order one of my guitars the pickup in it was made especially for you!</p>
-			<p>So whatever you have in mind, however bizarre or classic, get in touch. I can make it work.</p>
-		</section>
-		<div class="6u$ 12u$(small)">
-			<div class="12u$">
-				<span class="image fit"><img src="../assets/images/pickups/pickups-wayfair-dark.jpg" alt="" /></span>
+	<section>
+			<div class="inner row uniform">
+				<div class="12u 12u(small)" style="margin-bottom: 2em;">
+					<h1>Pickups</h1>
+					<hr/>
+					<h3>Hand-wound, bespoke pickups</h3>
+					<p>It is very hard to communicate that I am able to make more or less anything you can think up, so I have started with a clear price list for most “normal” pickup types. Prices include any cover options you might like, and each pickup is wound to your taste. I do not wax pot my pickups as standard but am happy to include it in the price.</p>
+				</div>
+				<!-- Gallery -->
+				<!-- 
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				
+					
+				 -->
 			</div>
-			<div class="12u$">
-				<span class="image fit"><img src="../assets/images/pickups/pickups-dark.jpg" alt="" /></span>
-			</div>
-		</div>
+			<form class="inner row uniform" id="extra-features" action="https://formspree.io/xdoppvkv" method="POST">
+				<div class="8u 12u(small)" style="padding-right: 2em;">
+					<!-- Extras -->
+					<h2 style="margin-bottom: 0.5em">Design your pickups</h2>
+<p>Current waiting time on pickups is around two to three months.</p>
+
+
+<section style="box-sizing: border-box; margin-bottom: 2em;">
+	<h3 style="margin-bottom: 0.5em">Choose the woods</h3>
+	<p>Not sure which woods to pick? Find out more and see pictures in our guide to wood.</p>
+	
+    <!-- Guitar -->
+    <input class="binding" value="200" type="hidden" name="Pickups" > 
+
+	<!-- Body -->
+    <h5>Body Wood</h5>
+	<div class="select-wrapper" style="margin-top: 1em; margin-bottom: 1em;">		
+        <select name="wood-body" id="wood-body" onchange="updateTotals()" required>
+			<option name="ash" value="Ash:0">Ash - $0</option>
+			<option name="cedar" value="Cedar:0">Cedar - $0</option>
+			<option name="pine" value="Pine:0">Pine - $0</option>
+			<option name="alder" value="Alder:0">Alder - $0</option>
+			<option name="mahogany" value="Mahogany:0">Mahogany - $0</option>
+			<option name="wenge" value="Wenge:160">Wenge - $160</option>
+			<option name="walnut" value="Walnut:130">Walnut - $130</option>
+			<option name="bubinga" value="Bubinga:220">Bubinga - $220</option>
+			<option name="maple" value="Maple:160">Maple - $160</option>
+			<option name="swamp-ash" value="Swamp Ash:130">Swamp Ash - $130</option>
+		</select>
 	</div>
+
+	<!-- Neck --> 
+    <h4 style="margin-top: 2em;">Neck and Fretboard</h4>
+    <h5>Neck Wood</h5>
+	<div class="select-wrapper" style="margin-top: 1em; margin-bottom: 1em;">      
+		<select name="wood-neck" id="wood-neck" onchange="updateTotals()" required>
+			<option name="maple" value="Maple:0">Maple - $0</option>
+			<option name="mahogany" value="Mahogany:0">Mahogany - $0</option>
+			<option name="cedar" value="Cedar:0">Cedar - $0</option>
+			<option name="ash" value="Ash:0">Ash - $0</option>
+			<option name="rosewood-african" value="African Rosewood:45">Rosewood (African) - $45</option>
+			<option name="bubinga" value="Bubinga:45">Bubinga - $45</option>
+			<option name="walnut" value="Walnut:45">Walnut - $45</option>
+			<option name="wenge" value="Wenge:45">Wenge - $45</option>
+		</select>
+	</div>
+
+	<!-- Fretboard -->
+    <h5>Fretboard Wood</h5>
+	<div class="select-wrapper" style="margin-top: 1em; margin-bottom: 1em;">      
+        <select name="wood-fret" id="wood-fret" onchange="updateTotals()" required>
+			<option name="ebony" value="Ebony:0">Ebony - $0</option>
+			<option name="rosewood-indian" value="Rosewood (Indian):0">Rosewood (Indian) - $0</option>
+			<option name="rosewood-african" value="Rosewood (African):0">Rosewood (African) - $0</option>
+			<option name="wenge" value="Wenge:0">Wenge - $0</option>
+			<option name="maple" value="Maple:0">Maple - $0</option>
+			<option name="oak" value="Oak:0">Oak - $0</option>
+			<option name="bubinga" value="Bubinga:0">Bubinga - $0</option>
+			<option name="cocobolo" value="Cocbolo:0">Cocobolo - $0</option>
+			<option name="rosewood-madagascan" value="Rosewood (Madagascan):30">Rosewood (Madagascan) - $30</option>
+			<option name="malaysian-blackwood" value="Malaysian Blackwood:30">Malaysian Blackwood - $30</option>
+			<option name="ovangkol" value="Ovangkol:30">Ovangkol - $30</option>
+			<option name="padouk" value="Padouk:30">Padouk - $30</option>
+			<option name="walnut" value="Walnut:30">Walnut - $30</option>
+			<option name="zebrano" value="Zebrano:30">Zebrano - $30</option>
+		</select>
+	</div>       
+       
+    <h5>Neck Radius</h5>
+    <div class="select-wrapper" style="margin-top: 1em; ">
+        <select name="neck-radius" id="neck-radius" onchange="updateTotals()" required>>
+			<option name="7.25" value="7.25:0">7.25” - $0</option>
+			<option name="9.5" value="9.5:0">9.5” - $0</option>
+			<option name="10" value="10:0">10” - $0</option>
+			<option name="12" value="12:0">12” - $0</option>
+			<option name="14" value="14:0">14” - $0</option>
+			<option name="16" value="16:0">16” - $0</option>
+			<option name="20" value="20:0">20” - $0</option>
+			<option name="compound" value="Compound:60">Compound - $60</option>
+		</select>
+	</div>
+    
+
+	<!-- Roasted Options -->
+	<label style="margin-top: 2em;">Roasted Woods</label>
+	<table class="alt">
+		<tbody>
+    		<tr>
+    			<td class="description">
+    				<input class="binding" value="155" type="checkbox" id="Checkbox1" name="roasted-body" data-toggle="checkbox"> 
+    				<label class="checkbox" for="Checkbox1">Roasted Body</label>
+    			</td>
+    			<td class="price">
+    				<p>$155</p>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td class="description">
+    				<input class="binding" value="90" type="checkbox" id="Checkbox2" name="roasted-neck" data-toggle="checkbox"> 
+    				<label class="checkbox" for="Checkbox2">Roasted Neck</label>
+    			</td>
+    			<td class="price">
+    				<p>$90</p>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td class="description">
+    				<input class="binding" value="45" type="checkbox" id="Checkbox3" name="roasted-fret" data-toggle="checkbox"> 
+    				<label class="checkbox" for="Checkbox3">Roasted Fretboard</label>
+    			</td>
+    			<td class="price">
+    				<p>$45</p>
+    			</td>
+    		</tr>
+    	</tbody>
+    </table>
 </section>
 
+<!-- Binding -->
+<section style="box-sizing: border-box; margin-bottom: 1em;">
+	<h3 style="margin-bottom: 0.5em">Binding</h3>
+  	<table class="alt">
+		<tbody>
+    		<tr>
+    			<td class="description">
+    				<input class="binding" value="160" type="checkbox" id="Checkbox4" name="binding-top" data-toggle="checkbox"> 
+    				<label class="checkbox" for="Checkbox4">Top binding</label>
+    			</td>
+    			<td class="price">
+    				<p>$160</p>
+    			</td>
+    		</tr>
+			<tr>
+    			<td class="description">
+    				<input class="binding" value="320"  type="checkbox" id="Checkbox6" name="binding-fhole" data-toggle="checkbox"> 
+					<label class="checkbox" for="Checkbox6">F-hole binding</label>
+				</td>
+				<td class="price">
+					<p>$320</p>
+				</td>
+			</tr>
+			<tr>
+    			<td class="description">
+    				<input class="binding" value="220"  type="checkbox" id="Checkbox7" name="binding-neck" data-toggle="checkbox"> 
+					<label class="checkbox" for="Checkbox7">Neck binding</label>
+				</td>
+				<td class="price">
+					<p>$220</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+
+<!-- Hardware -->
+<section style="box-sizing: border-box; margin-bottom: 1em;">
+	<h3 style="margin-bottom: 0.5em">Hardware</h3>
+  	<table class="alt">
+		<tbody>
+    		<tr>
+    			<td class="description">
+    				<input class="binding" value="45" type="checkbox" id="Checkbox8" name="hardware-gold" data-toggle="checkbox"> 
+    				<label class="checkbox" for="Checkbox8">Gold hardware and frets</label>
+    			</td>
+    			<td class="price">
+    				<p>$45</p>
+    			</td>
+    		</tr>
+    		<tr>
+    			<td class="description">
+    				<input class="binding" value="20"  type="checkbox" id="Checkbox9" name="locking-tuners" data-toggle="checkbox"> 
+					<label class="checkbox" for="Checkbox9">Locking tuners over standard</label>
+				</td>
+				<td class="price">
+					<p>$20</p>
+				</td>
+			</tr>
+			<tr>
+    			<td class="description">
+    				<input class="binding" value="30"  type="checkbox" id="Checkbox10" name="locking-straps" data-toggle="checkbox"> 
+					<label class="checkbox" for="Checkbox10">Locking strap pins</label>
+				</td>
+				<td class="price">
+					<p>$30</p>
+				</td>
+			</tr>
+			<tr>
+    			<td class="description">
+    				<input class="binding" value="60"  type="checkbox" id="Checkbox11" name="tunomatic-bridge" data-toggle="checkbox"> 
+					<label class="checkbox" for="Checkbox11">Tunomatic style bridge and stoptail</label>
+				</td>
+				<td class="price">
+					<p>$60</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</section>
+
+
+<!-- Pickups -->
+<section style="box-sizing: border-box; margin-bottom: 1em;">
+	<h3 style="margin-bottom: 0.5em">Pickups</h3>
+    <p>Each guitar comes with one Moar P90 as standard.</p>
+    <h5>Humbuckers</h5>
+  	<table class="alt" style="margin-top:1em; margin-bottom: 1em">
+		<tbody>
+    		<tr>
+    			<td class="description">
+    				<input class="binding" value="155" type="checkbox" id="Checkbox12" name="extra-humbucker" data-toggle="checkbox"> 
+    				<label class="checkbox" for="Checkbox12">Extra humbucker</label>
+    			</td>
+    			<td class="price">
+    				<p>$155</p>
+    			</td>
+            </tr>
+            <tr>
+    			<td class="description">
+    				<input class="binding" value="75" type="checkbox" id="Checkbox13" name="swap-p90" data-toggle="checkbox"> 
+    				<label class="checkbox" for="Checkbox13">Swap stock P90 for humbucker</label>
+    			</td>
+    			<td class="price">
+    				<p>$75</p>
+    			</td>
+    		</tr>
+        </tbody>
+    </table>
+    <h5>P90s</h5>
+    <table class="alt" style="margin-top:1em; margin-bottom: 1em">
+        <tbody>
+    		<tr>
+    			<td class="description">
+    				<input class="binding" value="90" type="checkbox" id="Checkbox14" name="extra-p90" data-toggle="checkbox"> 
+    				<label class="checkbox" for="Checkbox14">Extra P90</label>
+    			</td>
+    			<td class="price">
+    				<p>$90</p>
+    			</td>
+            </tr>
+        </tbody>
+    </table>
+    <h5>Single Coils</h5>
+    <table class="alt" style="margin-top:1em; margin-bottom: 1em">
+        <tbody>
+    		<tr>
+    			<td class="description">
+    				<input class="binding" value="90" type="checkbox" id="Checkbox15" name="extra-singlecoil" data-toggle="checkbox"> 
+    				<label class="checkbox" for="Checkbox15">Extra single coil</label>
+    			</td>
+    			<td class="price">
+    				<p>$90</p>
+    			</td>
+            </tr>
+            <tr>
+    			<td class="description">
+    				<input class="binding" value="0" type="checkbox" id="Checkbox16" name="swap-singlecoil" data-toggle="checkbox"> 
+    				<label class="checkbox" for="Checkbox16">Swap stock P90 for single coil</label>
+    			</td>
+    			<td class="price">
+    				<p>$0</p>
+    			</td>
+    		</tr>
+        </tbody>
+    </table>
+    <h5>Firbirds</h5>
+    <table class="alt" style="margin-top:1em; margin-bottom: 1em">
+        <tbody>
+    		<tr>
+    			<td class="description">
+    				<input class="binding" value="160" type="checkbox" id="Checkbox17" name="extra-firebird" data-toggle="checkbox"> 
+    				<label class="checkbox" for="Checkbox17">Extra Firebird Pickup</label>
+    			</td>
+    			<td class="price">
+    				<p>$160</p>
+    			</td>
+            </tr>
+            <tr>
+    			<td class="description">
+    				<input class="binding" value="75" type="checkbox" id="Checkbox18" name="swap-firebird" data-toggle="checkbox"> 
+    				<label class="checkbox" for="Checkbox18">Swap Stock P90 for firebird</label>
+    			</td>
+    			<td class="price">
+    				<p>$75</p>
+    			</td>
+    		</tr>
+        </tbody>
+    </table>
+    <h5>Mini Humbuckers</h5>
+    <table class="alt" style="margin-top:1em; margin-bottom: 1em">
+        <tbody>
+    		<tr>
+    			<td class="description">
+    				<input class="binding" value="160" type="checkbox" id="Checkbox19" name="extra-minihumbucker" data-toggle="checkbox"> 
+    				<label class="checkbox" for="Checkbox19">Extra mini humbucker</label>
+    			</td>
+    			<td class="price">
+    				<p>$160</p>
+    			</td>
+            </tr>
+            <tr>
+    			<td class="description">
+    				<input class="binding" value="75" type="checkbox" id="Checkbox20" name="swap-minihumbucker" data-toggle="checkbox"> 
+    				<label class="checkbox" for="Checkbox20">Swap stock P90 for mini humbucker</label>
+    			</td>
+    			<td class="price">
+    				<p>$75</p>
+    			</td>
+    		</tr>
+        </tbody>
+    </table>
+    <h5>Filtertrons</h5>
+    <table class="alt" style="margin-top:1em; margin-bottom: 1em">
+        <tbody>
+    		<tr>
+    			<td class="description">
+    				<input class="binding" value="200" type="checkbox" id="Checkbox21" name="extra-filtertron" data-toggle="checkbox"> 
+    				<label class="checkbox" for="Checkbox21">Extra Filtertron</label>
+    			</td>
+    			<td class="price">
+    				<p>$200</p>
+    			</td>
+            </tr>
+            <tr>
+    			<td class="description">
+    				<input class="binding" value="100" type="checkbox" id="Checkbox22" name="swap-filtertron" data-toggle="checkbox"> 
+    				<label class="checkbox" for="Checkbox22">Swap stock P90 for filtertron</label>
+    			</td>
+    			<td class="price">
+    				<p>$100</p>
+    			</td>
+    		</tr>
+        </tbody>
+    </table>
+    <h5>Piezo</h5>
+    <table class="alt" style="margin-top:1em; margin-bottom: 2em">
+        <tbody>
+    		<tr>
+    			<td class="description">
+    				<input class="binding" value="130" type="checkbox" id="Checkbox23" name="piezo" data-toggle="checkbox"> 
+    				<label class="checkbox" for="Checkbox23">Inbuilt passive piezo circuit and pickup</label>
+    			</td>
+    			<td class="price">
+    				<p>$130</p>
+    			</td>
+    		</tr>
+		</tbody>
+	</table>
+</section>
+
+<!-- Electronics -->
+<section style="box-sizing: border-box; margin-bottom: 1em;">
+    <h3 style="margin-bottom: 0.5em">Electronics</h3>
+    <table class="alt">
+        <tbody>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="15" type="checkbox" id="Checkbox24" name="3way-switch" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Checkbox24">3 way selector switch</label>
+                </td>
+                <td class="price">
+                    <p>$15</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="60" type="checkbox" id="Checkbox25" name="6way-switch" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Checkbox25">6 way selector switch</label>
+                </td>
+                <td class="price">
+                    <p>$60</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="17" type="checkbox" id="Checkbox26" name="tone-knob" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Checkbox26">Tone Knob</label>
+                </td>
+                <td class="price">
+                    <p>$17</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="15" type="checkbox" id="Checkbox27" name="extra-volume" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Checkbox27">Extra volume knob</label>
+                </td>
+                <td class="price">
+                    <p>$15</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="30" type="checkbox" id="Checkbox28" name="push-pull" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Checkbox28">Push-pull knob</label>
+                </td>
+                <td class="price">
+                    <p>$30</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="300" type="checkbox" id="Checkbox29" name="moar-overdrive" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Checkbox29">Inbuilt Moar hand-wired over drive effect</label>
+                </td>
+                <td class="price">
+                    <p>$300</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Inlays -->
+<section style="box-sizing: border-box; margin-bottom: 1em;">
+    <h3 style="margin-bottom: 0.5em">Inlays</h3>
+    <table class="alt">
+        <tbody>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="0" type="radio" id="Checkbox30" name="inlay" data-toggle="checkbox" checked> 
+                    <label class="radio" for="Checkbox30">None</label>
+                </td>
+                <td class="price">
+                    <p>$0</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="Dots:75" type="radio" id="Checkbox31" name="inlay" data-toggle="checkbox"> 
+                    <label class="radio" for="Checkbox31">Dots</label>
+                </td>
+                <td class="price">
+                    <p>$75</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="Custom:350" type="radio" id="Checkbox32" name="inlay" data-toggle="checkbox"> 
+                    <label class="radio" for="Checkbox32">Custom</label>
+                </td>
+                <td class="price">
+                    <p>$350</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Tremolo Systems -->
+<section style="box-sizing: border-box; margin-bottom: 1em;">
+    <h3 style="margin-bottom: 0.5em">Tremolo Systems</h3>
+    <table class="alt">
+        <tbody>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="0" type="radio" id="Checkbox33" name="trem" data-toggle="checkbox" checked> 
+                    <label class="radio" for="Checkbox33">None</label>
+                </td>
+                <td class="price">
+                    <p>$0</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="205" type="radio" id="Checkbox34" name="trem" data-toggle="checkbox"> 
+                    <label class="radio" for="Checkbox34">Bigsby</label>
+                </td>
+                <td class="price">
+                    <p>$205</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="130" type="radio" id="Checkbox35" name="trem" data-toggle="checkbox"> 
+                    <label class="radio" for="Checkbox35">Jazzmaster</label>
+                </td>
+                <td class="price">
+                    <p>$130</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="160" type="radio" id="Checkbox36" name="trem" data-toggle="checkbox"> 
+                    <label class="radio" for="Checkbox36">Stratocaster</label>
+                </td>
+                <td class="price">
+                    <p>$160</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="120" type="radio" id="Checkbox37" name="trem" data-toggle="checkbox"> 
+                    <label class="radio" for="Checkbox37">Duesenberg</label>
+                </td>
+                <td class="price">
+                    <p>$120</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Neck and Fretboard Extras -->
+<section style="box-sizing: border-box; margin-bottom: 1em;">
+    <h3 style="margin-bottom: 0.5em">Neck and Fretboard Extras</h3>
+    <table class="alt">
+        <tbody style="=margin-bottom: 1em">
+            <tr>
+                <td class="description">
+                    <input class="binding" value="120" type="checkbox" id="Checkbox38" name="carbon-rods" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Checkbox38">Carbon rods in neck</label>
+                </td>
+                <td class="price">
+                    <p>$120</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="1000" type="checkbox" id="Checkbox39" name="extra-neck" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Checkbox39">Extra neck (prices start at $1000)</label>
+                </td>
+                <td class="price">
+                    <p>$1000</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="950" type="checkbox" id="Checkbox40" name="tru-neck" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Checkbox40">Swap neck for Tru Temperament neck</label>
+                </td>
+                <td class="price">
+                    <p>$950</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h5>Fretboard</h5>
+    <table class="alt" style="margin-top:1em; margin-bottom: 1em">
+        <tbody>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="22 frets:0" type="radio" id="Checkbox41" name="frets" data-toggle="checkbox" checked> 
+                    <label class="radio" for="Checkbox41">22 frets</label>
+                </td>
+                <td class="price">
+                    <p>$0</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="23 frets:45" type="radio" id="Checkbox42" name="frets" data-toggle="checkbox"> 
+                    <label class="radio" for="Checkbox42">23 frets</label>
+                </td>
+                <td class="price">
+                    <p>$45</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="24 frets:90" type="radio" id="Checkbox43" name="frets" data-toggle="checkbox"> 
+                    <label class="radio" for="Checkbox43">24 frets</label>
+                </td>
+                <td class="price">
+                    <p>$90</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Fun Stuff -->
+<section style="box-sizing: border-box; margin-bottom: 1em;">
+    <h3 style="margin-bottom: 0.5em">Fun Stuff</h3>
+    <table class="alt">
+        <tbody>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="380" type="checkbox" id="Checkbox44" name="extra-string" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Checkbox44">Extra string</label>
+                </td>
+                <td class="price">
+                    <p>$380</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="30" type="checkbox" id="Checkbox45" name="baritone" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Checkbox45">Baritone scale length</label>
+                </td>
+                <td class="price">
+                    <p>$30</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="description">
+                    <input class="binding" value="750" type="checkbox" id="Checkbox46" name="baritone" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Checkbox46">Nitro paint (from $750)</label>
+                </td>
+                <td class="price">
+                    <p>$750</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+				</div>
+				<div class="box 4u 12u(small) sticky-quote" style="padding: 2em">
+					<!-- Quote Box -->
+					
+					<h3 style="margin-bottom: 0.5em;">Place Order</h3>	
+					<div style="margin-bottom: 2em;">
+						<label>Total (USD)</label>
+						<input style="font-weight: 700;" type="text" value="$115" id="payment-total" name="total-price" disabled></input>
+					</div>
+			      	<div id="paypal-button-container"></div>
+					<script>
+						paypal.Buttons({
+						    createOrder: function(data, actions) {
+						      // This function sets up the details of the transaction, including the amount and line item details.
+						      return actions.order.create({
+						        purchase_units: [{
+						          amount: {
+						            value: payment-total
+						          }
+						        }]
+						      });
+						    },
+						    onApprove: function(data, actions) {
+						      // This function captures the funds from the transaction.
+						      return actions.order.capture().then(function(details) {
+						        // This function shows a transaction success message to your buyer.
+						        alert('Transaction completed by ' + details.payer.name.given_name);
+						      });
+						    }
+						  }).render('#paypal-button-container');
+		  			</script>
+				</div>
+			</form>
+	</section>
 </div>
- <!-- Footer -->
+
+    <!-- Footer -->
 	<footer id="footer">
 		<div class="inner">
 			<div class="row 100% uniform">
@@ -282,5 +986,53 @@
 
 
 </body>
-
 </html>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<!-- Form Script -->
+<script>
+function updateTotals() {
+    // Checkboxes
+    var inputs = document.getElementById('extra-features').getElementsByTagName('input');
+
+    // Selected Options
+    var body = document.getElementById("wood-body");
+	var bodycost = parseInt(body.options[body.selectedIndex].getAttribute('value').split(":").pop());
+	var neck = document.getElementById("wood-neck");
+	var neckcost = parseInt(neck.options[neck.selectedIndex].getAttribute('value').split(":").pop());	
+	var fret = document.getElementById("wood-fret");
+	var fretcost = parseInt(fret.options[fret.selectedIndex].getAttribute('value').split(":").pop());
+	var radius = document.getElementById("neck-radius");
+	var radiuscost = parseInt(radius.options[radius.selectedIndex].getAttribute('value').split(":").pop());
+	var result = bodycost + neckcost + fretcost + radiuscost;
+
+    // Total Price
+    var sum = 115 + result;
+    for (var i = 0, num = inputs.length; i < num; i++) {
+        if (inputs[i].checked) {
+            sum += parseInt(inputs[i].getAttribute('value').split(":").pop());
+        }
+    }
+
+    // Customisation Total
+    var customisations = sum - 115;
+
+	// Totals for text
+    // document.getElementById('payment-custom').innerHTML = '$' + customisations;
+    document.getElementById('payment-total').value = '$' + sum;
+    window.history.pushState('page2', 'Title', '//order-placed?deposit=' + sum);
+    // document.getElementById('next').value = 'http://localhost:4000///order-placed?deposit=' + (sum*0.25);
+
+    
+}
+
+var section = document.getElementById('extra-features');
+var inputs = section.getElementsByTagName('input');
+for (var i = 0, num = inputs.length; i < num; i++) {
+    inputs[i].addEventListener('change', updateTotals);
+}
+
+
+</script>

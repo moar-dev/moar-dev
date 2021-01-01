@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Guitars
+title: View Guitars
 description: 'View our collection of unique, hand-made instruments'
 seo_description:
 show_tile: true

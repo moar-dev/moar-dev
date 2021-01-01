@@ -31,7 +31,7 @@
 					<h3 style="margin-bottom: 0.5em;">Place Order</h3>	
 					<div style="margin-bottom: 2em;">
 						<label>Total (USD)</label>
-						<input style="font-weight: 700;" type="text" value="$330" id="payment-total" name="total-price" disabled></input>
+						<input style="font-weight: 700;" type="text" value="$0" id="payment-total" name="total-price" disabled></input>
 					</div>
 			      	<div id="paypal-button-container"></div>
 				</div>
@@ -59,25 +59,33 @@
 	    var PickupType = pickupSelection.options[pickupSelection.selectedIndex].value;
 	    console.log(PickupType);
 
+	    // T type
 	    if (PickupType === 'single-coil-s:0') {
 	    	document.getElementById('s-type-options').setAttribute("style", "display:block;");
 	    }
 	    else {
 	    	document.getElementById('s-type-options').setAttribute("style", "display:none;");
+	    	document.getElementById('Radio1').checked=false;
+	    	document.getElementById('Radio2').checked=false;
 	    }
 
-	    // S type
-	    if (document.getElementById("Radio1").checked) {
-	    	document.getElementById('stype-individual').setAttribute("style", "display:none;");
-	    	document.getElementById("Checkbox2").checked=false;
-	    	document.getElementById("Checkbox3").checked=false;
-	    	document.getElementById("Checkbox4").checked=false;
+	    // T type
+	    if (PickupType === 'single-coil-t:0') {
+	    	document.getElementById('t-type-options').setAttribute("style", "display:block;");
 	    }
 	    else {
-	    	document.getElementById('stype-individual').setAttribute("style", "display:block;");
-	    	document.getElementById("Checkbox2").disabled= false;
-	    	document.getElementById("Checkbox3").disabled= false;
-	    	document.getElementById("Checkbox4").disabled= false;
+	    	document.getElementById('t-type-options').setAttribute("style", "display:none;");
+	    	document.getElementById('Radio3').checked=false;
+	    	document.getElementById('Radio4').checked=false;
+	    }
+
+	    if (document.getElementById("Radio4").checked) {
+	    	document.getElementById('ttype-individual').setAttribute("style", "display:block;");
+	    }
+	    else {
+	    	document.getElementById('ttype-individual').setAttribute("style", "display:none;");
+	    	document.getElementById('Radio5').checked=false;
+	    	document.getElementById('Radio6').checked=false;
 	    }
 
 

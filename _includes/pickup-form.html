@@ -1,13 +1,10 @@
-<h2 style="margin-bottom: 0.5em">Design your pickups</h2>
-<p>Current waiting time on pickups is around two to three months.</p>
-
-
 <section style="box-sizing: border-box; margin-bottom: 2em;">
 	
     <!-- Guitar -->
     <input class="binding" value="200" type="hidden" name="{{ page.title }}" > 
 
 	<!-- Body -->
+    <h2>Select Pickups</h2>
     <h3>Pickup Type</h3>
 	<div class="select-wrapper" style="margin-top: 1em; margin-bottom: 1em;">		
         <select name="pickup-type" id="pickup-type" onchange="updateTotals()" required>
@@ -23,41 +20,59 @@
 	</div>
 </section>
 
-<!-- Binding -->
+<!-- T-type -->
 <section id="s-type-options" style="box-sizing: border-box; margin-bottom: 1em; display: none;">
-	<h3 style="margin-bottom: 0.5em">S Type</h3>
+    <h3 style="margin-bottom: 0.5em">S-type Pickups</h3>
+    <p>For that versatile strat-style tone</p>
+    <table class="alt">
+        <tbody>
+            <tr width="100%">
+                <td width="50%">
+                    <input class="binding" value="330" type="radio" id="Radio1" name="s-type" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Radio1">Full Set</label>
+                </td>
+                <td width="50%">
+                    <input class="binding" value="115" type="radio" id="Radio2" name="s-type" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Radio2">Individual Pickup</label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+<!-- T-type -->
+<section id="t-type-options" style="box-sizing: border-box; margin-bottom: 1em; display: none;">
+	<h3 style="margin-bottom: 0.5em">T-type Pickups</h3>
+    <p>For that honky telecaster-style tone</p>
     <table class="alt">
         <tbody>
     		<tr width="100%">
                 <td width="50%">
-                    <input class="binding" value="330" type="radio" id="Radio1" name="binding-top" data-toggle="checkbox" checked="checked"> 
-                    <label class="checkbox" for="Radio1">Full Set</label>
+                    <input class="binding" value="215" type="radio" id="Radio3" name="t-type" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Radio3">Full Set</label>
                 </td>
                 <td width="50%">
-                    <input class="binding" value="0" type="radio" id="Radio2" name="binding-top" data-toggle="checkbox"> 
-                    <label class="checkbox" for="Radio2">Individual Pickups</label>
+                    <input class="binding" value="115" type="radio" id="Radio4" name="t-type" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Radio4">Individual Pickup</label>
                 </td>
             </tr>
         </tbody>
     </table>
 
-    <!-- Individual -->
-    <div id="stype-individual" style="display: none;">
-        <h5>Select individual Pickups</h5>
+    <!-- T-type Individual -->
+    <div id="ttype-individual" style="display: none;">
+        <h4>Select individual Pickups</h4>
         <table class="alt">
             <tbody>
                 <tr>
         			<td>
-        				<input class="binding" value="115" type="checkbox" id="Checkbox2" name="binding-top" data-toggle="checkbox">
-        				<label class="checkbox" for="Checkbox2">Neck Pickup</label>
+        				<input class="binding" value="0" type="radio" id="Radio5" name="pickup-position" data-toggle="checkbox">
+        				<label class="checkbox" for="Radio5">Neck Pickup</label>
         			</td>
                     <td>
-                        <input class="binding" value="115" type="checkbox" id="Checkbox3" name="binding-top" data-toggle="checkbox">
-                        <label class="checkbox" for="Checkbox3">Middle Pickup</label>
-                    </td>
-                    <td>
-                        <input class="binding" value="115" type="checkbox" id="Checkbox4" name="binding-top" data-toggle="checkbox">
-                        <label class="checkbox" for="Checkbox4">Bridge Pickup</label>
+                        <input class="binding" value="0" type="radio" id="Radio6" name="pickup-position" data-toggle="checkbox">
+                        <label class="checkbox" for="Radio6">Bridge Pickup</label>
                     </td>
         		</tr>
     		</tbody>

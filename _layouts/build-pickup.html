@@ -19,15 +19,6 @@
 					<h3>{{ page.description }}</h3>
 					<p>{{ page.modeldesc }}</p>
 				</div>
-				<!-- Gallery -->
-				<!-- {% for record in site.data.gallery.records reversed %}
-					{% if record.fields.guitar == page.img-tag and record.fields.placement == "gallery" %}
-					<div class="4u 12u$(medium)">
-						<div class="gallery" style="background-image:url({{ record.fields.image[0].url }})">
-						</div>
-					</div>
-					{% endif %}
-				{% endfor %} -->
 			</div>
 			<form class="inner row uniform" id="extra-features" action="https://formspree.io/xdoppvkv" method="POST">
 				<div class="8u 12u(small)" style="padding-right: 2em;">
@@ -40,7 +31,7 @@
 					<h3 style="margin-bottom: 0.5em;">Place Order</h3>	
 					<div style="margin-bottom: 2em;">
 						<label>Total (USD)</label>
-						<input style="font-weight: 700;" type="text" value="${{page.price-usd}}" id="payment-total" name="total-price" disabled></input>
+						<input style="font-weight: 700;" type="text" value="$330" id="payment-total" name="total-price" disabled></input>
 					</div>
 			      	<div id="paypal-button-container"></div>
 				</div>
@@ -63,16 +54,37 @@
 	    // Checkboxes
 	    var inputs = document.getElementById('extra-features').getElementsByTagName('input');
 
+	    // Pickup Type
+	    var pickupSelection = document.getElementById("pickup-type");
+	    var PickupType = pickupSelection.options[pickupSelection.selectedIndex].value;
+	    console.log(PickupType);
+
+	    if (PickupType === 'single-coil-s:0') {
+	    	document.getElementById('s-type-options').setAttribute("style", "display:block;");
+	    }
+	    else {
+	    	document.getElementById('s-type-options').setAttribute("style", "display:none;");
+	    }
+
+	    // S type
+	    if (document.getElementById("Radio1").checked) {
+	    	document.getElementById('stype-individual').setAttribute("style", "display:none;");
+	    	document.getElementById("Checkbox2").checked=false;
+	    	document.getElementById("Checkbox3").checked=false;
+	    	document.getElementById("Checkbox4").checked=false;
+	    }
+	    else {
+	    	document.getElementById('stype-individual').setAttribute("style", "display:block;");
+	    	document.getElementById("Checkbox2").disabled= false;
+	    	document.getElementById("Checkbox3").disabled= false;
+	    	document.getElementById("Checkbox4").disabled= false;
+	    }
+
+
 	    // Selected Options
-	    var body = document.getElementById("wood-body");
-		var bodycost = parseInt(body.options[body.selectedIndex].getAttribute('value').split(":").pop());
-		var neck = document.getElementById("wood-neck");
-		var neckcost = parseInt(neck.options[neck.selectedIndex].getAttribute('value').split(":").pop());	
-		var fret = document.getElementById("wood-fret");
-		var fretcost = parseInt(fret.options[fret.selectedIndex].getAttribute('value').split(":").pop());
-		var radius = document.getElementById("neck-radius");
-		var radiuscost = parseInt(radius.options[radius.selectedIndex].getAttribute('value').split(":").pop());
-		var result = bodycost + neckcost + fretcost + radiuscost;
+	    var pickups = document.getElementById("pickup-type");
+		var pickupcost = parseInt(pickups.options[pickups.selectedIndex].getAttribute('value').split(":").pop());
+		var result = pickupcost;
 
 	    // Total Price
 	    var sum = {{ page.price-usd }} + result;

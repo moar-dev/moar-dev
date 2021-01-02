@@ -51,11 +51,11 @@ image: '/assets/images/luthiers-special/luthiers-special-being-built.jpg'
 			</div>
 			<div class="4u 12u$(small)">
 				<div class="box">
-					<h4>Moar Information</h4>
+					<h3>Moar Information</h3>
 					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
+						<li><a href="{{ "/guitars"  | relative_url }}" >View Guitars</a></li>
+						<li><a href="{{ "/pickups  | relative_url }}" >Shop Pickups</a></li>
+						<li><a href="{{ "/waitlist"  | relative_url }}" >Waitlist</a></li>
 					</ul>
 				</div>
 			</div>

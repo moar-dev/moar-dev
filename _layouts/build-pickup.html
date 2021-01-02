@@ -19,8 +19,17 @@
 					<h3>{{ page.description }}</h3>
 					<p>{{ page.modeldesc }}</p>
 				</div>
+				<div class="4u 12u$(medium)">
+					<img class="image fit" src="{{ '/assets/images/pickups/moar-pickups-1.png'  | relative_url }}" alt="">
+				</div>
+				<div class="4u 12u$(medium)">
+					<img class="image fit" src="{{ '/assets/images/pickups/moar-pickups-6.png'  | relative_url }}" alt="">
+				</div>
+				<div class="4u 12u$(medium)">
+					<img class="image fit" src="{{ '/assets/images/pickups/moar-pickups-7.png'  | relative_url }}" alt="">
+				</div>
 			</div>
-			<form class="inner row uniform" id="extra-features" action="https://formspree.io/xdoppvkv" method="POST">
+			<form class="inner row uniform" id="extra-features" action="https://formspree.io/xdoppvkv" method="POST" style="margin-top: 2em">
 				<div class="8u 12u(small)" style="padding-right: 2em;">
 					<!-- Extras -->
 					{% include pickup-form.html %}
@@ -126,6 +135,96 @@
 	    	document.getElementById('p90-soapbar-options').setAttribute("style", "display:none;");
 	    	document.getElementById('Radio13').checked=false;
 	    	document.getElementById('Radio14').checked=false;
+	    }
+
+	    // Humbucker
+	    if (PickupType === 'humbucker:0') {
+	    	document.getElementById('humbucker-options').setAttribute("style", "display:block;");
+	    }
+	    else {
+	    	document.getElementById('humbucker-options').setAttribute("style", "display:none;");
+	    	document.getElementById('Radio15').checked=false;
+	    	document.getElementById('Radio16').checked=false;
+	    }
+
+	    // Humbucker Rail
+	    if (PickupType === 'rail-humbucker:0') {
+	    	document.getElementById('rail-humbucker-options').setAttribute("style", "display:block;");
+	    }
+	    else {
+	    	document.getElementById('rail-humbucker-options').setAttribute("style", "display:none;");
+	    	document.getElementById('Radio17').checked=false;
+	    	document.getElementById('Radio18').checked=false;
+	    }
+
+	    // Humbucker Mini
+	    if (PickupType === 'mini-humbucker:0') {
+	    	document.getElementById('mini-humbucker-options').setAttribute("style", "display:block;");
+	    }
+	    else {
+	    	document.getElementById('mini-humbucker-options').setAttribute("style", "display:none;");
+	    	document.getElementById('Radio19').checked=false;
+	    	document.getElementById('Radio20').checked=false;
+	    }
+
+	    // Humbucker Firebird
+	    if (PickupType === 'humbucker-firebird:0') {
+	    	document.getElementById('firebird-humbucker-options').setAttribute("style", "display:block;");
+	    }
+	    else {
+	    	document.getElementById('firebird-humbucker-options').setAttribute("style", "display:none;");
+	    	document.getElementById('Radio21').checked=false;
+	    	document.getElementById('Radio22').checked=false;
+	    }
+
+	    // Humbucker Filtertron
+	    if (PickupType === 'humbucker-filtertron:0') {
+	    	document.getElementById('filtertron-humbucker-options').setAttribute("style", "display:block;");
+	    }
+	    else {
+	    	document.getElementById('filtertron-humbucker-options').setAttribute("style", "display:none;");
+	    	document.getElementById('Radio23').checked=false;
+	    	document.getElementById('Radio24').checked=false;
+	    }
+
+	    // P Bass
+	    if (PickupType === 'p-bass:0') {
+	    	document.getElementById('p-bass-options').setAttribute("style", "display:block;");
+	    }
+	    else {
+	    	document.getElementById('p-bass-options').setAttribute("style", "display:none;");
+	    	document.getElementById('Radio25').checked=false;
+	    	// document.getElementById('Radio26').checked=false;
+	    }
+
+	    // Jazz Bass
+	    if (PickupType === 'jazz-bass:0') {
+	    	document.getElementById('jazz-bass-options').setAttribute("style", "display:block;");
+	    }
+	    else {
+	    	document.getElementById('jazz-bass-options').setAttribute("style", "display:none;");
+	    	document.getElementById('Radio27').checked=false;
+	    	document.getElementById('Radio28').checked=false;
+	    }
+
+	    // Bass Rail Humbucker
+	    if (PickupType === 'bass-rail:0') {
+	    	document.getElementById('bass-rail-options').setAttribute("style", "display:block;");
+	    }
+	    else {
+	    	document.getElementById('bass-rail-options').setAttribute("style", "display:none;");
+	    	document.getElementById('Radio29').checked=false;
+	    	document.getElementById('Radio30').checked=false;
+	    }
+
+	    // Bass Single Coil
+	    if (PickupType === 'bass-single-coil:0') {
+	    	document.getElementById('bass-single-coil-options').setAttribute("style", "display:block;");
+	    }
+	    else {
+	    	document.getElementById('bass-single-coil-options').setAttribute("style", "display:none;");
+	    	// document.getElementById('Radio31').checked=false;
+	    	document.getElementById('Radio32').checked=false;
 	    }
 
 

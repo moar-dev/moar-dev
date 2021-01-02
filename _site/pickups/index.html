@@ -226,8 +226,17 @@
 					<h3>Hand-made, bespoke pickups</h3>
 					<p>It is very hard to communicate that I am able to make more or less anything you can think up, so I have started with a clear price list for most “normal” pickup types. Prices include any cover options you might like, and each pickup is wound to your taste. I do not wax pot my pickups as standard but am happy to include it in the price.</p>
 				</div>
+				<div class="4u 12u$(medium)">
+					<img class="image fit" src="/moar-dev/assets/images/pickups/moar-pickups-1.png" alt="">
+				</div>
+				<div class="4u 12u$(medium)">
+					<img class="image fit" src="/moar-dev/assets/images/pickups/moar-pickups-6.png" alt="">
+				</div>
+				<div class="4u 12u$(medium)">
+					<img class="image fit" src="/moar-dev/assets/images/pickups/moar-pickups-7.png" alt="">
+				</div>
 			</div>
-			<form class="inner row uniform" id="extra-features" action="https://formspree.io/xdoppvkv" method="POST">
+			<form class="inner row uniform" id="extra-features" action="https://formspree.io/xdoppvkv" method="POST" style="margin-top: 2em">
 				<div class="8u 12u(small)" style="padding-right: 2em;">
 					<!-- Extras -->
 					<section style="box-sizing: border-box; margin-bottom: 2em;">
@@ -240,8 +249,8 @@
     <h3>Pickup Type</h3>
 	<div class="select-wrapper" style="margin-top: 1em; margin-bottom: 1em;">		
         <select name="pickup-type" id="pickup-type" onchange="updateTotals()" required>
-			<option disabled selected value>Choose Pickups</option>
-            <option name="stype" value="single-coil-s:0">Single Coil (S type)</option>
+			<option disabled value>Choose Pickups</option>
+            <option name="stype" value="single-coil-s:0" selected>Single Coil (S type)</option>
             <option name="ash" value="single-coil-t:0">Single Coil (T type)</option>
             <option name="ash" value="jazzmaster:0">Jazzmaster</option>
             <option name="ash" value="jaguar:0">Jaguar</option>
@@ -250,12 +259,18 @@
             <option name="ash" value="humbucker:0">Humbucker</option>
             <option name="ash" value="humbucker-rail:0">Humbucker (rail)</option>
             <option name="ash" value="humbucker-mini:0">Humbucker (mini)</option>
+            <option name="ash" value="humbucker-firebird:0">Humbucker (firebird)</option>
+            <option name="ash" value="humbucker-filtertron:0">Humbucker (filtertron)</option>
+            <option name="ash" value="p-bass:0">P Bass</option>
+            <option name="ash" value="jazz-bass:0">Jazz Bass</option>
+            <option name="ash" value="bass-rail:0">Bass Rail Humbucker</option>
+            <option name="ash" value="bass-single-coil:0">Bass Single Coil</option>
 		</select>
 	</div>
 </section>
 
 <!-- S-type -->
-<section id="s-type-options" style="box-sizing: border-box; margin-bottom: 1em; display: none;">
+<section id="s-type-options" style="box-sizing: border-box; margin-bottom: 1em; display: block;">
     <h3 style="margin-bottom: 0.5em">S-type Pickups</h3>
     <p>For that versatile strat-style tone</p>
     <table class="alt">
@@ -388,6 +403,182 @@
                 <td width="50%">
                     <input class="binding" value="165" type="radio" id="Radio14" name="p90-soapbar" data-toggle="checkbox"> 
                     <label class="checkbox" for="Radio14">Individual Pickup</label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Humbucker -->
+<section id="humbucker-options" style="box-sizing: border-box; margin-bottom: 1em; display: none;">
+    <h3 style="margin-bottom: 0.5em">Humbuckers</h3>
+    <p>Something about these pickups</p>
+    <table class="alt">
+        <tbody>
+            <tr width="100%">
+                <td width="50%">
+                    <input class="binding" value="460" type="radio" id="Radio15" name="humbucker-full" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Radio15">Full Set</label>
+                </td>
+                <td width="50%">
+                    <input class="binding" value="245" type="radio" id="Radio16" name="humbucker-full" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Radio16">Individual Pickup</label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Rail Humbucker -->
+<section id="rail-humbucker-options" style="box-sizing: border-box; margin-bottom: 1em; display: none;">
+    <h3 style="margin-bottom: 0.5em">Rail Humbuckers</h3>
+    <p>Something about these pickups</p>
+    <table class="alt">
+        <tbody>
+            <tr width="100%">
+                <td width="50%">
+                    <input class="binding" value="460" type="radio" id="Radio17" name="humbucker-rail" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Radio17">Full Set</label>
+                </td>
+                <td width="50%">
+                    <input class="binding" value="245" type="radio" id="Radio18" name="humbucker-rail" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Radio18">Individual Pickup</label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Mini Humbucker -->
+<section id="mini-humbucker-options" style="box-sizing: border-box; margin-bottom: 1em; display: none;">
+    <h3 style="margin-bottom: 0.5em">Mini Humbuckers</h3>
+    <p>Something about these pickups</p>
+    <table class="alt">
+        <tbody>
+            <tr width="100%">
+                <td width="50%">
+                    <input class="binding" value="410" type="radio" id="Radio19" name="humbucker-mini" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Radio19">Full Set</label>
+                </td>
+                <td width="50%">
+                    <input class="binding" value="215" type="radio" id="Radio20" name="humbucker-mini" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Radio20">Individual Pickup</label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Firebird Humbuckers -->
+<section id="firebird-humbucker-options" style="box-sizing: border-box; margin-bottom: 1em; display: none;">
+    <h3 style="margin-bottom: 0.5em">Firebird Humbuckers</h3>
+    <p>Something about these pickups</p>
+    <table class="alt">
+        <tbody>
+            <tr width="100%">
+                <td width="50%">
+                    <input class="binding" value="410" type="radio" id="Radio21" name="humbucker-firebird" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Radio21">Full Set</label>
+                </td>
+                <td width="50%">
+                    <input class="binding" value="215" type="radio" id="Radio22" name="humbucker-firebird" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Radio22">Individual Pickup</label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Filtertron Humbuckers -->
+<section id="filtertron-humbucker-options" style="box-sizing: border-box; margin-bottom: 1em; display: none;">
+    <h3 style="margin-bottom: 0.5em">Filtertron Humbuckers</h3>
+    <p>Something about these pickups</p>
+    <table class="alt">
+        <tbody>
+            <tr width="100%">
+                <td width="50%">
+                    <input class="binding" value="460" type="radio" id="Radio23" name="humbucker-filtertron" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Radio23">Full Set</label>
+                </td>
+                <td width="50%">
+                    <input class="binding" value="215" type="radio" id="Radio24" name="humbucker-filtertron" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Radio24">Individual Pickup</label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- P Bass -->
+<section id="p-bass-options" style="box-sizing: border-box; margin-bottom: 1em; display: none;">
+    <h3 style="margin-bottom: 0.5em">P Bass Set</h3>
+    <p>Something about these pickups</p>
+    <table class="alt">
+        <tbody>
+            <tr width="100%">
+                <td width="50%">
+                    <input class="binding" value="215" type="radio" id="Radio25" name="p-bass-set" data-toggle="checkbox" checked> 
+                    <label class="checkbox" for="Radio25">Full Set</label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Jazz Bass -->
+<section id="jazz-bass-options" style="box-sizing: border-box; margin-bottom: 1em; display: none;">
+    <h3 style="margin-bottom: 0.5em">Jazz Bass Pickups</h3>
+    <p>Something about these pickups</p>
+    <table class="alt">
+        <tbody>
+            <tr width="100%">
+                <td width="50%">
+                    <input class="binding" value="280" type="radio" id="Radio27" name="jazz-bass" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Radio27">Full Set</label>
+                </td>
+                <td width="50%">
+                    <input class="binding" value="165" type="radio" id="Radio28" name="jazz-bass" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Radio28">Individual Pickup</label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Bass Rail Humbucker -->
+<section id="bass-rail-options" style="box-sizing: border-box; margin-bottom: 1em; display: none;">
+    <h3 style="margin-bottom: 0.5em">Bass Rail Humbuckers</h3>
+    <p>Something about these pickups</p>
+    <table class="alt">
+        <tbody>
+            <tr width="100%">
+                <td width="50%">
+                    <input class="binding" value="460" type="radio" id="Radio29" name="p90-soapbar" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Radio29">Full Set</label>
+                </td>
+                <td width="50%">
+                    <input class="binding" value="215" type="radio" id="Radio30" name="p90-soapbar" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Radio30">Individual Pickup</label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Bass Single Coil -->
+<section id="bass-single-coil-options" style="box-sizing: border-box; margin-bottom: 1em; display: none;">
+    <h3 style="margin-bottom: 0.5em">Single Coil Bass Pickup</h3>
+    <p>Something about these pickups</p>
+    <table class="alt">
+        <tbody>
+            <tr width="100%">
+<!--                 <td width="50%">
+                    <input class="binding" value="280" type="radio" id="Radio31" name="single-coil-bass" data-toggle="checkbox"> 
+                    <label class="checkbox" for="Radio31">Full Set</label>
+                </td> -->
+                <td width="50%">
+                    <input class="binding" value="165" type="radio" id="Radio32" name="single-coil-bass" data-toggle="checkbox" checked> 
+                    <label class="checkbox" for="Radio32">Individual Pickup</label>
                 </td>
             </tr>
         </tbody>
@@ -532,6 +723,96 @@
 	    	document.getElementById('p90-soapbar-options').setAttribute("style", "display:none;");
 	    	document.getElementById('Radio13').checked=false;
 	    	document.getElementById('Radio14').checked=false;
+	    }
+
+	    // Humbucker
+	    if (PickupType === 'humbucker:0') {
+	    	document.getElementById('humbucker-options').setAttribute("style", "display:block;");
+	    }
+	    else {
+	    	document.getElementById('humbucker-options').setAttribute("style", "display:none;");
+	    	document.getElementById('Radio15').checked=false;
+	    	document.getElementById('Radio16').checked=false;
+	    }
+
+	    // Humbucker Rail
+	    if (PickupType === 'rail-humbucker:0') {
+	    	document.getElementById('rail-humbucker-options').setAttribute("style", "display:block;");
+	    }
+	    else {
+	    	document.getElementById('rail-humbucker-options').setAttribute("style", "display:none;");
+	    	document.getElementById('Radio17').checked=false;
+	    	document.getElementById('Radio18').checked=false;
+	    }
+
+	    // Humbucker Mini
+	    if (PickupType === 'mini-humbucker:0') {
+	    	document.getElementById('mini-humbucker-options').setAttribute("style", "display:block;");
+	    }
+	    else {
+	    	document.getElementById('mini-humbucker-options').setAttribute("style", "display:none;");
+	    	document.getElementById('Radio19').checked=false;
+	    	document.getElementById('Radio20').checked=false;
+	    }
+
+	    // Humbucker Firebird
+	    if (PickupType === 'humbucker-firebird:0') {
+	    	document.getElementById('firebird-humbucker-options').setAttribute("style", "display:block;");
+	    }
+	    else {
+	    	document.getElementById('firebird-humbucker-options').setAttribute("style", "display:none;");
+	    	document.getElementById('Radio21').checked=false;
+	    	document.getElementById('Radio22').checked=false;
+	    }
+
+	    // Humbucker Filtertron
+	    if (PickupType === 'humbucker-filtertron:0') {
+	    	document.getElementById('filtertron-humbucker-options').setAttribute("style", "display:block;");
+	    }
+	    else {
+	    	document.getElementById('filtertron-humbucker-options').setAttribute("style", "display:none;");
+	    	document.getElementById('Radio23').checked=false;
+	    	document.getElementById('Radio24').checked=false;
+	    }
+
+	    // P Bass
+	    if (PickupType === 'p-bass:0') {
+	    	document.getElementById('p-bass-options').setAttribute("style", "display:block;");
+	    }
+	    else {
+	    	document.getElementById('p-bass-options').setAttribute("style", "display:none;");
+	    	document.getElementById('Radio25').checked=false;
+	    	// document.getElementById('Radio26').checked=false;
+	    }
+
+	    // Jazz Bass
+	    if (PickupType === 'jazz-bass:0') {
+	    	document.getElementById('jazz-bass-options').setAttribute("style", "display:block;");
+	    }
+	    else {
+	    	document.getElementById('jazz-bass-options').setAttribute("style", "display:none;");
+	    	document.getElementById('Radio27').checked=false;
+	    	document.getElementById('Radio28').checked=false;
+	    }
+
+	    // Bass Rail Humbucker
+	    if (PickupType === 'bass-rail:0') {
+	    	document.getElementById('bass-rail-options').setAttribute("style", "display:block;");
+	    }
+	    else {
+	    	document.getElementById('bass-rail-options').setAttribute("style", "display:none;");
+	    	document.getElementById('Radio29').checked=false;
+	    	document.getElementById('Radio30').checked=false;
+	    }
+
+	    // Bass Single Coil
+	    if (PickupType === 'bass-single-coil:0') {
+	    	document.getElementById('bass-single-coil-options').setAttribute("style", "display:block;");
+	    }
+	    else {
+	    	document.getElementById('bass-single-coil-options').setAttribute("style", "display:none;");
+	    	// document.getElementById('Radio31').checked=false;
+	    	document.getElementById('Radio32').checked=false;
 	    }
 
 
